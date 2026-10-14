@@ -1,0 +1,1964 @@
+* {
+    margin: 0px;
+    padding: 0px;    
+    font-family: "Inter";
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none !important; 
+  pointer-events: none !important;
+}
+
+input[type=number] {
+    -moz-appearance: textfield !important;
+  }
+  
+body {
+    display: flex;
+    background: var(--glow), var(--bg);
+    background: var(--bg);
+    overflow: hidden;
+    min-width: 350px !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+h2 {
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+::-moz-selection {
+    background: var(--selection);
+    color: var(--sharp);
+}
+  
+::selection { 
+    background: var(--selection);
+    color: var(--sharp);
+}
+
+.pnlHeader {
+    width: 100%;
+    height: 70px;
+    min-height: 70px;
+    display: flex;
+    background-color: transparent;
+    margin: auto;
+}
+
+.configScroll {
+    width: 264px;
+    margin-left: 1em;
+    overflow-x: hidden; 
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    outline: none;
+    border: none;
+    height: calc(100% - 70px - 69px + 5px);
+    max-height: calc(100% - 70px - 69px + 5px);
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+.configScrollTemplates,
+.configScrollPatterns,
+.configScrollElements,
+.configScrollUploads {
+    height: calc(100% - 70px - 69px + 5px + 9px);
+    max-height: calc(100% - 70px - 69px + 5px + 9px);
+
+    /*THESE FOUR HOLD contentPreview OR contentCategory, WHICH DO THEIR OWN SCROLLING.
+    THE BASE .configScroll RULE SETS overflow-y: auto FOR EVERY MENU, SO THEY WERE
+    SCROLLING TOO AND DRAWING A SECOND BAR. SETTINGS, LAYERS AND WONDR STILL NEED THE
+    BASE BEHAVIOUR, SO THIS OPTS OUT THE FOUR THAT DO NOT INSTEAD OF CHANGING THE BASE.*/
+    overflow-y: hidden;
+}
+
+.configScrollText {
+    height: calc(100% - 70px - 40px - 69px - 11px);
+    max-height: calc(100% - 70px - 40px - 69px - 11px);
+}
+
+.configScrollSettings {
+
+    height: calc(100% - 70px - 69px + 5px + .5em + 70px + 53px);
+    max-height: calc(100% - 70px - 69px + 5px + .5em + 70px + 53px);
+
+}
+
+.configScrollLayers{
+    height: calc(100% - 60px - 11px);
+    max-height: calc(100% - 60px - 11px);
+}
+
+.configScrollSave {
+
+    height: calc(100% - 70px - 69px + 5px + .5em + 70px);
+    max-height: calc(100% - 70px - 69px + 5px + .5em + 70px);
+
+}
+
+.configScrollFooter {
+    height: 40px;
+    width: 264px;
+    margin-left: 1em;
+}
+
+.headerUI {
+    width: 100%;
+    height: 2em;
+    max-height: 2em;
+    min-height: 2em;
+    background-color: transparent;
+    border-bottom: 1px solid var(--muted-line);
+
+    position: relative;
+    z-index: 1;
+}
+
+#bodyUI {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: transparent;
+}
+
+
+.btnHeader {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    border-radius: 4px;
+    display: flex;
+    background-color: var(--accent);
+    transition: .2s;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.btnHeader:hover {
+    filter: brightness(110%);
+}
+
+.btnHeader h2 {
+    color: var(--sharp);
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+#btnClearCache {
+    width: 100%; margin-top: auto; margin-bottom: 0px; background: var(--sharp); box-sizing: border-box; border-radius: 4px; transition: 0.2s; border: 1px solid transparent;
+}
+
+#btnClearCache h2 {
+    color: var(--bg);
+}
+
+#btnClearCache:hover {
+    background: var(--sharp);
+}
+
+#btnLogOut {
+    width: 246px; background: rgba(255, 0, 0, 0.075); border: 1px solid rgba(255, 99, 71, 0.5); box-sizing: border-box; border-radius: 4px;
+}
+
+.btnIcon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btnIcon svg {
+    margin: auto;
+}
+
+.vertiLine {
+    height: 32px;
+    width: 1px;
+    background-color: white;
+    margin-top: auto;
+    opacity: .12;
+    margin-bottom: auto;
+    border-radius: 999px;
+}
+
+#pnlBoxCanvas {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.pnlTitle {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    max-height: 70px;
+    min-height: 70px;
+    background-color: transparent;
+}
+
+.pnlTitle h2 {
+    color: var(--sharp);
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.pnlEntry {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    margin-top: 1em;
+    justify-content: space-between;
+}
+
+.pnlEntry h2 {
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.pnlDrop {
+    width: 100%;
+    height: 40px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.pnlDropHeader {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: auto;
+}
+
+#pnlSize {
+    justify-content: space-evenly;
+}
+
+.dropdown {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    transition: .2s;
+    border-radius: 4px;
+    border: 1px solid var(--muted-track);
+    box-sizing: border-box;
+}
+
+.dropdown:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.dropdown h2{
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.dropdown svg{
+    width: 8px;
+    height: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+}
+
+.dropdown svg [fill="var(--muted-blue-text)"] {
+    fill: var(--accent);
+}
+
+.dropdown svg [stroke="var(--muted-blue-text)"] {
+    stroke: var(--accent);
+}
+
+.dropOptionVerti {
+    z-index: 5;
+    width: 264px;
+    height: auto;
+
+    max-height: 174px;
+    border-radius: 6px;
+    background-color: var(--dark2);
+    border: 1px solid var(--muted-line);
+
+    box-sizing: border-box;
+    display: none;
+    cursor: default;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 42px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 6px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+
+.dropOptionVerti > [class*=opt] {
+    scroll-snap-align: start;
+}
+
+/* TWO BREAKLINES SIT INSIDE THE FIRST FOUR ROWS: 160 + 26 + 14 */
+.dropOptionBlend,
+.dropOptionPreset {
+    max-height: 200px;
+}
+
+/* ONE BREAKLINE INSIDE THE FIRST FOUR ROWS: 160 + 13 + 14 */
+.dropOptionResize {
+    max-height: 187px;
+}
+
+/* 32px ROWS, NO BREAKLINE: 128 + 14 */
+.dropOptionVectorColor {
+    max-height: 142px;
+}
+
+.dropOptionVerti::-webkit-scrollbar {
+    width: 1px;
+}
+
+.dropOptionVerti::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dropOptionVerti::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+
+.dropOptionVerti::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.dropOptionVertiLeft {
+    z-index: 5;
+    width: 246px;
+    height: auto;
+    /* SAME FOUR ROW BASE AS .dropOptionVerti */
+    max-height: 174px;
+    border-radius: 6px;
+    background-color: var(--dark2);
+    border: 1px solid var(--muted-line);
+    /*[!] border-box SO THE 1px BORDER DOES NOT GROW THESE BY 2px -
+      THERE IS NO GLOBAL box-sizing IN THIS PROJECT */
+    box-sizing: border-box;
+    display: none;
+    cursor: default;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 42px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+.dropOptionVertiLeft::-webkit-scrollbar {
+    width: 1px;
+}
+
+.dropOptionVertiLeft::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dropOptionVertiLeft::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+
+.dropOptionVertiLeft::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.optBG {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optBG:hover {
+    background-color: var(--accent);
+}
+
+.optResize {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optResize:hover {
+    background-color: var(--accent);
+}
+
+.txtBackgroundColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtBackgroundColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtBackgroundColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtSizeWidth {
+    width: 30px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtSizeWidth:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSizeWidth:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSizeHeight {
+    width: 30px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtSizeHeight:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSizeHeight:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.chkLockAspectRatio {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+#btnResetSettings {
+    min-width: 24px;
+    min-height: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    
+}
+
+#btnResetSettings svg {
+    margin: auto;
+    transition: 0.2s;
+}
+
+#btnResetSettings:hover svg {
+    filter: saturate(1) brightness(1.5);
+}
+
+.thumbPicker {
+    outline: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: none;
+}
+
+.thumbCheckered {
+    object-fit:contain;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.thumbColor {
+    width: 24px;
+    height: 24px;
+    border-radius: 0px;
+    position: absolute;
+    background-color: white;
+}
+
+.thumbGradient {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    position: absolute;
+    background-color: white;
+}
+
+.breakline {
+    width: 88%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5em;
+    background: var(--muted-line);
+}
+
+.breaklinePanel {
+    background-color: var(--muted-line);
+    width: 210px;
+    width: 100%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5em;
+    margin-top: 1em;
+}
+
+.breaklineHeader {
+    background-color: var(--accent);
+    background: var(--muted-line);
+    width: 88%;
+    height: 1px;
+    margin: auto;
+}
+
+.breaklineVerti {
+    background-color: var(--muted-track);
+    width: 90%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    /* 1px + 6px + 6px = 13px. THE DROPDOWN max-height FIGURES COUNT ON THIS EXACTLY */
+    margin-top: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.rngInput {
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 52px; 
+    height: 1px; 
+    border-radius: 99px;
+    background: var(--muted-blue-text); 
+    outline: none; 
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 8px;
+}
+
+.rngInput::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 14px; 
+    height: 14px; 
+    background-color: var(--thumb, var(--sharp)); 
+    border-radius: 99px;
+    cursor: pointer; 
+    transition: .2s;
+}
+
+.rngInput::-webkit-slider-thumb:hover {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 14px; 
+    height: 14px; 
+    background-color: var(--thumb, var(--sharp)); 
+    border-radius: 99px;
+    cursor: pointer; 
+}
+  
+.rngInput::-moz-range-thumb {
+    width: 14px; 
+    height: 14px; 
+    background-color: var(--thumb, var(--sharp)); 
+    border-radius: 99px;
+    cursor: pointer; 
+    border: 0px solid transparent;
+    transition: .2s;
+}
+
+.rngInput::-moz-range-thumb:hover {
+    width: 14px; 
+    height: 14px; 
+    background: var(--thumb, var(--sharp)); 
+    border-radius: 99px;
+    cursor: pointer; 
+}
+
+.tabSliderBox1 {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.tabSliderBox2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: .2s;
+}
+
+.tabSliderBox3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: .2s;
+}
+
+.tabBasicBox {
+    height: 370px;
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabColorBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    /*
+    width: 214px; */
+    width: 264px;
+}
+
+.tabStyleBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+.tabPresetBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+.tabTextBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+
+.tab3DBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+.tabEnvironmentBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+.tabMockupBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+.tabSubLayer {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+.pnlBottomBoxTrack {
+
+    background: var(--muted-track);
+    width: 214px;
+    width: 88%;
+    height: 1px;
+    margin: auto;
+}
+
+.pnlBottomBoxThumb1 {
+    background-color: var(--accent);
+    width: 88%;
+    height: 1px;
+    margin: auto;
+}
+
+.pnlBottomBoxThumb2 {
+    background-color: var(--accent);
+    width: 50%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.pnlBottomBoxThumb3 {
+    background-color: var(--accent);
+    width: 33%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.pnlBottomBox {
+    display: flex;
+    width: 88%;
+    height: 40px;
+    min-height: 40px;
+    margin: auto;
+    margin-bottom: 18px;
+    background-color: transparent;
+}
+
+.frBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.frBottom div {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.frBottom div:hover svg {
+    filter: saturate(1) brightness(1.5);
+}
+
+.frBottom svg [stroke="white"] {
+    stroke: var(--muted-blue-text);
+}
+
+.frBottom div svg{
+    margin: auto;
+}
+
+.contentBox {
+    width: 88%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#rightPanel {
+    position: absolute;
+    width: 300px;
+    min-width: 300px;
+    left: calc(100vw - 300px);
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -1px 5px 5px 5px rgba(0,0,0,.2);
+    /*background: linear-gradient(to left, #212530, var(--bg));*/
+    background: var(--bg);
+}
+
+#bodyProperties {
+    width: 300px;
+    min-width: 300px;
+    height: calc(100vh - 2em - 374px); /*2em is header ui and 374px is body ads*/
+    height: 512px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#propertiesBox {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: transparent;
+}
+
+#bodyAds {
+    width: 300px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 374px;
+    margin: auto;
+    display: none;
+}
+
+.adSmallRect {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    margin: auto;
+    margin-top: 1em;
+    background: var(--ads);
+    display: none;
+}
+
+.adSmallRect h2 {
+    color: var(--muted-track);
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.adMedRect {
+    width: 300px;
+    height: 250px;
+    display: flex;
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0px;
+    background: var(--ads);
+    display: none;
+}
+
+.adMedRect h2 {
+    color: var(--muted-track);
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.iconLayer {
+    width: 20px;
+    height: 40px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: .5em;
+    cursor: default;
+    background-color: var(--accent);
+    background-color: transparent;
+}
+
+.iconLayer svg {
+    margin: auto;
+}
+
+.btnExpandCollapse {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: default;
+    background-color: var(--accent);
+    background-color: transparent;
+}
+
+.btnExpandCollapse svg {
+    margin: auto;
+    width: 50%;
+    height:auto;
+}
+
+.txtHeader {
+    margin: auto;
+    margin-left: 40px;
+    width: 80px;
+    height: 24px;
+    outline: none;
+    color: var(--sharp);
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.btnShowHide {
+    width: 18px;
+    height: 22px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0px;
+    margin-right: .5em;
+    cursor: pointer;
+}
+
+.btnShowHide svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+.btnLockUnlock {
+    width: 18px;
+    height: 22px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.btnLockUnlock svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+.btnMaskUnmask {
+    width: 18px;
+    height: 22px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.btnMaskUnmask svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+#breaklineDrag {
+    width: 246px;
+    height: 1px;
+    margin-top: auto;
+    margin-left: 1px;
+    margin-right: auto;
+    display: none;
+}
+
+.searchbox {
+    width: 244px;
+    height: 40px;
+    outline: none; 
+    display: flex;
+    transition: .2s;
+    margin-left: 17px;
+    margin-top: 15px;
+    border: 1px solid var(--muted-track);
+    border-radius: 999px;
+    cursor: default;
+}
+
+.searchbox svg {
+    width: 8px;
+    height: 6px;
+    margin: auto;
+}
+
+.searchIcon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: transparent;
+}
+
+.searchIcon svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+.txtSearch {
+    width: 160px;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-family: "Inter";
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sharp);
+    background-color: transparent;
+    cursor: default;
+}
+
+.txtSearch::placeholder {
+    color: var(--muted-blue-text);
+    font-weight: 400;
+    opacity: 1; /* Firefox */
+}
+  
+.txtSearch::-ms-input-placeholder {
+    color: var(--muted-blue-text); /* Edge 12 -18 */
+    font-weight: 400;
+}
+
+
+.txtSearchTemplate {
+    width: 136px;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-family: "Inter";
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sharp);
+    background-color: transparent;
+    cursor: default;
+}
+
+.txtSearchTemplate::placeholder {
+    color: var(--muted-blue-text);
+    font-weight: 400;
+    opacity: 1; 
+}
+  
+.txtSearchTemplate::-ms-input-placeholder {
+    color: var(--muted-blue-text); 
+    font-weight: 400;
+}
+
+.txtSearchFont {
+    width: 160px;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-family: "Inter";
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sharp);
+    background-color: transparent;
+    cursor: default;
+}
+
+.txtSearchFont::placeholder {
+    color: var(--muted-blue-text);
+    font-weight: 400;
+    opacity: 1; /* Firefox */
+}
+  
+.txtSearchFont::-ms-input-placeholder {
+    color: var(--muted-blue-text); /* Edge 12 -18 */
+    font-weight: 400;
+}
+
+.btnDelSearch {
+    width: 24px;
+    height: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 3px;
+    margin-left: auto;
+    display: flex;
+    cursor: pointer;
+    border-radius: 99px;
+    padding: 2px;
+    visibility: hidden;
+}
+
+.btnDelSearch svg {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+#btnUploadFile {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 3px;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+    border-radius: 99px;
+    transition: .2s;
+    padding: 2px;
+}
+
+#btnUploadFile svg {
+    transition: .2s;
+    width: auto;
+    height: auto;
+}
+
+#btnUploadFile:hover svg {
+    filter: saturate(1) brightness(1.5);
+}
+
+#toolmenu {
+    width: 280px;
+    min-width: 280px;
+    height: 100vh;
+    background: var(--bg);
+    transform: translateX(-350px);
+    z-index: 1;
+    transition: .3s;
+    visibility: hidden;
+    overflow: hidden;
+    box-shadow: 1px 5px 5px 5px rgba(0,0,0,.2);
+}
+
+.menu {
+    height: calc(100vh - 46px);
+    max-height: calc(100vh - 46px);
+}
+
+#menuWondr {
+    position: relative;
+    z-index: 0;
+}
+
+#divWelcomeMsg {
+    width: 95%;
+}
+
+#divWelcomeMsg h1 {
+    color: hsl(var(--hue) 30% 60%);
+    font-weight: 400;
+    font-size: 12px;
+    margin: auto;
+    letter-spacing: 2px;
+    word-break: normal;
+    line-height: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-shadow: 0px 1px 1px rgba(0 0 0 0.5);
+}
+
+.menuFooter {
+    width: 280px;
+    height: 69px;
+    min-height: 69px;
+    display: flex;
+    margin-top: 0px;
+}
+
+#bannerAutosave {
+    /*
+    background: linear-gradient(to right, #66ddaa, #40E0D0);
+    */
+    background: "transparent";
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuFooter h2 {
+    color: var(--sharp);
+    font-size: 12px;
+    font-weight: 500;
+    margin: auto;
+    letter-spacing: 0.5px;
+}
+
+.btnMenuFooter {
+    width: 2.8em;
+    height: 28px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 0.2s;
+}
+
+.btnMenuFooter:hover {
+    filter: brightness(110%);
+}
+
+.btnMenuFooter h2 {
+    margin: auto;
+    color: var(--sharp);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#toolbox {
+    z-index: 2;
+    width: 70px;
+    height: calc(100vh - 2em);
+    background: var(--dark1);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+    border-right: 1px solid var(--muted-line);
+}
+
+#toolbox::-webkit-scrollbar {
+    width: 1px;
+}
+
+#toolbox::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+#toolbox::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.tool {
+    width: 69px;
+    min-width: 69px;
+    height: 69px;
+    aspect-ratio: 1/1;
+    display: flex;
+    cursor: pointer;
+
+}
+
+.tool:nth-child(9) {
+    margin: auto;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.tool svg{
+    filter: none;
+    margin: auto;
+    cursor: pointer;
+}
+
+[fill="var(--muted-blue-text)"] {
+    fill: var(--muted-blue-text);
+}
+
+[stroke="var(--muted-blue-text)"] {
+    stroke: var(--muted-blue-text);
+}
+
+
+
+.pnlTopBoxTrack {
+    background-color: var(--muted-track);
+    width: 214px;
+    width: 88%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pnlTopBoxThumb2 {
+    background-color: var(--accent);
+    width: 50%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.pnlTopBox {
+    display: flex;
+    width: 88%;
+    height: 40px;
+    min-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.frTop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.frTop div {
+    margin: auto;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.frTop div:hover h2 {
+    color: var(--sharp);
+}
+
+.frTop div h2{
+    margin: auto;
+    color: var(--muted-blue-text);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.contentPreview {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+    overflow-y: auto;
+    display: block;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+    
+}
+
+.contentPreview::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+}
+
+.contentPreview::-webkit-scrollbar-track {
+    border-radius: 99px;
+}
+
+.contentPreview::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+
+.contentPreview::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+/*height WAS auto WITH NO max-height, SO IN CATEGORY MODE THIS GREW TO 700px INSIDE A
+692px configScroll AND THAT 8px OVERSHOOT IS WHERE THE SECOND SCROLLBAR CAME FROM.
+IT NOW OWNS THE PARENT HEIGHT EXACTLY AND CLIPS, SO THE ONLY BAR LEFT IS THE ONE INSIDE
+THE THUMB AREA AND THE TITLE ROW WITH "Go back" STAYS PINNED ABOVE IT.
+NO display HERE. THE JS SETS display none OR block INLINE AND WOULD WIN ANYWAY, AND IT
+DOES NOT MATTER: .wrapEntries IS ALREADY THE FLEX COLUMN AND IS THE ONLY CHILD.*/
+.contentCategory {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+/*FILLS THE CATEGORY BOX. THE MARGINS BECOME PADDING SO THE .5em GAP ABOVE THE TITLE
+SURVIVES WITHOUT PUSHING THE BOX PAST 100%, WHICH MARGINS WOULD DO.
+min-height: 0 IS LOAD BEARING THROUGHOUT. A FLEX ITEM DEFAULTS TO min-height: auto AND
+REFUSES TO SHRINK BELOW ITS CONTENT, WHICH WOULD CANCEL THE WHOLE ARRANGEMENT.*/
+.contentCategory .wrapEntries {
+    height: 100%;
+    min-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: .5em;
+    box-sizing: border-box;
+}
+
+.contentCategory .previewTitle {
+    flex: 0 0 auto;
+}
+
+/*max-height WAS calc(100vh - 33px - 71px - 69px - 60px), SIZED FROM THE VIEWPORT WHILE
+ITS PARENT WAS SIZED FROM A PERCENTAGE. THE TWO DISAGREED BY 8px. IT NOW TAKES WHATEVER
+IS LEFT AFTER THE 40px TITLE INSTEAD OF GUESSING FROM THE WINDOW.
+overflow-x IS DECLARED BECAUSE SETTING ONLY overflow-y PROMOTES THE OTHER AXIS FROM
+visible TO auto, WHICH WAS A HORIZONTAL BAR WAITING FOR WIDER CONTENT.*/
+.contentCategory .wrapThumbScroller {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.contentCategory::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+}
+
+.contentCategory::-webkit-scrollbar-track {
+    border-radius: 99px;
+}
+
+.contentCategory::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+
+.contentCategory::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.previewTitle {
+    width: 100%;
+    width: 246px;
+    height: 40px;
+    display: flex;
+    cursor: default;
+    visibility: visible;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.previewTitle h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 12px;
+    font-weight: 600px;
+    letter-spacing: 1px;
+}
+
+.configScrollFiller {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.wrapFiller {
+    width: 246px;
+    min-height: 109px;
+    height: 109px;
+    border-radius: 9px;
+    background: transparent;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    /*
+    padding-bottom: 6px;
+    */
+}
+.wrapFiller svg {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.wrapEntries {
+    width: calc(100%);
+    min-height: 109px;
+    height: auto;
+    background-color: transparent;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 6px;
+}
+
+.wrapThumbs {
+    width: 246px;
+    min-height: 74px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    visibility: visible;
+    /*
+    padding-top: .25em;
+    padding-bottom: .25em;
+    max-height: calc(100vh - 33px - 71px - 69px - 40px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    */
+}
+
+.wrapThumbImages {
+    width: 246px;
+    min-height: 74px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    visibility: visible;
+    /*
+    padding-top: .25em;
+    padding-bottom: .25em;
+    max-height: calc(100vh - 33px - 71px - 69px - 40px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    */
+}
+
+.wrapThumbScroller {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 33px - 71px - 69px - 60px);
+    display: flex;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+.wrapThumbScroller::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+}
+
+.wrapThumbScroller::-webkit-scrollbar-track {
+    border-radius: 99px;
+}
+
+.wrapThumbScroller::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+
+.wrapThumbScroller::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.thumbPreviewMini {
+    width: 74px;
+    height: 74px;
+    display: flex;
+    border-radius: 9px;
+    border: 1px solid transparent;
+    overflow: hidden;
+    box-sizing: border-box; 
+}
+
+.hoverPreviewMini {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.hoverPreviewMini svg {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hoverPreviewMini img {
+    margin: auto;    
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    
+    border-radius: 7px;
+    border-radius: 0px;
+    object-fit: fill;
+    object-position: center; 
+}
+
+.btnViewAll {
+    height: 24px;
+    width: auto;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnViewAll h2 {
+    cursor: pointer;
+    color: var(--muted-blue-text);
+    margin: auto;
+}
+
+.btnViewAll:hover {
+    cursor: pointer;
+}
+
+.btnViewAll:hover h2 {
+
+    text-decoration: underline;
+    filter: saturate(1) brightness(1.5);
+}
+
+.btnRetry {
+    height: 24px;
+    width: auto;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnRetry h2 {
+    cursor: pointer;
+    color: var(--muted-blue-text);
+    margin: auto;
+}
+
+.btnRetry:hover {
+    cursor: pointer;
+}
+
+.btnRetry:hover h2 {
+    text-decoration: underline;
+    filter: saturate(1) brightness(1.5);
+}
+
+
+.dropOptionSearch {
+    z-index: 5;
+    width: 88%;
+    height: auto;
+    /* EXACTLY FOUR .optSearch ROWS (40px EACH) PLUS THE .4em PADDING PAIR PLUS THE 1px
+       BORDER PAIR. box-sizing IS border-box, SO max-height HAS TO COVER ALL THREE OR THE
+       LAST ROW GETS SLICED - THE OLD 156px LEFT 141.2px OF CONTENT BOX, WHICH IS 3.53
+       ROWS. THE .4em HERE RESOLVES AGAINST THE SAME font-size THE PADDING DOES, SO IF
+       THAT EVER CHANGES THE TWO MOVE TOGETHER INSTEAD OF DRIFTING APART. */
+    max-height: calc((40px * 4) + (.4em * 2) + 2px);
+    border-radius: 6px;
+    background-color: var(--dark2);
+    border: 1px solid var(--muted-line);
+    /*[!] border-box SO THE 1px BORDER DOES NOT GROW THESE BY 2px -
+      THERE IS NO GLOBAL box-sizing IN THIS PROJECT */
+    box-sizing: border-box;
+    display: none;
+    cursor: default;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    scroll-behavior: smooth;
+    /* SAME SNAPPING .dropOptionVerti ALREADY USES, SO A HALF ROW CAN NEVER SIT PARKED AT
+       THE BOTTOM EDGE MID-SCROLL. scroll-padding-top MATCHES padding-top OR THE FIRST
+       SNAPPED ROW HIDES UNDER IT. */
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: .4em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 56px;
+    left: 17px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+.dropOptionSearch > [class*=opt] {
+    scroll-snap-align: start;
+}
+
+.dropOptionSearch::-webkit-scrollbar {
+    width: 4px;
+}
+
+.dropOptionSearch::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dropOptionSearch::-webkit-scrollbar-thumb {
+
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+
+.dropOptionSearch::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.optSearch {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+    padding-right: 1em;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.optSearch:hover {
+    background-color: var(--accent);
+}
+
+.optSearchFont {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optSearchFont:hover {
+    background-color: var(--accent);
+}
+
+.loadingDiv {
+    background-color: var(--muted-line);
+    width: 100%; 
+    height: 100%; 
+    margin: auto;
+    display: flex;
+    border-radius: 4px;
+}
+
+.loadingDiv svg {
+    width: 10%;
+    height: auto;
+    left: calc(50% - 5%);
+    top: calc(50% - 5%);
+}
+
+#snapdiv {
+    width: auto;
+    height: auto;
+    position: absolute;
+    display: flex;
+    left: 100vw;
+    top: 100vh;
+    background: transparent;
+}
+
+#tooltip {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background: var(--dark2);
+    cursor: default;
+    padding: .4em;
+    overflow: hidden;
+    outline: none;
+    position: absolute;
+    z-index: 5;
+    border: 1px solid var(--muted-line);
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));
+    left: 100vw;
+    opacity: 0;
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+}
+
+#tooltip h2 {
+    color: var(--sharp);
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    line-height: 1.6em;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+
+@property --badge-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes badgeSpin {
+    to { --badge-angle: 360deg; }
+}
+
+#lblAccessBadge {
+    height: 40px;
+    border-radius: 999px;
+    border: none;
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    position: relative;
+    background: linear-gradient(120deg, rgba(122, 142, 255, .10), rgba(117, 255, 245, .025));
+    margin: auto;
+    margin-right: 0px;
+
+}
+
+#lblAccessBadge::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(from var(--badge-angle),
+        rgba(122, 142, 255, .9), rgba(122, 142, 255, .45) 25%,
+        rgba(122, 142, 255, .9) 50%, rgba(122, 142, 255, .45) 75%,
+        rgba(122, 142, 255, .9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: badgeSpin 4s linear infinite;
+}
+
+#lblAccessBadge svg {
+    /* FIXED HEIGHT, NOT A PERCENTAGE WIDTH. WITH THE BADGE SIZED TO ITS CONTENT
+       A PERCENTAGE WIDTH RESOLVES AGAINST A BOX THAT DEPENDS ON THIS ELEMENT. */
+    height: 18px;
+    width: auto;
+    margin: auto;
+    margin-right: 0.6em;
+}
+
+#lblAccessBadge h1 {
+    border-color: var(--hover-line);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 10px;
+    margin: auto;
+    margin-left: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.divCoverDisabler {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    visibility: hidden;
+}

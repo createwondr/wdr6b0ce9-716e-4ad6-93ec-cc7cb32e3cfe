@@ -1,0 +1,557 @@
+.txtBlur {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtBlur:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtBlur:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtBrightness {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtBrightness:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtBrightness:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtContrast {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtContrast:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtContrast:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSaturation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtSaturation:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSaturation:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtTemperature {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtTemperature:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtTemperature:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+
+
+.tabOutlineLayer {
+    display: none;
+}
+
+.txtOutlineColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtOutlineColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtOutlineColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtOutlineOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOutlineOpacity:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOutlineOpacity:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOutlineSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOutlineSize:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOutlineSize:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.tabGlowLayer {
+    display: none;
+}
+
+.txtGlowColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtGlowColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtGlowColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+
+
+.txtGlowOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowOpacity:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowOpacity:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowSize:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowSize:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowSpread {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowSpread:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowSpread:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.tabShadowLayer {
+    display: none;
+}
+
+.txtShadowColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtShadowColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtShadowColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+
+
+
+.txtShadowOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowOpacity:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowOpacity:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowSize:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowSize:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowSpread {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowSpread:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowSpread:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowRotation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowRotation:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowRotation:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+/* THE IMAGE SWAP BUTTON. SAME SHAPE AS .btnFontLabel IN fonts.css - IT IS THE SAME CONTROL
+   ON A DIFFERENT PANEL, AND THE TWO ARE MEANT TO LOOK IDENTICAL. IF ONE CHANGES, CHANGE BOTH. */
+.btnImageLabel {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 1em;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid var(--muted-track);
+    box-sizing: border-box;
+}
+
+.btnImageLabel:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+/* THE CAPTION IS TRUNCATED IN JS, NOT BY CSS, BECAUSE THE ELLIPSIS HAS TO BE PART OF THE
+   STRING - sir, 2026-09-24. nowrap AND hidden ARE STILL HERE AS A FLOOR: A MEASUREMENT THAT
+   RUNS WHILE THE PANEL IS display:none CANNOT MEASURE, AND WITHOUT THESE THE BUTTON WOULD
+   GROW INSTEAD OF CLIPPING */
+.btnImageLabel h2 {
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.btnImageLabel svg {
+    width: 8px;
+    height: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+}
+
+/* SAME FOOTPRINT AS THE svg IT REPLACES SO THE LABEL DOES NOT SHIFT.
+   THE spin KEYFRAME LIVES IN modal.css, WHICH design.html ALREADY LOADS */
+.spinImageLabel {
+    width: 10px;
+    height: 10px;
+    flex: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+    border: 2px solid var(--muted-line);
+    border-top-color: var(--muted-track);
+    border-radius: 50%;
+    animation: spin .65s linear infinite;
+}
+
+/* THE LIVE SWAP STATE. THE :hover OVERRIDE HAS TO REPEAT THE BORDER OR .btnImageLabel:hover
+   STILL WINS */
+.btnImageLabel.swapping,
+.btnImageLabel.swapping:hover {
+    border: 1px solid var(--muted-track);
+}
+
+.btnImageLabel.swapping h2 {
+    color: var(--muted-track);
+}
+
+/* THE FAILED FETCH OVERLAY. IT SITS INSIDE THE LAYER BOX OVER THE img, WHICH IS LEFT IN
+   PLACE SO A SUCCESSFUL RETRY ONLY HAS TO SWAP src AND REMOVE THIS.
+   data-strip IS READ BY compileContent AND BY THE PNG EXPORT - THIS MUST NEVER BE
+   BAKED INTO A SAVED FILE OR A DOWNLOADED IMAGE */
+.cnvImageFailed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    box-sizing: border-box;
+    background-color: var(--dark2);
+    border: 1px solid var(--muted-line);
+}
+
+.cnvImageFailed h2 {
+    margin: auto;
+    padding: 0.5em;
+    color: var(--muted-blue-text);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.cnvImageFailed h2 span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.cnvImageFailed h2 span:hover {
+    color: var(--sharp);
+}
+
+.spinImageFailed {
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border: 2px solid var(--muted-line);
+    border-top-color: var(--muted-track);
+    border-radius: 50%;
+    animation: spin .65s linear infinite;
+}

@@ -1,0 +1,487 @@
+
+.canvas3D {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.optLayerMockup {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.optLayerMockup:hover {
+    background-color: var(--accent);
+}
+
+.optLayerMockupImage {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.optLayerMockupImage:hover {
+    background-color: var(--accent);
+}
+
+
+.optLayerMockupImageRed {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLayerMockupImageRed:hover {
+    background-color: salmon;
+}
+
+.optEnvironment {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optEnvironment:hover {
+    background-color: var(--accent);
+}
+
+#pnlBox3DMockup {
+    width: 100%;
+    height: 470px;
+    height: 100%;
+    margin: auto;
+    border-radius: 9px;
+    background-color: var(--muted-track);
+    background-color: transparent;
+    overflow: hidden;
+    transition: .1s;
+    display: flex;
+    flex-direction: column;
+}
+
+#pnlBox3DEnvironment {
+    width: 100%;
+    height: 470px;
+    height: 100%;
+    margin: auto;
+    border-radius: 9px;
+    background-color: var(--muted-track);
+    background-color: transparent;
+    overflow: hidden;
+    transition: .1s;
+    display: flex;
+    flex-direction: column;
+}
+
+.txtXRotation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtXRotation:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtXRotation:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtYRotation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+.txtYRotation:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtYRotation:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+
+.txtZRotation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+.txtZRotation:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtZRotation:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtLightRotation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+
+.txtColorDiffuse {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtColorDiffuse:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtColorDiffuse:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtMockupXOffset {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+}
+
+.txtMockupXOffset:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtMockupXOffset:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtMockupYOffset {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+}
+.txtMockupYOffset:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtMockupYOffset:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtMockupScale {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+}
+.txtMockupScale:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtMockupScale:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.contMockup {
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.chkFilmic {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.txtEnvBlur {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtEnvBlur:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtEnvBlur:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtEnvExposure {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtEnvExposure:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtEnvExposure:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtEnvRotation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtEnvRotation:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtEnvRotation:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtEnvBlur {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtEnvBlur:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtEnvBlur:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+#cnvEnv {
+    position: absolute;  
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#cnvEnv canvas {
+    /*
+    clip-path: inset(0 100% 0 0);
+    */
+    clip-path: circle(0% at 50% 50%);
+    transition: .3s;
+    width: 100%;
+    height: 100%;
+}
+
+#btnRemoveMockup {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    transition: .2s;
+    border-radius: 4px;
+    background: hsl(6, 93%, 71%, 0.25);
+    border: 1px solid salmon;
+    display: none;
+    margin-top: 1em;
+    box-sizing: border-box;
+}
+
+#btnRemoveMockup:hover {
+    filter: brightness(110%);
+}
+
+#btnRemoveMockup h2{
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: auto;
+    cursor: pointer;
+}

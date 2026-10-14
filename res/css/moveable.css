@@ -1,0 +1,118 @@
+:root {
+    --snap: #FF3E9D;
+    --moveableHandler: var(--accent);
+}
+
+.moveable-control {
+    background: var(--moveableHandler) !important;
+    border: 1px solid white !important;
+}
+.moveable-nw, .moveable-ne, .moveable-sw, .moveable-se {
+    width: 10px !important;
+    height: 10px !important;
+    margin-top: -5px !important;
+    margin-left: -5px !important;
+    border-radius: 999px !important;
+}
+.moveable-n, .moveable-s {
+    width: 26px !important;
+    height: 6px !important;
+    margin-top: -3px !important;
+    margin-left: -13px !important;
+    border-radius: 4px !important;
+}
+.moveable-e, .moveable-w {
+    width: 6px !important;
+    height: 26px !important;
+    margin-top: -13px !important;
+    margin-left: -3px !important;
+    border-radius: 4px !important;
+}
+.moveable-line {
+    background: var(--moveableHandler) !important;
+}
+
+.isGesturing .moveable-control,
+.isCramped .moveable-control {
+    visibility: hidden !important;
+}
+
+#cnvPin[data-handle="nw"] .moveable-nw,
+#cnvPin[data-handle="n"] .moveable-n,
+#cnvPin[data-handle="ne"] .moveable-ne,
+#cnvPin[data-handle="e"] .moveable-e,
+#cnvPin[data-handle="se"] .moveable-se,
+#cnvPin[data-handle="s"] .moveable-s,
+#cnvPin[data-handle="sw"] .moveable-sw,
+#cnvPin[data-handle="w"] .moveable-w {
+    visibility: visible !important;
+}
+
+/* CANVA STYLE: A SIDE BAR HIDES ONCE THE CORNER DOTS TOUCH IT (EDGE <= handleReach ON SCREEN, moveableUpdateCramped).
+   NOT WHILE GESTURING, SO THE BAR IN THE HAND STAYS. NOT WHEN CRAMPED, WHERE data-handle KEEPS THE LAST BAR
+   AS THE WAY BACK UP FROM THE FLOOR. ONE ID AND FOUR CLASSES OUT-SPECIFY THE data-handle RULE ABOVE */
+#cnvPin.isNarrow:not(.isGesturing):not(.isCramped) .moveable-n,
+#cnvPin.isNarrow:not(.isGesturing):not(.isCramped) .moveable-s,
+#cnvPin.isShort:not(.isGesturing):not(.isCramped) .moveable-e,
+#cnvPin.isShort:not(.isGesturing):not(.isCramped) .moveable-w {
+    visibility: hidden !important;
+}
+
+.moveable-line.moveable-guideline {
+    background: var(--snap) !important;
+}
+
+.moveable-line.moveable-dashed {
+    background: transparent !important;
+    border-top-color:  var(--snap) !important;
+    border-left-color: var(--snap) !important;
+}
+
+.moveable-size-value {
+    color: var(--snap) !important;
+}
+
+.moveable-line.moveable-guideline.moveable-bounds {
+    background: #d66 !important;
+}
+
+.moveable-around-control[data-direction="n"],
+.moveable-around-control[data-direction="e"],
+.moveable-around-control[data-direction="s"],
+.moveable-around-control[data-direction="w"] {
+    display: none !important;
+}
+
+/* LINE MODE HAS NO CORNERS, AND rotateAroundControls HANGS ROTATION OFF THE CORNER
+   CONTROLS - SO WITHOUT THIS A SPINE CANNOT BE ROTATED AT ALL. THE TWO END ZONES ARE
+   LET BACK IN, WHICH PUTS ROTATE AND STRETCH ON THE SAME HANDLE THE WAY FIGMA DOES.
+   #cnvPin[data-mode] OUT-SPECIFICS THE RULE ABOVE, SO ORDER IS NOT DOING THE WORK. */
+#cnvPin[data-mode="line"] .moveable-around-control[data-direction="w"],
+#cnvPin[data-mode="line"] .moveable-around-control[data-direction="e"] {
+    display: block !important;
+}
+
+/* IN LINE MODE THE TWO END HANDLES ARE CORNER HANDLES - THE SAME ROUND DOT, NOT THE
+   TALL SIDE BAR. THEY STILL RESIZE ALONG THE LINE; ONLY THE AFFORDANCE IS BORROWED, SO
+   AN END OF A LINE READS THE SAME AS A CORNER OF A BOX. THE ROTATION ARC OUTSIDE THEM
+   COMES FROM moveableCursorArt.rotate, WHICH NOW CARRIES w AND e.
+   #cnvPin[data-mode] + .class OUT-SPECIFICS THE SIDE-HANDLE RULE ABOVE. */
+#cnvPin[data-mode="line"] .moveable-e,
+#cnvPin[data-mode="line"] .moveable-w {
+    width: 10px !important;
+    height: 10px !important;
+    margin-top: -5px !important;
+    margin-left: -5px !important;
+    border-radius: 999px !important;
+}
+
+.moveable-control-box {
+    z-index: 99 !important;
+}
+
+
+html.is-gesturing #cnvPin * {
+    cursor: inherit !important;
+}
+
+.is-gesturing .pinBody { will-change: transform; }

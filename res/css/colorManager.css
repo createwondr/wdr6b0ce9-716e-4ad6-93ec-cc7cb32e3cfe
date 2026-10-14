@@ -1,0 +1,270 @@
+
+
+#colorManagerPanel {
+    width: 216px;
+    height: 208px;
+    width: auto;
+    height: auto;
+    border-radius: 9px;
+    background-color: var(--bg);
+    border: 1px solid var(--muted-line);
+    box-shadow: 0px 0px 10px rgba(0,10,20,1);
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    row-gap: 1em;
+    position: absolute !important;
+    z-index: 2 !important;
+    padding: 1em;
+}
+
+#btnSwitchSolid {
+    width: 50%;
+    height: 26px;
+    display: flex;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--muted-track);
+    cursor: pointer;
+    transition: .2s;
+}
+
+#btnSwitchSolid h2 {
+    color: var(--muted-blue-text);
+    margin: auto;
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .2s;
+    letter-spacing: 1px;
+}
+
+#btnSwitchSolid:hover h2 {
+    color: var(--sharp);
+}
+
+.colorManagerEntry {
+    display: flex;
+    width: 200px;
+    height: 26px;
+    justify-content: space-between;
+}
+
+#divSliderGradient {
+    width: 100%;
+    height: 1px;
+    position: relative;
+}
+
+.sliderGradient {
+    width: auto;
+    height: auto;
+    left: -6px;
+    top: -2px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#divGradientMeter {
+    width: 100%;
+    height: 24px;
+    margin-top: 1em;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+}
+
+#divGradientMeter img {
+    width: 100%;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 2px;
+    position: absolute;
+}
+
+#gradientMeter {
+    width: 100%;
+    height: 24px;
+    border-radius: 2px;
+    position: absolute;
+}
+
+#btnAddGradient {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    background: white;
+    display: flex;
+    cursor: pointer;
+}
+
+#btnAddGradient svg {
+    margin: auto;
+}
+
+.divGradientStop {
+    width: 64px;
+    height: 26px;
+    display: flex;
+    transition: .2s;
+    margin-top: 0px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 0px;
+    border-radius: 2px;
+    border: 1px solid var(--muted-track);
+}
+
+.divGradientStop svg {
+    margin: auto;
+    margin-left: 6px;
+}
+
+.divGradientStop:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.divGradientStop:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtGradientStop {
+    width: 34px;
+    height: 24px;
+    outline: none;
+    color: var(--sharp) !important;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    text-align: left;
+    border: none;
+    margin: auto;
+    margin-right: 4px;
+    background-color: transparent;
+}
+
+.txtGradient {
+    width: 60px;
+    height: 26px;
+    outline: none;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+    color: var(--sharp) !important;
+}
+
+.txtGradient:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtGradient:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.btnDelGradient {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    margin-right: 0px;
+    display: flex;
+    cursor: pointer;
+    border: 1px solid salmon;
+    border-radius: 2px;
+}
+
+.btnDelGradient svg {
+    margin: auto;
+}
+
+.thumbPickerGradient {
+    outline: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    margin: auto;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.breaklineColorManager {
+    background-color: var(--muted-track);
+    background-color: var(--muted-track);
+    width: 100%;
+    height: 1px;
+}
+
+#dropdownGradientMode {
+    display: flex;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: 0px;
+    height: 26px;
+    width: 64px;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    cursor: pointer;
+    transition: .2s;
+}
+
+#dropdownGradientMode h2 {
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    margin: auto;
+}
+
+#dropdownGradientMode svg{
+    width: 8px;
+    height: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+    transition: .2s;
+}
+
+#dropdownGradientMode:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+#divGradientRotation {
+    width: 56px;
+    height: 26px;
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: auto;
+    margin-right: 0px;
+    margin-left: auto;
+    border-radius: 3px;
+    transition: .2s;
+    border: 1px solid var(--muted-track);
+}
+
+#divGradientRotation:hover {
+    border: 1px solid black;
+}
+
+#divGradientRotation svg {
+    margin: auto;
+    margin-left: 6px;
+}
+
+#txtGradientRotation {
+    width: 34px;
+    height: 24px;
+    outline: none;
+    color: var(--sharp) !important;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: default;
+    text-align: left;
+    border: none;
+    margin: auto;
+    margin-right: 0px;
+    background-color: transparent;
+}

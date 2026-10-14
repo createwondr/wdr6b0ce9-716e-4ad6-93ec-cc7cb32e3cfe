@@ -1,0 +1,861 @@
+/*borders*/
+
+#cnvPin {
+    overflow: hidden;
+    position: absolute;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+#selectPin {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    position: absolute;
+    border-radius: 6px;
+    border: 2px dotted var(--accent);
+}
+
+#selectPinGroup {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+}
+
+.vertiGuide {
+    width: 1px;
+    position: absolute;
+    z-index: 999;
+}
+
+.horiGuide {
+    height: 1px;
+    position: absolute;
+    z-index: 999;
+}
+
+/* NO min-width/min-height HERE. A CONSTANT IN CSS WOULD BE A FLOOR IN SCREEN PIXELS
+   WHILE THE LAYER'S FLOOR IS IN LAYOUT PIXELS - THE OLD 10px ONLY EVER AGREED WITH THE
+   LAYERS' 20px AT 50% ZOOM. sizePinToCanvas() WRITES min-width/min-height INLINE AS
+   THE LAYER'S OWN DECLARED MINIMUM x THE ZOOM, SO BOTH FLOORS ARE THE SAME PHYSICAL
+   SIZE AT EVERY ZOOM LEVEL. */
+.pinBody {
+    display: grid;
+    position: absolute;
+}
+
+/* A LOCKED LAYER IS NOT SELECTABLE ON THE CANVAS - CLICKS, RIGHT CLICKS AND DRAGS PASS THROUGH TO
+   WHATEVER IS UNDER IT. IT STAYS SELECTABLE FROM THE LAYERS PANEL, WHERE IT IS UNLOCKED, UNHIDDEN,
+   RENAMED AND DELETED */
+.pinBody[data-lock="lock"] {
+    pointer-events: none;
+}
+
+/* A LINE'S PIN IS DELIBERATELY 1px TALL SO MOVEABLE DRAWS A HAIRLINE WITH A HANDLE AT
+   EACH END. THAT LEAVES A 1px DRAG TARGET, WHICH IS NOT USABLE - SO THE POINTER AREA IS
+   PADDED VERTICALLY HERE. ::before DOES NOT CHANGE THE ELEMENT'S RECT, SO THE CONTROL
+   BOX MOVEABLE MEASURES STAYS A HAIRLINE. HORIZONTALLY IT ADDS NOTHING: THE ENDS ARE
+   WHERE THE RESIZE HANDLES LIVE AND MUST NOT BE COVERED. */
+.pinBody[data-type="line"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -6px;
+    bottom: -6px;
+}
+
+.cnvLayers {
+    position: absolute;
+    display: flex;
+}
+
+.cnvLayers svg {
+    position: absolute;
+}
+
+.cnvLayersBorder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.cnvLayers img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: high-quality;
+    position: absolute;
+    /* 1x1 IS THE DESIGN FLOOR NOW - A 5px IMAGE INSIDE A 1px LAYER WOULD SPILL OUT OF IT */
+    min-width: 1px !important;
+    min-height: 1px !important;
+}
+
+.cnvOutline {
+    position: absolute;
+}
+
+#pnlBoxImage {
+
+    width: 100%;
+    height: 470px;
+    height: 100%;
+    margin: auto;
+    border-radius: 9px;
+    background-color: var(--muted-track);
+    background-color: transparent;
+    overflow: hidden;
+    transition: .1s;
+    display: flex;
+    flex-direction: column;
+}
+
+#pnlBoxVector {
+
+    width: 100%;
+    height: 470px;
+    height: 100%;
+    margin: auto;
+    border-radius: 9px;
+    background-color: var(--muted-track);
+    background-color: transparent;
+    overflow: hidden;
+    transition: .1s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pnlBoxLayer {
+    width: 246px;
+    height: 40px;
+    margin-right: auto;
+    margin-left: 1px;
+    /*
+    border-bottom: 1px solid var(--muted-track);
+    border-top: 1px solid var(--muted-track);
+    border-radius: 6px;
+    background-color: var(--muted-track);
+    background-color: transparent;
+    border: 1px solid var(--muted-track);
+    margin-bottom: .5em;
+    */
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pnlTitleLayer {
+
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    
+}
+
+
+.btnExpandCollapseLayer {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+    cursor: pointer;
+    rotate: 0deg;
+    transition: .2s;
+}
+
+.btnExpandCollapseLayer svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+.btnShowHideLayer {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.btnShowHideLayer svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+.optLayerBlend {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLayerBlend:hover {
+    background-color: var(--accent);
+}
+
+.optTextWeight {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optTextWeight:hover {
+    background-color: var(--accent);
+}
+
+.optLayerStyle {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLayerStyle:hover {
+    background-color: var(--accent);
+}
+
+.optLayerStyleImage {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLayerStyleImage:hover {
+    background-color: var(--accent);
+}
+
+.optLayerStyleElement {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLayerStyleElement:hover {
+    background-color: var(--accent);
+}
+
+.optLayerStyleText {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLayerStyleText:hover {
+    background-color: var(--accent);
+}
+
+.contentImages {
+    width: 214px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+
+.contentVector {
+    width: 214px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+
+.pnlEntryFold {
+    display: flex;
+    width: 210px;
+    width: 100%;
+    height: 40px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.pnlEntryFold h2 {
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.pnlEntrySide {
+    height: 40px;
+    width: 42%;
+    width: 34%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pnlEntrySide svg {
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: .2s;
+    filter: saturate(0) brightness(2);
+}
+
+.tabSliderLayer {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: .2s;
+}
+
+.tabBasicLayer {
+    height: auto;
+    width: 214px;
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pnlDropLayer {
+    width: 210px;
+    height: 40px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pnlBottomLayerTrack {
+    background-color: var(--muted-track);
+    width: 90%;
+    height: 1px;
+    margin: auto;
+    top: 400px;
+}
+
+.pnlBottomLayerThumb {
+    background-color: var(--accent);
+    width: 33%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.pnlBottomLayerThumb2 {
+    background-color: var(--accent);
+    width: 50%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.pnlBottomLayer {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--muted-track); 
+    top: 400px;
+}
+
+.pnlBottomLayer h2:hover {
+    color: #99B7FF;
+}
+
+.frBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.frBottom div {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.frBottom div:hover svg {
+    filter: saturate(1) brightness(1.5);
+}
+
+.frBottom div svg{
+    margin: auto;
+}
+
+.txtMiniLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtMiniLayer:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtMiniLayer:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtRotationLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtRotationLayer:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtRotationLayer:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOpacityLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOpacityLayer:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOpacityLayer:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+
+
+.checkboxLayer {
+    outline: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid var(--hover-line);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 6px;
+}
+
+.txtWidthLayer {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtWidthLayer:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtWidthLayer:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtHeightLayer {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtHeightLayer:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtHeightLayer:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtXLayer {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtXLayer:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtXLayer:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtYLayer {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtYLayer:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtYLayer:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.chkFlipX {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.chkFlipY {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.chkSwitch {
+    width: 12px;
+    height: 12px;
+    border-radius: 99px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: var(--muted-blue-text);
+    transition: .2s;
+    transform: translateX(1px);
+}
+
+.txtTextColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtTextColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtTextColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+
+.txtResizeText {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtResizeText:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtResizeText:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+
+.txtLetterSpacing {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtLetterSpacing:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtLetterSpacing:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+
+.txtLineHeight {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtLineHeight:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtLineHeight:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSubLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtSubLayer:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSubLayer:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+
+.txtVectorCornerRadius {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorCornerRadius:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorCornerRadius:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.pnlDropSide {
+    height: 40px;
+    width: 88px;
+    margin-top: auto;
+    margin-bottom: auto;
+}

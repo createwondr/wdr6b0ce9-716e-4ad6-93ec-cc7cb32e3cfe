@@ -1,0 +1,54 @@
+
+/*
+#configContainer {
+    width: 246px;
+    border-radius: 6px;
+    height: 300px;
+    background-color: red;
+}
+*/
+
+#configContainer {
+    width: 246px;
+    height: 794px;
+    max-height: calc(100% - 30px);
+    margin-top: .5em;
+    /*70px is pnlHeader, 1+8px is breakline and .5em, 40px is menufooter */
+}
+
+#wrapUploads {
+    width: 246px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pnlBoxThumb {
+    width: 118px;
+    height: 118px;
+    border-radius: 9px;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.pnlBoxThumb img {  
+    width: auto;
+    height: auto;
+    margin: auto;
+    /*
+    border-radius: 7px;
+    */
+}
+
+.pnlBoxThumb svg {
+    width: 80%;
+    height: 80%;
+    object-fit:cover;
+    margin:auto;
+}
+
+

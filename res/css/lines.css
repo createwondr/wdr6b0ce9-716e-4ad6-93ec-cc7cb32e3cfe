@@ -1,0 +1,380 @@
+#pnlBoxLine {
+    width: 100%;
+    min-width: 100%;
+    height: 470px;
+    height: 100%;
+    margin: auto;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: .1s;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dropdownLineStart {
+    width: 100%;
+    height: 40px;
+    margin-top: auto;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    transition: .2s;
+    border-radius: 4px;
+    border: 1px solid var(--hover-line);
+}
+
+.dropdownLineStart:hover {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.dropdownLineEnd {
+    width: 100%;
+    height: 40px;
+    margin-top: auto;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    transition: .2s;
+    border-radius: 4px;
+    border: 1px solid var(--hover-line);
+}
+
+.dropdownLineEnd:hover {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.chosenLineStart {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.chosenLineEnd {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    transform: scale(-1,1);
+}
+
+.chosenLineEnd svg {
+    translate: -18px;
+}
+
+.dropdownLineStart svg{
+    width: 8px;
+    height: 6px;
+    margin: auto;
+}
+
+.dropdownLineEnd svg{
+    width: 8px;
+    height: 6px;
+    margin: auto;
+}
+
+.dropOptionLineStart {
+    z-index: 5;
+    width: 90px;
+    height: auto;
+    /* FOUR 32px optLineHead ROWS AND NOTHING OF A FIFTH. ONE BREAKLINE SITS INSIDE THE FIRST
+       FOUR ROWS (AFTER round): 128 + 13 + 14. 142 LEFT 25 OF THE 4th ROW SHOWING */
+    max-height: 155px;
+    border-radius: 6px;
+    background-color: var(--dark2);
+    border: 1px solid var(--muted-line);
+    /*[!] border-box SO THE 1px BORDER DOES NOT GROW THESE BY 2px -
+      THERE IS NO GLOBAL box-sizing IN THIS PROJECT */
+    box-sizing: border-box;
+    display: none;
+    cursor: default;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-color: var(--scroll-thumb) transparent;
+    scrollbar-width: thin;
+    
+}
+
+.dropOptionLineStart::-webkit-scrollbar {
+    width: 1px;
+}
+
+.dropOptionLineStart::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dropOptionLineStart::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+
+.dropOptionLineStart::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.dropOptionLineEnd {
+    z-index: 5;
+    width: 90px;
+    height: auto;
+    /* FOUR 32px optLineHead ROWS AND NOTHING OF A FIFTH. ONE BREAKLINE SITS INSIDE THE FIRST
+       FOUR ROWS (AFTER round): 128 + 13 + 14. 142 LEFT 25 OF THE 4th ROW SHOWING */
+    max-height: 155px;
+    border-radius: 6px;
+    background-color: var(--dark2);
+    border: 1px solid var(--muted-line);
+    /*[!] border-box SO THE 1px BORDER DOES NOT GROW THESE BY 2px -
+      THERE IS NO GLOBAL box-sizing IN THIS PROJECT */
+    box-sizing: border-box;
+    display: none;
+    cursor: default;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-color: var(--scroll-thumb) transparent;
+    scrollbar-width: thin;
+    
+}
+
+.dropOptionLineEnd::-webkit-scrollbar {
+    width: 1px;
+}
+
+.dropOptionLineEnd::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dropOptionLineEnd::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+
+.dropOptionLineEnd::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.optLineHead {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLineHead:hover {
+    background-color: var(--accent);
+}
+
+.optLineHead svg {
+    width: 40%;
+    height: auto;
+}
+
+
+.txtLineStrokeColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtLineStrokeColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtLineStrokeColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtLineStrokeWidth {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtLineStrokeWidth:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtLineStrokeWidth:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtLineStrokeDash {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtLineStrokeDash:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtLineStrokeDash:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtLineStrokeGap {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtLineStrokeGap:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtLineStrokeGap:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.chkLineStrokeCap {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+
+.divLineStart {
+    display: flex;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+.divLineStart svg {
+    width: 100%;
+    height: auto;
+}
+
+.divLineStart div {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/* THE BODY IS WHATEVER IS LEFT AFTER THE TWO HEADS, DOWN TO AND INCLUDING ZERO.
+   IT WAS width:100%, WHICH MEANT IT NEVER GAVE ANY WIDTH BACK - IT JUST OVERFLOWED
+   BEHIND THE HEADS, SO "THE BODY IS 0" COULD NEVER ACTUALLY HAPPEN.
+   flex:1 1 0 MAKES IT TAKE THE REMAINDER; min-width:0 IS THE PART THAT MATTERS -
+   WITHOUT IT A FLEX ITEM REFUSES TO SHRINK BELOW ITS CONTENT. */
+.divLineMid {
+    display: flex;
+    height: 100%;
+    flex: 1 1 0;
+
+    /* 🔴 4px, NOT 0. A DEFAULT LINE IS MITER-HEADED, SO BOTH HEADS ARE display:none AND
+       THE BODY *IS* THE WHOLE LINE - "THE BODY HAS RUN OUT" COULD NEVER BECOME TRUE AND
+       A FRESH LINE HAD NO WORKING FLOOR AT ALL. THIS IS THE ONE NUMBER THAT DEFINES THE
+       MINIMUM; lineHeadFloor() AND THE RESIZE GUARD BOTH READ IT FROM HERE RATHER THAN
+       CARRYING THEIR OWN COPY. */
+    min-width: 4px;
+}
+
+.divLineMid svg {
+    width: 100%;
+    height: auto;
+}
+
+.divLineEnd {
+    display: flex;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+.divLineEnd div {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    transform: scale(-1,1);
+}
+
+.divLineEnd svg {
+    width: 100%;
+    height: auto;
+    transform: scale(-1,1);
+}

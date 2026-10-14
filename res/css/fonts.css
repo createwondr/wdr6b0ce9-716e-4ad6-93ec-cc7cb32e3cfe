@@ -1,0 +1,982 @@
+#pnlBoxText {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: transparent;
+    overflow: hidden;
+    transition: .1s;
+    display: flex;
+    flex-direction: column;
+}
+
+#breaklineTrackFonts {
+    background: var(--muted-track);
+    width: 88%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5em;
+}
+
+#breaklineThumbFonts {
+    background-color: var(--accent);
+    width: 33%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+#fontCategory {
+    display: flex;
+    height: 40px;
+    width: 88%;
+    margin: auto;
+    margin-bottom: 1em;
+    justify-content: space-between;
+    
+}
+
+.fontSelect {
+    width: 30%;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.fontSelect svg {
+    margin: auto;
+    width: 45%;
+    height: 45%;
+}
+
+#tabFontCategory {
+    width: 264px;
+    height: 700px;
+    overflow: hidden;
+}
+
+#tabSliderFont {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: .2s;
+    outline: none;
+    border: none;
+}
+
+#tabStylish {
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    outline: none;
+    border: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+#tabStylish::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+#tabStylish::-webkit-scrollbar-track {
+    border-radius: 99px;
+}
+
+#tabStylish::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+
+#tabStylish::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+#tabSansSerif {
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    outline: none;
+    border: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+#tabSansSerif::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+}
+
+#tabSansSerif::-webkit-scrollbar-track {
+    border-radius: 99px;
+}
+
+#tabSansSerif::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+
+#tabSansSerif::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+#tabSerif {
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    outline: none;
+    border: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+#tabSerif::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+}
+
+#tabSerif::-webkit-scrollbar-track {
+    border-radius: 99px;
+}
+
+#tabSerif::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+
+#tabSerif::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.wrapFonts {
+    width: 246px;
+    height: 50px;
+    margin-right: auto;
+    border-radius: 9px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    overflow: hidden;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    display: flex;
+}
+
+.wrapFonts h2 {
+    color: var(--muted-blue-text);
+    margin: auto;
+    margin-left: 1em;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: flex;
+    filter: saturate(1) brightness(1.5);
+}
+
+.pnlBoxStylish {
+    width: 246px;
+    height: 50px;
+    margin-right: auto;
+    border-radius: 9px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    overflow: hidden;
+    margin-bottom: 1em;
+    margin-top: .5em;
+    display: flex;
+    /*transition: .2s;*/
+}
+
+.pnlBoxStylish h2 {
+    color: #9DAFDB;
+    margin: auto;
+    margin-left: 1em;
+    font-weight: 400;
+    font-size: 16px;
+    /*transition: .2s;*/
+    letter-spacing: 1px;
+}
+
+.pnlBoxSansSerif {
+    width: 246px;
+    height: 50px;
+    margin-right: auto;
+    border-radius: 9px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    overflow: hidden;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    display: flex;
+    /*transition: .2s;*/
+}
+
+.pnlBoxSansSerif h2 {
+    color: #9DAFDB;
+    margin: auto;
+    margin-left: 1em;
+    font-weight: 400;
+    font-size: 16px;
+    /*transition: .2s;*/
+    letter-spacing: 1px;
+}
+
+.pnlBoxSerif {
+    width: 246px;
+    height: 50px;
+    margin-right: auto;
+    border-radius: 9px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    overflow: hidden;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    display: flex;
+    /*transition: .2s;*/
+}
+
+.pnlBoxSerif h2 {
+    color: #9DAFDB;
+    margin: auto;
+    margin-left: 1em;
+    font-weight: 400;
+    font-size: 16px;
+    /*transition: .2s;*/
+    letter-spacing: 1px;
+}
+
+.fontPopular {
+    width: 240px;
+    min-width: 240px;
+    height: 40px;
+    margin-bottom: .5em;
+    display: flex;
+}
+
+.fontPopular h2{
+    color: var(--sharp);
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 13px;
+}
+
+.fontResults {
+    width: 240px;
+    min-width: 240px;
+    height: 40px;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    display: flex;
+}
+
+.fontResults h2{
+    color: var(--sharp);
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 13px;
+}
+
+.textArea {
+    color: #949EFF;
+    white-space: nowrap;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: default;
+    text-transform: uppercase;
+}
+
+.textDisplay {
+    width: auto;
+    height: auto;
+    position: absolute;
+    color: black;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.contText {
+    width: 240px;
+    min-width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.textTitle {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    cursor: default;
+    margin-top: .5em;
+}
+
+.textTitle h2 {
+    color: var(--sharp);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600px;
+    cursor: default;
+}
+
+.optFonts {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optFonts:hover {
+    background-color: var(--accent);
+}
+
+.optResults {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.selTextCase {
+    height: 40px;
+    width: 42%;
+    display: flex;
+}
+
+.selTextResize {
+    height: 40px;
+    width: 42%;
+    display: flex;
+}
+
+.selTextHori {
+    height: 40px;
+    width: 42%;
+    display: flex;
+}
+
+.selTextVerti {
+    height: 40px;
+    width: 42%;
+    display: flex;
+}
+
+/* ========================TEXT EDITOR======================*/
+#pnlBoxTextEditor {
+    width: 100%;
+    height: 233px; /*this includs 18px the same width left and right which is 88% of 300px width = 36px / 2 */
+    /*original height = 233px*/
+    height: auto;
+    background-color: transparent;
+    overflow: hidden;
+    transition: .1s;
+    display: flex;
+    flex-direction: column;
+}
+
+#pnlBoxEmojiSymbol {
+    width: 100%;
+    height: 243px; /* + 18px same with pnlBoxTextEditor */
+    /*original height 243px */
+    height: auto;
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.txtEditorBox {
+    color: var(--sharp);
+    outline: none;
+    border: none;
+    resize: none;
+    white-space: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    overflow: visible;
+    background-color: transparent;
+    padding: 8px;
+    width: 246px;
+    height: 76px;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid var(--muted-track);
+    transition: .2s;
+    cursor: default;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+.txtEditorBox::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+.txtEditorBox::-webkit-scrollbar-track {
+    border-radius: 99px;
+}
+
+.txtEditorBox::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+
+.txtEditorBox::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.txtEditorBox::placeholder {
+    color: var(--muted-blue-text);
+    font-weight: 400;
+    opacity: 1; /* Firefox */
+}
+  
+.txtEditorBox::-ms-input-placeholder { /* Edge 12 -18 */
+    color: var(--sharp);
+    font-weight: 400;
+}
+
+.txtEditorBox:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtEditorBox:focus {
+    border: 1px solid var(--sharp-track);
+}
+
+#btnSaveEdit {
+    width: 224px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    background-color: #7595E5;
+    transition: .2s;
+    padding-right: 40px;
+    margin-bottom: 18px;
+}
+
+#btnSaveEdit:hover {
+    /*background: linear-gradient(var(--accent) 1%, var(--accent) 2%, var(--accent) 100%);*/
+    background-color: #82A6FF;
+}
+
+
+#btnSaveEdit h2 {
+    color: var(--sharp);
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+#tabSliderBoxText {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: .2s;
+    height: 98px;
+    height: 8em;
+    margin-top: 0.5em;
+}
+
+.tabEmojisBox {
+    height: 100%;
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabSymbolsBox {
+    height: 100%;
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchboxEmojis {
+    height: 40px;
+    width: 262px;
+    display: flex;
+    border-radius: 999px;
+    border: 1px solid var(--muted-track);
+    transition: .2s;
+    cursor: default;
+    margin-top: 1.5em;
+    margin-bottom: 18px;
+}
+
+.searchboxIcon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    display: flex;
+}
+
+.searchboxIcon svg {
+    margin: auto;
+}
+
+.txtSearchEmojiSymbol {
+    height: 40px;
+    width: 180px;
+    font-family: "Inter";
+    outline: none;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--sharp);
+    background-color: transparent;
+    cursor: default;
+}
+
+.txtSearchEmojiSymbol::placeholder {
+    color: var(--muted-blue-text);
+    font-weight: 400;
+    opacity: 1;
+}
+
+#contEmoji {
+    width: 264px;
+    height: 8em;
+    margin: auto;
+    margin-top: 0px;
+    overflow: hidden;
+    padding-bottom: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: normal;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+#contEmoji::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+#contEmoji::-webkit-scrollbar-track {
+    border-radius: 99px;
+    background-color:var(--muted-track);
+}
+
+#contEmoji::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+
+#contEmoji::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.emojiTitle {
+    width: 100%;
+    height: 28px;
+    display: flex;
+}
+
+.emojiTitle h2 {
+    color: var(--muted-blue-text);
+    margin: auto;
+    margin-left: 0px;
+    font-size: 12px;
+    font-weight: 600px;
+    cursor: default;
+}
+
+.wrapEmoji {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: auto;
+}
+
+
+.clickEmoji {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: transparent;
+    display: flex;
+    padding-bottom: 2px;
+}
+
+.clickEmoji:hover {
+    background-color: var(--accent);
+    background-color: var(--dark2);
+}
+
+.clickEmoji h2 {
+    margin: auto;
+    font-size: 18px;
+}
+
+#contSymbol {
+    width: 264px;
+    height: 8em;
+    margin: auto;
+    margin-top: 0px;
+    overflow: hidden;
+    padding-bottom: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: normal;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+#contSymbol::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+#contSymbol::-webkit-scrollbar-track {
+    border-radius: 99px;
+    background-color:var(--muted-track);
+}
+
+#contSymbol::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+  
+
+#contSymbol::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.symbolTitle {
+    width: 100%;
+    height: 28px;
+    display: flex;
+}
+
+.symbolTitle h2 {
+    color: var(--muted-blue-text);
+    margin: auto;
+    margin-left: 0px;
+    font-size: 12px;
+    font-weight: 600px;
+    cursor: default;
+}
+
+.wrapSymbol {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: auto;
+}
+
+.clickSymbol {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: transparent;
+    display: flex;
+    padding-bottom: 2px;
+}
+
+.clickSymbol:hover {
+    background-color: var(--accent);
+    background-color: var(--dark2);
+}
+
+.clickSymbol h2 {
+    margin: auto;
+    font-size: 18px;
+    color: var(--sharp);
+    font-weight: 300;
+}
+
+.btnCapitalize {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnCapitalize h2 {
+    margin: auto;
+    color: var(--muted-blue-text);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.btnUpperCase {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.btnUpperCase h2 {
+    margin: auto;
+    color: var(--muted-blue-text);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.btnLowerCase {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.btnLowerCase h2 {
+    margin: auto;
+    color: var(--muted-blue-text);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.btnAutoWidth {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnAutoWidth svg {
+    margin: auto;
+}
+
+.btnAutoHeight {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnAutoHeight svg {
+    margin: auto;
+}
+
+.btnFixedSize {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnFixedSize svg {
+    margin: auto;
+}
+
+.btnAlignLeft {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnAlignLeft svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignCenter {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnAlignCenter svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignRight {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnAlignRight svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignTop {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnAlignTop svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignMiddle {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnAlignMiddle svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignBottom {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btnAlignBottom svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnFontLabel {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    margin-top: 1em;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid var(--muted-track);
+    box-sizing: border-box;
+}
+
+.btnFontLabel:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+
+.btnFontLabel h2 {
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: auto;
+}
+
+
+.btnFontLabel svg {
+    width: 8px;
+    height: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+}
+
+/* SAME FOOTPRINT AS THE 10px svg IT REPLACES SO THE LABEL DOES NOT SHIFT.
+   THE spin KEYFRAME LIVES IN modal.css, WHICH design.html ALREADY LOADS */
+.spinFontLabel {
+    width: 10px;
+    height: 10px;
+    flex: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+    border: 2px solid var(--muted-line);
+    border-top-color: var(--muted-track);
+    border-radius: 50%;
+    animation: spin .65s linear infinite;
+}
+
+/* THE LIVE SWAP FONT STATE. THE LOOK LIVES HERE SO IT CAN CHANGE WITHOUT TOUCHING JS,
+   AND THE :hover OVERRIDE HAS TO REPEAT THE BORDER OR .btnFontLabel:hover STILL WINS */
+.btnFontLabel.swapping,
+.btnFontLabel.swapping:hover {
+    border: 1px solid var(--muted-track);
+}
+
+.btnFontLabel.swapping h2 {
+    color: var(--muted-track);
+}

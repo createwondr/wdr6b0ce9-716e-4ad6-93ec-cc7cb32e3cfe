@@ -1,0 +1,36 @@
+/* SINGLE SOURCE OF TRUTH FOR THEME VARIABLES */
+/* MUST BE LINKED FIRST ON EVERY PAGE */
+/* DO NOT REDECLARE :root IN ANY OTHER FILE, LAST ONE LOADED WOULD SILENTLY WIN */
+
+:root {
+
+    color-scheme: dark;
+    --ads: hsl(0 0% 11%);
+    --bg: hsl(0 0% 10%);
+    --dark1: hsl(0 0% 9%);
+    --dark2: hsl(0 0% 8%);
+    --dark3: hsl(0 0% 11%);
+    --sharp: hsl(0 0% 90%);
+    --darkline: hsl(0 0% 5%);
+    --breakline: hsl(0 0% 20%);
+    --placeholder: hsl(0 0% 50%);
+    --muted: hsl(222 4% 48.6%);
+
+    --hue: 223;
+    --sat: 20%;
+
+    --muted-line: hsl(var(--hue) var(--sat) 16%);
+    --muted-track: hsl(var(--hue) var(--sat) 25%);
+    --sharp-track: hsl(var(--hue) var(--sat) 30%);
+    --hover-line: hsl(var(--hue) var(--sat) 40%);
+    --muted-blue-text: hsl(var(--hue) var(--sat) 50%);
+    --accent: hsl(var(--hue) 50% 60%);
+    --scroll-thumb: hsl(var(--hue) var(--sat) 25%);
+    --scroll-thumb-hover: hsl(var(--hue) var(--sat) 26%);
+
+    --selection: hsl(var(--hue) 31% 65%);
+    --overlay-light: rgba(255, 255, 255, 0.075);
+    --gradient: linear-gradient(100deg, #CBA6FF, #7A8EFF 45%, #75FFF5);
+    --glow: radial-gradient(circle at 50% -10%, rgba(122, 142, 255, .10), transparent 38%);
+
+}

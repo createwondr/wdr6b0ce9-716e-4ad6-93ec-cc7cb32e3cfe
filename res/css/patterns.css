@@ -1,0 +1,595 @@
+
+#cnvGrpPatterns {
+    width: 100%;
+    height: 100%;
+    position: absolute;  
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cnvPatterns {
+    width: "100%";
+    height: "100%";
+
+    display: "grid";
+    grid-template-columns: "repeat(10, 10px)";
+    grid-gap: '0%';
+    flex-wrap: "wrap";
+    position: "absolute";
+    background-color: "transparent"
+}
+
+.contPattern {
+    width: 240px;
+    min-width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.optPattern {
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+
+.hoverPattern {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.hoverPattern:hover {
+    background-color: var(--accent);
+    background-color: transparent;
+}
+
+.hoverPattern svg {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.patTitle {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    cursor: default;
+    margin-top: .5em;
+}
+
+.patTitle h2 {
+    color: var(--sharp);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600px;
+    cursor: default;
+}
+
+#pnlBoxPattern {
+    width: 100%;
+    height: 470px;
+    height: 100%;
+    margin: auto;
+    border-radius: 9px;
+    background-color: var(--muted-track);
+    background-color: transparent;
+    overflow: hidden;
+    transition: .1s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pnlTitlePattern {
+    display: flex;
+    width: 240px;
+    height: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--accent);
+    background-color: transparent;
+}
+
+.pnlTitlePattern h2 {
+    color: var(--sharp);
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+}
+
+.contentPattern {
+    width: 214px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+
+.tabSliderPattern {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: .2s;
+}
+
+.tabBasicPattern {
+    height: auto;
+    width: 214px;
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pnlDropPattern {
+    width: 210px;
+    height: 40px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabStylePattern {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 214px;
+}
+
+.pnlBottomPatternTrack {
+    background-color: var(--muted-track);
+    width: 90%;
+    height: 1px;
+    margin: auto;
+    top: 400px;
+}
+
+.pnlBottomPatternThumb {
+    background-color: var(--accent);
+    width: 50%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.pnlBottomPattern {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--muted-track); 
+    top: 400px;
+}
+
+.pnlBottomPattern h2:hover {
+    color: #99B7FF;
+}
+
+.frBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.frBottom div {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.frBottom div:hover svg {
+    filter: saturate(1) brightness(1.5);
+}
+
+.frBottom div svg{
+    margin: auto;
+}
+
+
+.txtHeaderPattern {
+    margin: auto;
+    width: 80px;
+    height: 24px;
+    outline: none;
+    color: var(--sharp);
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+    text-align: center;
+    cursor: default;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: .2s;
+    background-color: transparent;
+}
+
+.dropdownPatternBlend {
+    width: 210px;
+    height: 32px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    transition: .2s;
+    border-radius: 6px;
+    border: 1px solid var(--hover-line);
+}
+
+.dropdownPatternBlend:hover {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.dropdownPatternBlend h2{
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.dropdownPatternBlend svg{
+    width: 8px;
+    height: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+}
+
+
+.optPatternPart {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optPatternPart:hover {
+    background-color: var(--accent);
+}
+
+.optPatternPreset {
+    width: 100%;
+    height: 32px;
+    height: 40px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optPatternPreset:hover {
+    background-color: var(--accent);
+}
+
+
+.txtColorPattern {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtColorPattern:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtColorPattern:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtOpacityPattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOpacityPattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOpacityPattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtRotationPattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtRotationPattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtRotationPattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtXPattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtXPattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtXPattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtYPattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtYPattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtYPattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSizePattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtSizePattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSizePattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtScalingPattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtScalingPattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtScalingPattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSpacingPattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtSpacingPattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtSpacingPattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtRandomSizePattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtRandomSizePattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtRandomSizePattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtRandomSpinPattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtRandomSpinPattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtRandomSpinPattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtStrokeWidthPattern {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtStrokeWidthPattern:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtStrokeWidthPattern:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+
+.chkRandomSeed {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+
+

@@ -1,0 +1,138 @@
+* {
+    margin: 0px;
+    padding: 0px;    
+    font-family: "Inter";
+}
+
+/* BODY FADES TO REACH design.html, WHICH HAS NO GLOW. WITHOUT A BACKGROUND HERE THAT
+   FADE WOULD EXPOSE THE BROWSER'S WHITE CANVAS FOR 200ms. billing.css DOES THE SAME. */
+html {
+    background: var(--bg);
+}
+
+body {
+    /* THE GLOW LIVES HERE. IT ONLY FADES ON THE WAY OUT TO design.html, NEVER ON
+       ARRIVAL. body WAS visibility: hidden, WHICH
+       HIDES THE BACKGROUND TOO - SO THE GLOW COULD NOT PAINT UNTIL THE SESSION
+       CHECK AND THE EDGE CALL HAD FINISHED, AND IT SNAPPED ON WITH THE CONTENT.
+       #blurWrapper AT opacity 0 ALREADY STOPS ANY CONTENT FLASH, AND IT IS THE
+       ONLY VISIBLE CHILD OF body ON EVERY PAGE, SO HIDING body BOUGHT NOTHING.
+       NOW THE BACKDROP IS PAINTED THE INSTANT THE PAGE LOADS AND IS IDENTICAL ON
+       index, billing AND design - ONLY THE CONTENT CROSSES OVER. */
+    background: var(--glow), var(--bg);
+    transition: opacity 0.2s;
+    overflow: hidden;
+    min-width: 350px !important;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard syntax */
+    cursor: default;
+}
+
+a {
+  text-decoration: none; /* Optional: remove underline */
+  font-weight: 500; 
+  font-size: 11px; 
+  color: var(--muted-blue-text);
+  cursor: pointer;
+  transition: .2s;
+  filter: brightness(140%);
+}
+
+/* Hover state */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Visited (clicked) state */
+a:visited {
+  filter: brightness(140%);
+}
+
+/* Optional: active (while being clicked) */
+a:active {
+  text-decoration: underline;
+}
+
+#blurWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+#loginPanel {
+  width: 18em;
+  min-width: 18em;
+  height: auto;
+  margin: auto;
+  border-radius: 1em;
+  padding: 1em;
+  /*
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  border: 1px solid var(--hover-line);
+  */
+  
+}
+
+.loginSection {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#divLogo {
+  width: 100%; 
+  height: auto; 
+  margin: auto; 
+  display: flex;
+  margin-bottom: 2em;
+}
+
+#divLogo svg {
+  width: 100%;
+  height: 100%;
+}
+
+#lblLogin {
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  color: var(--muted-blue-text); 
+  font-size: 11px;
+  line-height: 18px;
+}
+
+#btnLogin {
+  width: calc(100% - 40px);
+  height: 40px;
+  background-color: #7595E5;
+  border-radius: 4px;
+  display: flex;
+  padding-right: 40px;
+  cursor: pointer;
+  transition: .2s;
+  margin-bottom: 0.5em; 
+  cursor: pointer;
+}
+
+#btnLogin:hover {
+  background-color: #82A6FF;
+}
+
+#btnLogin h2 {
+    font-family: 'Roboto', arial, sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+    color: var(--sharp);
+    font-size: 14px;
+    margin: auto;
+}
+
+
+

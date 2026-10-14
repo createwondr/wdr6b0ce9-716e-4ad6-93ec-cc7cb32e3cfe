@@ -1,0 +1,213 @@
+
+#colorPickerPanel {
+    width: 216px;
+    height: 208px;
+    width: auto;
+    height: auto;
+    border-radius: 9px;
+    background-color: var(--bg);
+    border: 1px solid var(--muted-line);
+    box-shadow: 0px 0px 10px rgba(0,10,20,1);
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    row-gap: 1em;
+    position: absolute !important;
+    z-index: 99 !important;
+    padding: 1em;
+}
+
+.btnSwitchFake {
+    width: 50%;
+    height: 26px;
+    display: flex;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--accent);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btnSwitchFake h2 {
+    color: var(--sharp);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: auto;
+    margin-top: 0px;
+}
+
+#btnSwitchGradient {
+    width: 50%;
+    height: 26px;
+    display: flex;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--muted-track);
+    cursor: pointer;
+    transition: .2s;
+}
+
+#btnSwitchGradient h2 {
+    color: var(--muted-blue-text);
+    margin: auto;
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .2s;
+    letter-spacing: 1px;
+}
+
+#btnSwitchGradient:hover h2 {
+    color: var(--sharp);
+}
+
+#colorBoard {
+    width: 200px;
+    height: 120px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: linear-gradient(to right, white, red);
+}
+
+#colorBoardBlack {
+    width: 184px;
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    cursor: pointer;
+    background: linear-gradient(to bottom, transparent, black);
+}
+
+#colorBoardThumb {
+    width: 12px;
+    height: 12px;
+    border: 1px solid white;
+    border-radius: 99px;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    cursor: pointer;
+    box-shadow:0px 0px 0px 1px black inset;
+}
+
+#colorBarHue {
+    width: 184px;
+    width: 200px;
+    height: 12px;
+    border-radius: 99px;
+    position: relative;
+    cursor:pointer;
+    background: linear-gradient(to right, red, yellow, lightgreen, cyan, dodgerblue, mediumslateblue, magenta, tomato);
+}
+
+#colorBarThumb {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 99px;
+    border: 2px solid white;
+    cursor: pointer;
+    top: -2px;
+}
+
+#colorValuesContainer {
+    display: flex;
+    width: 200px;
+    height: auto;
+}
+
+#divValuesContainter {
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    margin: auto;
+    margin-right: 0.5em;
+    margin-left: auto;
+    transition: .2s;
+    height: auto;
+    width: 140px;
+}
+
+#divValuesContainter:hover {
+    border-color: var(--sharp-track);
+}
+
+#txtAlpha {
+    width: 46px;
+    height: 24px;
+    outline: none;
+    color: var(--sharp) !important;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    text-align: center;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+}
+
+#txtAlpha:hover {
+    border-color: var(--hover-line);
+}
+
+#txtAlpha:focus {
+    border-color: 1px solid var(--muted-blue-text);
+}
+
+.divColorValues {
+    width: 86px;
+    height: 26px;
+    display: none;
+    justify-content: space-evenly;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.txtColorValues {
+    width: 100%;
+    height: 24px;
+    outline: none;
+    color: var(--sharp);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+}
+
+#dropdownColorValue {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 26px;
+    width: 60px;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    cursor: pointer;
+    transition: .2s;
+}
+
+#dropdownColorValue h2 {
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    margin: auto;
+}
+
+#dropdownColorValue svg{
+    width: 8px;
+    height: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+}
+
+#dropdownColorValue:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+

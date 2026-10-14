@@ -1,0 +1,277 @@
+
+.tabVectorPreview {
+    width: 214px;
+    height: 82%;
+    border-radius: 9px;
+    margin-top: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.tabVectorPreview svg { 
+    width: 100%;
+    height: auto;
+    margin: auto;
+    filter: none;
+}
+
+.tabVectorStroke {
+    display: block;
+}
+
+.txtVectorStrokeColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtVectorStrokeColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtVectorStrokeColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtVectorStrokeOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorStrokeOpacity:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorStrokeOpacity:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorStrokeWidth {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorStrokeWidth:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorStrokeWidth:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorStrokeDash {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorStrokeDash:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorStrokeDash:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorStrokeGap {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorStrokeGap:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorStrokeGap:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.chkVectorStrokeCap {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.chkVectorStrokeShow {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.chkVectorFillShow {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid var(--muted-track);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.optVectorColor {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    color: var(--sharp);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optVectorColor:hover {
+    background-color: var(--accent);
+}
+
+.tabVectorFill {
+    display: none;
+}
+
+
+.txtVectorFillColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtVectorFillColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtVectorFillColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+
+.txtVectorFillOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorFillOpacity:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtVectorFillOpacity:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
