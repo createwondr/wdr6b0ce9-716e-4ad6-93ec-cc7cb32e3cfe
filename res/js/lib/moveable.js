@@ -89,12 +89,12 @@ function moveableSetMode(mode) {
 
     clearGestureCursor();
     createMoveable();
-    moveableAttachDrag();
+    llOlIlOl();
 
-    moveable.snappable = (snapped == "true");
-    moveable.snapThreshold = snapSensitivity;
-    moveable.snapHorizontalThreshold = snapSensitivity;
-    moveable.snapVerticalThreshold   = snapSensitivity;
+    moveable.snappable = (lIllIIlI == "true");
+    moveable.snapThreshold = lIllIIll;
+    moveable.snapHorizontalThreshold = lIllIIll;
+    moveable.snapVerticalThreshold   = lIllIIll;
 
     return true;
 }
@@ -105,12 +105,12 @@ function rebuildMoveable() {
 
     createMoveable();
 
-    moveableAttachDrag();
+    llOlIlOl();
 
-    moveable.snappable = (snapped == "true");
-    moveable.snapThreshold = snapSensitivity;
-    moveable.snapHorizontalThreshold = snapSensitivity;
-    moveable.snapVerticalThreshold   = snapSensitivity;
+    moveable.snappable = (lIllIIlI == "true");
+    moveable.snapThreshold = lIllIIll;
+    moveable.snapHorizontalThreshold = lIllIIll;
+    moveable.snapVerticalThreshold   = lIllIIll;
 
     updateMoveableRect();
     moveableUpdateTargets();
@@ -190,7 +190,7 @@ function clearGestureCursor() {
 
     //[!] THIS ALSO RUNS ON WINDOW BLUR AND EVERY POINTERUP, SO IT MUST NOT WIPE THE
     //EYEDROPPER WHILE COLOR PICKING IS STILL LIVE
-    if(cnvPin != null) cnvPin.style.cursor = isColorPicking ? eyedropperCursor : '';
+    if(cnvPin != null) cnvPin.style.cursor = llIOIOOO ? llIIIllO : '';
 
     document.documentElement.classList.remove('is-gesturing');
 }
@@ -254,14 +254,14 @@ function moveableTargets() {
     //[!] (let focusObj). updateMoveableRect() RUNS AT THE BOTTOM OF THIS FILE, SO ON THAT
     //[!] ONE PATH THE APP MAY NOT EXIST YET. A `let` IN THE TEMPORAL DEAD ZONE THROWS ON
     //[!] typeof AS WELL AS ON READ, WHICH IS WHY THIS IS A try, NOT A typeof CHECK.
-    try { if(focusObj == null || typeof f2PinBody !== 'function') return []; }
+    try { if(llIIOOlI == null || typeof llIIIlIO !== 'function') return []; }
     catch { return []; }
 
     let targets = [];
 
-    for(let f = 0; f < focusObj.length; f++) {
-        if(focusObj[f] != null) {
-            let pin = f2PinBody(f);
+    for(let f = 0; f < llIIOOlI.length; f++) {
+        if(llIIOOlI[f] != null) {
+            let pin = llIIIlIO(f);
 
             if(pin != null && pin.dataset.lock == "unlock") targets.push(pin);
         }
