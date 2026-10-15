@@ -36,7 +36,7 @@ a:active {
 
 #pnlBoxSettings {
     width: 246px;
-    height: 886px;
+    height: max(100%, 886px);
     background: transparent;
     overflow: visible;
     transition: .1s;
