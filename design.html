@@ -70,6 +70,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet" crossorigin>
 
     <script defer src="res/js/lib/supabase.js"></script>
+    <script defer src="res/js/sec/paths.js"></script>
     <script defer src="res/js/sec/auth2.0.js"></script>
     <script defer src="res/js/sec/connect.js"></script>
     
@@ -691,7 +692,7 @@
                         <div class="pnlTitle" style="width: 247px; margin: auto;">
                             <h2>Thank you for using Wondr</h2>
                         </div>  
-                        <div class="configScroll">
+                        <div class="configScroll configScrollWondr">
                             <div id="divWelcomeMsg">
                                 <h1>
                                     &ensp;Wondr was founded by <i>Ozydeus</i>, a solo indie designer and developer. It started as a small project, built from a simple idea: to create something useful, meaningful, and to extend human creativity. It was personally designed, developed, and funded from the very beginning, with no investors, no large team, and no millions behind it. Just one person, a computer, countless hours, and the belief that even a humble idea can grow into something worth sharing.
@@ -702,20 +703,32 @@
                                     <br><br>
                                     &ensp;We are excited to see what you can be and what you can create.
                                     <br><br>
-                                    &ensp;<b style="color: hsl(var(--hue) 30% 70%);">Welcome to Wondr!</b>
+                                    &ensp;<b>Welcome to Wondr!</b>
                                     <br><br>
                                 </h1>
                             </div>
+                            
                         </div>
-                        <div class="menuFooter" style="flex-direction: column;">
-                        </div> 
-                        <canvas id="cnvWondrStars"></canvas>
+             
+                        <div class="menuFooter">
+
+                            <div style="margin: auto; height: 26px; width: 4em; display: flex; box-sizing: border-box; background: var(--muted-line); border-radius: 99px;">
+                                
+                                <div style="width: 14px; height: 14px; border-radius: 999px; display: flex; margin:auto; margin-right: 0px; box-sizing: border-box; background: var(--accent);">
+                                    <h2 style="margin:auto; margin-top: 1.4px; margin-left: 3.5px; font-size: 11px; font-family:'Courier New', Courier, monospace; font-weight: 700; color: var(--sharp)">?</h2>
+                                </div>
+                                <h2 style="letter-spacing: 1px; margin-left: 4px; margin-top: 0.43em; font-weight: 400; color: var(--sharp);">Help</h2>
+                            
+                            </div>
+                        
+                            <h2 style="letter-spacing: 1.2px; margin: auto; margin-right: 2em; font-weight: 400; color: var(--sharp);">support@createwondr.io</h2>
+                        </div>
+
                     </div>
                 </div>
                 <div id="workArea">
                     <div id="subHeader" class="subMenu">
-                        <!-- THE SAME OUTER WIDTH AS #chkMode ON THE OTHER SIDE: 50 + 4 + 4 PADDING + 1 + 1 BORDER (content-box) = 60.
-                        AT 50 #contZoom SAT 5px LEFT OF THE CANVAS CENTRE (sir, 2026-10-03, measured in Paint) -->
+            
                         <div style="width: 60px; margin-left: 3em;"></div>
 
                         <div id="contZoom">

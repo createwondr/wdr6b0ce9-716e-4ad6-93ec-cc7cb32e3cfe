@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr</title>
+
+    <script>
+        //sir, 2026-10-15: A TYPED 127.0.0.1:5503/design NEVER REACHES design.html - LIVE SERVER HAS NO
+        //FILE CALLED "design", SO NO PAGE (AND NO paths.js) EVER LOADS. .vscode/settings.json NOW TELLS
+        //LIVE SERVER TO SEND THIS PAGE FOR EVERY MISSING PATH, AND THIS RUNS sir's RULE:
+        //LOCALHOST / 127 + NO .html AT THE END -> APPEND .html AND GO THERE.
+        //GITHUB PAGES ALSO SENDS THIS FILE FOR ITS 404s. ON createwondr.io /design ALREADY WORKS, SO THIS
+        //ONLY SHOWS FOR A PAGE THAT REALLY DOES NOT EXIST - THE .html STRIP THERE IS paths.js'S JOB
+        (function () {
+            let local = location.hostname === '127.0.0.1' || location.hostname === 'localhost';
+            let path = location.pathname.replace(/\/+$/, '');
+
+            //ONLY BARE PAGE NAMES. /missing.html OR A MISSING res/ FILE STAYS HERE, SO IT CAN'T LOOP
+            if (local && path && !/\.[a-z0-9]+$/i.test(path)) {
+                location.replace(path + '.html' + location.search + location.hash);
+            }
+        })();
+    </script>
+
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+
+    <script src="/res/js/sec/paths.js"></script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        html {
+            background: var(--bg);
+        }
+
+        body {
+            background: var(--glow), var(--bg);
+            min-height: 100vh;
+            overflow: hidden;
+            color: var(--sharp);
+            cursor: default;
+        }
+
+        #blurWrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: var(--muted-blue-text);
+        }
+
+        a {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--muted-blue-text);
+            filter: brightness(140%);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+        <h1>Page not found</h1>
+        <p>The page you're looking for doesn't exist.</p>
+        <a href="/">Back to Wondr</a>
+    </div>
+
+</body>
+</html>
