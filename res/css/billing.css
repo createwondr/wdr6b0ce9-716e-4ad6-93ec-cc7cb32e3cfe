@@ -14,16 +14,19 @@ body {
     font-family: "Inter", sans-serif;
     color: var(--sharp);
 
-    /* THE GLOW LIVES HERE AND MUST NEVER FADE. body WAS visibility: hidden, WHICH
-       HIDES THE BACKGROUND TOO - SO THE GLOW COULD NOT PAINT UNTIL THE SESSION
-       CHECK AND THE EDGE CALL HAD FINISHED, AND IT SNAPPED ON WITH THE CONTENT.
-       #blurWrapper AT opacity 0 ALREADY STOPS ANY CONTENT FLASH, AND IT IS THE
-       ONLY VISIBLE CHILD OF body ON EVERY PAGE, SO HIDING body BOUGHT NOTHING.
-       NOW THE BACKDROP IS PAINTED THE INSTANT THE PAGE LOADS AND IS IDENTICAL ON
-       index, billing AND design - ONLY THE CONTENT CROSSES OVER. */
-    background: var(--glow), var(--bg);
+    background: var(--bg);
     -webkit-font-smoothing: antialiased;
     cursor: default;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--glow);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 100;
 }
 
 #blurWrapper {
@@ -31,8 +34,6 @@ body {
     display: flex;
     flex-direction: column;
     opacity: 0;
-    /* opacity ONLY, MATCHING auth.css AND modal.css. A BARE 0.2s ANIMATES EVERY
-       PROPERTY, WHICH IS ONE MORE THING TO REASON ABOUT FOR NO GAIN. */
     transition: opacity 0.2s;
 }
 
@@ -117,7 +118,6 @@ main {
     opacity: .8;
 }
 
-/* =============================== INTRO =============================== */
 #intro, #introSub {
     margin-bottom: 28px;
 }
@@ -170,7 +170,6 @@ h1 {
     line-height: 1.65;
 }
 
-/* =============================== BENEFITS =============================== */
 #inclusions, #inclusionsSub {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -218,7 +217,6 @@ h1 {
     line-height: 1.4;
 }
 
-/* =============================== CARD =============================== */
 #sectPayment, #sectPaymentSub {
     position: relative;
     border: 1px solid var(--muted-track);
@@ -277,7 +275,6 @@ h1 {
     font-size: 12px;
 }
 
-/* =============================== SIGNED IN =============================== */
 #boxSignedIn, #boxSignedInSub {
     display: flex;
     align-items: center;
@@ -312,7 +309,6 @@ h1 {
     filter: brightness(140%);
 }
 
-/* =============================== PLAN =============================== */
 #boxPlan, #boxPlanSub {
     position: relative;
     display: flex;
@@ -383,7 +379,6 @@ h1 {
     background: var(--muted-line);
 }
 
-/* =============================== PAYPAL =============================== */
 #lblMethod, #lblMethodSub {
     margin-bottom: 1em;
     color: #85878c;
@@ -460,23 +455,12 @@ h1 {
     color: #e8a5a5;
 }
 
-/* [!] COLOUR ONLY. IT USED TO OVERRIDE display, padding, border-radius AND
-       text-align, WHICH IS WHAT MADE THE SUCCESS PANEL ~121px TALL AGAINST ~42px
-       FOR THE OTHER TWO AND STRETCHED THE CARD DOWNWARD ON PAYMENT. THE LAYOUT NOW
-       COMES ENTIRELY FROM .state, SO ALL THREE STATES ARE THE SAME BOX AND ONLY
-       THEIR COLOURS DIFFER - THE SAME RELATIONSHIP #stateBusy AND #stateFail
-       ALREADY HAD WITH EACH OTHER.
-       THE panelIn ANIMATION WENT WITH IT: THE OTHER TWO APPEAR WITHOUT ONE. */
 #stateDone, #stateDoneSub {
     border: 1px solid rgba(117, 255, 245, .2);
     background: rgba(117, 255, 245, .05);
     color: #9ad7d4;
 }
 
-/* MATCHES #iconSpin's FOOTPRINT EXACTLY - 14px AND flex: none - SO THE TICK OCCUPIES
-   THE SAME SLOT THE SPINNER DOES AND THE TEXT STARTS ON THE SAME x IN EVERY STATE.
-   THE margin RESET IS LOAD-BEARING: THE SHARED .ico RULE CARRIES margin-bottom: 9px
-   FOR THE PERK TILES, AND LEFT ALONE IT PUSHES THIS ROW 9px TALLER. */
 #stateDone .ico, #stateDoneSub .ico {
     width: 14px;
     height: 14px;
@@ -488,8 +472,6 @@ h1 {
     font-size: 12px;
 }
 
-/* AN h3 FOR THE OUTLINE, NOT FOR THE LOOK. IT INHERITS .state's 11px / 1.5 SO IT
-   SITS ON ONE LINE LIKE #lblBusy AND #lblFail. */
 #stateDone h3, #stateDoneSub h3 {
     margin: 0px;
     color: #e9ffff;
@@ -497,7 +479,6 @@ h1 {
     font-weight: 600;
 }
 
-/* =============================== FINE PRINT =============================== */
 #lblFine, #lblFineSub {
     margin: 12px 4px 0px;
     color: #5e6065;
@@ -545,8 +526,6 @@ footer h1 {
     letter-spacing: 1px;
 }
 
-/* =============================== RESPONSIVE =============================== */
-
 @media (max-width: 820px) {
 
     main {
@@ -587,11 +566,6 @@ footer h1 {
     }
 }
 
-/* =============================== OFFER SWITCH =============================== */
-
-/* main IS THE FLEX ROW THAT PUTS THE CAPTION BESIDE THE CARD. THE TWO OFFER
-   WRAPPERS SIT BETWEEN THEM NOW, SO THEY HAVE TO CARRY THAT LAYOUT THEMSELVES
-   OR THE CARD DROPS UNDER THE CAPTION. */
 #offerFounding, #offerSubscription {
     width: 100%;
     flex-wrap: wrap;

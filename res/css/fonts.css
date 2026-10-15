@@ -393,11 +393,9 @@
     display: flex;
 }
 
-/* ========================TEXT EDITOR======================*/
 #pnlBoxTextEditor {
     width: 100%;
-    height: 233px; /*this includs 18px the same width left and right which is 88% of 300px width = 36px / 2 */
-    /*original height = 233px*/
+    height: 233px;
     height: auto;
     background-color: transparent;
     overflow: hidden;
@@ -408,8 +406,7 @@
 
 #pnlBoxEmojiSymbol {
     width: 100%;
-    height: 243px; /* + 18px same with pnlBoxTextEditor */
-    /*original height 243px */
+    height: 243px;
     height: auto;
     background-color: transparent;
     overflow: hidden;
@@ -464,10 +461,10 @@
 .txtEditorBox::placeholder {
     color: var(--muted-blue-text);
     font-weight: 400;
-    opacity: 1; /* Firefox */
+    opacity: 1;
 }
   
-.txtEditorBox::-ms-input-placeholder { /* Edge 12 -18 */
+.txtEditorBox::-ms-input-placeholder {
     color: var(--sharp);
     font-weight: 400;
 }
@@ -955,8 +952,6 @@
     margin-right: 6px;
 }
 
-/* SAME FOOTPRINT AS THE 10px svg IT REPLACES SO THE LABEL DOES NOT SHIFT.
-   THE spin KEYFRAME LIVES IN modal.css, WHICH design.html ALREADY LOADS */
 .spinFontLabel {
     width: 10px;
     height: 10px;
@@ -970,8 +965,6 @@
     animation: spin .65s linear infinite;
 }
 
-/* THE LIVE SWAP FONT STATE. THE LOOK LIVES HERE SO IT CAN CHANGE WITHOUT TOUCHING JS,
-   AND THE :hover OVERRIDE HAS TO REPEAT THE BORDER OR .btnFontLabel:hover STILL WINS */
 .btnFontLabel.swapping,
 .btnFontLabel.swapping:hover {
     border: 1px solid var(--muted-track);

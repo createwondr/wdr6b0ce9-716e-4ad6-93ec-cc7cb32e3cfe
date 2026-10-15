@@ -13,7 +13,6 @@
     height: 794px;
     max-height: calc(100% - 30px);
     margin-top: .5em;
-    /*70px is pnlHeader, 1+8px is breakline and .5em, 40px is menufooter */
 }
 
 #wrapUploads {

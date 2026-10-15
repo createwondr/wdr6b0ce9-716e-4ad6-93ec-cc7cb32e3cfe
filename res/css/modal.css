@@ -165,11 +165,6 @@
     height: auto;
 }
 
-/* THE BUSY RING ON #btnModalClose. SAME GEOMETRY AND SAME .65s AS #iconSpin ON
-   billing.html, BUT INVERTED: THAT ONE SITS ON A DARK CARD, THIS BUTTON IS --sharp
-   (NEAR WHITE), SO THE TRACK HAS TO BE DARK. THE MOVING ARC IS --bg - THE EXACT
-   COLOUR #btnModalClose h2 ALREADY PAINTS "Download" WITH.
-   margin:auto CENTRES IT BECAUSE .btnModal IS display:flex. */
 #iconSpinModal {
     width: 14px;
     height: 14px;
@@ -181,8 +176,6 @@
     animation: spin .65s linear infinite;
 }
 
-/* design.html DOES NOT LOAD billing.css, WHERE THE ORIGINAL LIVES, SO THE MODAL
-   CARRIES ITS OWN COPY. THE TWO DEFINITIONS ARE IDENTICAL - CHANGE BOTH OR NEITHER. */
 @keyframes spin {
     to {
         transform: rotate(360deg);

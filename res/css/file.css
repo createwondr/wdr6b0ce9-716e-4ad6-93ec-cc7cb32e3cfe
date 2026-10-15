@@ -113,11 +113,11 @@
 #txtProjectTitle::placeholder {
     color: var(--muted-blue-text);
     font-weight: 400;
-    opacity: 1; /* Firefox */
+    opacity: 1;
     text-align: center;   
 }
   
-#txtProjectTitle::-ms-input-placeholder { /* Edge 12 -18 */
+#txtProjectTitle::-ms-input-placeholder {
     color: var(--muted-blue-text);
     font-weight: 400;
     text-align: center;

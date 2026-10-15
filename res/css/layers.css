@@ -1,4 +1,3 @@
-/*borders*/
 
 #cnvPin {
     overflow: hidden;
@@ -34,28 +33,15 @@
     z-index: 999;
 }
 
-/* NO min-width/min-height HERE. A CONSTANT IN CSS WOULD BE A FLOOR IN SCREEN PIXELS
-   WHILE THE LAYER'S FLOOR IS IN LAYOUT PIXELS - THE OLD 10px ONLY EVER AGREED WITH THE
-   LAYERS' 20px AT 50% ZOOM. sizePinToCanvas() WRITES min-width/min-height INLINE AS
-   THE LAYER'S OWN DECLARED MINIMUM x THE ZOOM, SO BOTH FLOORS ARE THE SAME PHYSICAL
-   SIZE AT EVERY ZOOM LEVEL. */
 .pinBody {
     display: grid;
     position: absolute;
 }
 
-/* A LOCKED LAYER IS NOT SELECTABLE ON THE CANVAS - CLICKS, RIGHT CLICKS AND DRAGS PASS THROUGH TO
-   WHATEVER IS UNDER IT. IT STAYS SELECTABLE FROM THE LAYERS PANEL, WHERE IT IS UNLOCKED, UNHIDDEN,
-   RENAMED AND DELETED */
 .pinBody[data-lock="lock"] {
     pointer-events: none;
 }
 
-/* A LINE'S PIN IS DELIBERATELY 1px TALL SO MOVEABLE DRAWS A HAIRLINE WITH A HANDLE AT
-   EACH END. THAT LEAVES A 1px DRAG TARGET, WHICH IS NOT USABLE - SO THE POINTER AREA IS
-   PADDED VERTICALLY HERE. ::before DOES NOT CHANGE THE ELEMENT'S RECT, SO THE CONTROL
-   BOX MOVEABLE MEASURES STAYS A HAIRLINE. HORIZONTALLY IT ADDS NOTHING: THE ENDS ARE
-   WHERE THE RESIZE HANDLES LIVE AND MUST NOT BE COVERED. */
 .pinBody[data-type="line"]::before {
     content: "";
     position: absolute;
@@ -86,7 +72,6 @@
     object-fit: cover;
     image-rendering: high-quality;
     position: absolute;
-    /* 1x1 IS THE DESIGN FLOOR NOW - A 5px IMAGE INSIDE A 1px LAYER WOULD SPILL OUT OF IT */
     min-width: 1px !important;
     min-height: 1px !important;
 }

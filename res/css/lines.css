@@ -81,14 +81,10 @@
     z-index: 5;
     width: 90px;
     height: auto;
-    /* FOUR 32px optLineHead ROWS AND NOTHING OF A FIFTH. ONE BREAKLINE SITS INSIDE THE FIRST
-       FOUR ROWS (AFTER round): 128 + 13 + 14. 142 LEFT 25 OF THE 4th ROW SHOWING */
     max-height: 155px;
     border-radius: 6px;
     background-color: var(--dark2);
     border: 1px solid var(--muted-line);
-    /*[!] border-box SO THE 1px BORDER DOES NOT GROW THESE BY 2px -
-      THERE IS NO GLOBAL box-sizing IN THIS PROJECT */
     box-sizing: border-box;
     display: none;
     cursor: default;
@@ -128,14 +124,10 @@
     z-index: 5;
     width: 90px;
     height: auto;
-    /* FOUR 32px optLineHead ROWS AND NOTHING OF A FIFTH. ONE BREAKLINE SITS INSIDE THE FIRST
-       FOUR ROWS (AFTER round): 128 + 13 + 14. 142 LEFT 25 OF THE 4th ROW SHOWING */
     max-height: 155px;
     border-radius: 6px;
     background-color: var(--dark2);
     border: 1px solid var(--muted-line);
-    /*[!] border-box SO THE 1px BORDER DOES NOT GROW THESE BY 2px -
-      THERE IS NO GLOBAL box-sizing IN THIS PROJECT */
     box-sizing: border-box;
     display: none;
     cursor: default;
@@ -336,21 +328,11 @@
     margin: auto;
 }
 
-/* THE BODY IS WHATEVER IS LEFT AFTER THE TWO HEADS, DOWN TO AND INCLUDING ZERO.
-   IT WAS width:100%, WHICH MEANT IT NEVER GAVE ANY WIDTH BACK - IT JUST OVERFLOWED
-   BEHIND THE HEADS, SO "THE BODY IS 0" COULD NEVER ACTUALLY HAPPEN.
-   flex:1 1 0 MAKES IT TAKE THE REMAINDER; min-width:0 IS THE PART THAT MATTERS -
-   WITHOUT IT A FLEX ITEM REFUSES TO SHRINK BELOW ITS CONTENT. */
 .divLineMid {
     display: flex;
     height: 100%;
     flex: 1 1 0;
 
-    /* 🔴 4px, NOT 0. A DEFAULT LINE IS MITER-HEADED, SO BOTH HEADS ARE display:none AND
-       THE BODY *IS* THE WHOLE LINE - "THE BODY HAS RUN OUT" COULD NEVER BECOME TRUE AND
-       A FRESH LINE HAD NO WORKING FLOOR AT ALL. THIS IS THE ONE NUMBER THAT DEFINES THE
-       MINIMUM; lineHeadFloor() AND THE RESIZE GUARD BOTH READ IT FROM HERE RATHER THAN
-       CARRYING THEIR OWN COPY. */
     min-width: 4px;
 }
 

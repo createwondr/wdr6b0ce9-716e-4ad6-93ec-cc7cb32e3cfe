@@ -73,11 +73,6 @@ h2 {
 .configScrollUploads {
     height: calc(100% - 70px - 69px + 5px + 9px);
     max-height: calc(100% - 70px - 69px + 5px + 9px);
-
-    /*THESE FOUR HOLD contentPreview OR contentCategory, WHICH DO THEIR OWN SCROLLING.
-    THE BASE .configScroll RULE SETS overflow-y: auto FOR EVERY MENU, SO THEY WERE
-    SCROLLING TOO AND DRAWING A SECOND BAR. SETTINGS, LAYERS AND WONDR STILL NEED THE
-    BASE BEHAVIOUR, SO THIS OPTS OUT THE FOUR THAT DO NOT INSTEAD OF CHANGING THE BASE.*/
     overflow-y: hidden;
 }
 
@@ -88,9 +83,8 @@ h2 {
 
 .configScrollSettings {
 
-    height: calc(100% - 70px - 69px + 5px + .5em + 70px + 53px);
-    max-height: calc(100% - 70px - 69px + 5px + .5em + 70px + 53px);
-
+    height: calc(100% - 70px - 69px + 5px + .5em + 70px + 53px + 1em);
+    max-height: calc(100% - 70px - 69px + 5px + .5em + 70px + 53px + 1em);
 }
 
 .configScrollLayers{
@@ -102,6 +96,13 @@ h2 {
 
     height: calc(100% - 70px - 69px + 5px + .5em + 70px);
     max-height: calc(100% - 70px - 69px + 5px + .5em + 70px);
+
+}
+
+.configScrollWondr {
+
+    height: calc(100% - 70px - 64px + 9px);
+    max-height: calc(100% - 70px - 64px + 9px);
 
 }
 
@@ -168,7 +169,12 @@ h2 {
 }
 
 #btnLogOut {
-    width: 246px; background: rgba(255, 0, 0, 0.075); border: 1px solid rgba(255, 99, 71, 0.5); box-sizing: border-box; border-radius: 4px;
+    width: 246px; 
+    background: rgba(255, 0, 0, 0.075); 
+    border: 1px solid rgba(255, 99, 71, 0.5); 
+    box-sizing: border-box; 
+    border-radius: 4px;
+    margin-bottom: 1em;
 }
 
 .btnIcon {
@@ -337,18 +343,15 @@ h2 {
     scroll-snap-align: start;
 }
 
-/* TWO BREAKLINES SIT INSIDE THE FIRST FOUR ROWS: 160 + 26 + 14 */
 .dropOptionBlend,
 .dropOptionPreset {
     max-height: 200px;
 }
 
-/* ONE BREAKLINE INSIDE THE FIRST FOUR ROWS: 160 + 13 + 14 */
 .dropOptionResize {
     max-height: 187px;
 }
 
-/* 32px ROWS, NO BREAKLINE: 128 + 14 */
 .dropOptionVectorColor {
     max-height: 142px;
 }
@@ -374,13 +377,10 @@ h2 {
     z-index: 5;
     width: 246px;
     height: auto;
-    /* SAME FOUR ROW BASE AS .dropOptionVerti */
     max-height: 174px;
     border-radius: 6px;
     background-color: var(--dark2);
     border: 1px solid var(--muted-line);
-    /*[!] border-box SO THE 1px BORDER DOES NOT GROW THESE BY 2px -
-      THERE IS NO GLOBAL box-sizing IN THIS PROJECT */
     box-sizing: border-box;
     display: none;
     cursor: default;
@@ -644,7 +644,6 @@ h2 {
     height: 1px;
     margin-left: auto;
     margin-right: auto;
-    /* 1px + 6px + 6px = 13px. THE DROPDOWN max-height FIGURES COUNT ON THIS EXACTLY */
     margin-top: 6px;
     margin-bottom: 6px;
     cursor: pointer;
@@ -889,7 +888,7 @@ h2 {
 #bodyProperties {
     width: 300px;
     min-width: 300px;
-    height: calc(100vh - 2em - 374px); /*2em is header ui and 374px is body ads*/
+    height: calc(100vh - 2em - 374px);
     height: 512px;
     margin: auto;
     margin-top: 0px;
@@ -1109,11 +1108,11 @@ h2 {
 .txtSearch::placeholder {
     color: var(--muted-blue-text);
     font-weight: 400;
-    opacity: 1; /* Firefox */
+    opacity: 1;
 }
   
 .txtSearch::-ms-input-placeholder {
-    color: var(--muted-blue-text); /* Edge 12 -18 */
+    color: var(--muted-blue-text);
     font-weight: 400;
 }
 
@@ -1158,11 +1157,11 @@ h2 {
 .txtSearchFont::placeholder {
     color: var(--muted-blue-text);
     font-weight: 400;
-    opacity: 1; /* Firefox */
+    opacity: 1;
 }
   
 .txtSearchFont::-ms-input-placeholder {
-    color: var(--muted-blue-text); /* Edge 12 -18 */
+    color: var(--muted-blue-text);
     font-weight: 400;
 }
 
@@ -1444,12 +1443,6 @@ h2 {
     background: transparent; 
 }
 
-/*height WAS auto WITH NO max-height, SO IN CATEGORY MODE THIS GREW TO 700px INSIDE A
-692px configScroll AND THAT 8px OVERSHOOT IS WHERE THE SECOND SCROLLBAR CAME FROM.
-IT NOW OWNS THE PARENT HEIGHT EXACTLY AND CLIPS, SO THE ONLY BAR LEFT IS THE ONE INSIDE
-THE THUMB AREA AND THE TITLE ROW WITH "Go back" STAYS PINNED ABOVE IT.
-NO display HERE. THE JS SETS display none OR block INLINE AND WOULD WIN ANYWAY, AND IT
-DOES NOT MATTER: .wrapEntries IS ALREADY THE FLEX COLUMN AND IS THE ONLY CHILD.*/
 .contentCategory {
     width: 100%;
     height: 100%;
@@ -1461,10 +1454,6 @@ DOES NOT MATTER: .wrapEntries IS ALREADY THE FLEX COLUMN AND IS THE ONLY CHILD.*
     scrollbar-color: var(--scroll-thumb) transparent;
 }
 
-/*FILLS THE CATEGORY BOX. THE MARGINS BECOME PADDING SO THE .5em GAP ABOVE THE TITLE
-SURVIVES WITHOUT PUSHING THE BOX PAST 100%, WHICH MARGINS WOULD DO.
-min-height: 0 IS LOAD BEARING THROUGHOUT. A FLEX ITEM DEFAULTS TO min-height: auto AND
-REFUSES TO SHRINK BELOW ITS CONTENT, WHICH WOULD CANCEL THE WHOLE ARRANGEMENT.*/
 .contentCategory .wrapEntries {
     height: 100%;
     min-height: 0;
@@ -1478,11 +1467,6 @@ REFUSES TO SHRINK BELOW ITS CONTENT, WHICH WOULD CANCEL THE WHOLE ARRANGEMENT.*/
     flex: 0 0 auto;
 }
 
-/*max-height WAS calc(100vh - 33px - 71px - 69px - 60px), SIZED FROM THE VIEWPORT WHILE
-ITS PARENT WAS SIZED FROM A PERCENTAGE. THE TWO DISAGREED BY 8px. IT NOW TAKES WHATEVER
-IS LEFT AFTER THE 40px TITLE INSTEAD OF GUESSING FROM THE WINDOW.
-overflow-x IS DECLARED BECAUSE SETTING ONLY overflow-y PROMOTES THE OTHER AXIS FROM
-visible TO auto, WHICH WAS A HORIZONTAL BAR WAITING FOR WIDER CONTENT.*/
 .contentCategory .wrapThumbScroller {
     flex: 1 1 auto;
     min-height: 0;
@@ -1724,17 +1708,10 @@ visible TO auto, WHICH WAS A HORIZONTAL BAR WAITING FOR WIDER CONTENT.*/
     z-index: 5;
     width: 88%;
     height: auto;
-    /* EXACTLY FOUR .optSearch ROWS (40px EACH) PLUS THE .4em PADDING PAIR PLUS THE 1px
-       BORDER PAIR. box-sizing IS border-box, SO max-height HAS TO COVER ALL THREE OR THE
-       LAST ROW GETS SLICED - THE OLD 156px LEFT 141.2px OF CONTENT BOX, WHICH IS 3.53
-       ROWS. THE .4em HERE RESOLVES AGAINST THE SAME font-size THE PADDING DOES, SO IF
-       THAT EVER CHANGES THE TWO MOVE TOGETHER INSTEAD OF DRIFTING APART. */
     max-height: calc((40px * 4) + (.4em * 2) + 2px);
     border-radius: 6px;
     background-color: var(--dark2);
     border: 1px solid var(--muted-line);
-    /*[!] border-box SO THE 1px BORDER DOES NOT GROW THESE BY 2px -
-      THERE IS NO GLOBAL box-sizing IN THIS PROJECT */
     box-sizing: border-box;
     display: none;
     cursor: default;
@@ -1744,9 +1721,6 @@ visible TO auto, WHICH WAS A HORIZONTAL BAR WAITING FOR WIDER CONTENT.*/
     padding-top: .4em;
     padding-bottom: .4em;
     scroll-behavior: smooth;
-    /* SAME SNAPPING .dropOptionVerti ALREADY USES, SO A HALF ROW CAN NEVER SIT PARKED AT
-       THE BOTTOM EDGE MID-SCROLL. scroll-padding-top MATCHES padding-top OR THE FIRST
-       SNAPPED ROW HIDES UNDER IT. */
     scroll-snap-type: y mandatory;
     scroll-padding-top: .4em;
     overflow-y: auto;
@@ -1933,8 +1907,6 @@ visible TO auto, WHICH WAS A HORIZONTAL BAR WAITING FOR WIDER CONTENT.*/
 }
 
 #lblAccessBadge svg {
-    /* FIXED HEIGHT, NOT A PERCENTAGE WIDTH. WITH THE BADGE SIZED TO ITS CONTENT
-       A PERCENTAGE WIDTH RESOLVES AGAINST A BOX THAT DEPENDS ON THIS ELEMENT. */
     height: 18px;
     width: auto;
     margin: auto;

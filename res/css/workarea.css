@@ -6,15 +6,10 @@
 }
 
 #workArea {
-    width: calc(100vw - 650px); /*650 is sum of toolbox(70) toolmenu(280) and rightpanel(300) */
-    height: calc(100vh - 33px); /*32 is top header */
+    width: calc(100vw - 650px);
+    height: calc(100vh - 33px);
 }
 
-/* overflow: scroll + scrollbar-gutter: THE BAR SPACE IS ALWAYS RESERVED, SO NOTHING MOVES WHEN A SCROLLBAR APPEARS
-   (sir, 2026-10-03: "it also moves the canvas a bit which looks like a hiccup"). THE TRACK IS TRANSPARENT THROUGH
-   scrollbar-color, SO ONLY THE THUMB SHOWS, AND ONLY WHEN THERE IS SOMETHING TO SCROLL. NOT both-edges: A LEFT GUTTER MOVES
-   WHERE left: 0 LANDS (#cnvPin AND EVERY PIN) BUT NOT offsetLeft, SO adjustBorder PUT EVERY PIN ONE GUTTER (~10px) TO THE
-   RIGHT (sir, 2026-10-03, MEASURED LIVE). THE SIDE AND BOTTOM BARS ARE EVENED OUT IN containWorkArea INSTEAD */
 #canvasBorder {
     overflow: scroll;
     scrollbar-gutter: stable;
@@ -31,10 +26,6 @@
     scrollbar-color: var(--scroll-thumb) transparent;
 }
 
-/* NOTHING TO SCROLL: THUMB, ARROWS AND TRACK TAKE THE PAGE COLOUR AND DISAPPEAR INTO IT. THE BARS ARE ALWAYS ON
-   (overflow: scroll, SO THE CANVAS NEVER JUMPS) AND CHROME PAINTS THE ARROWS IN THE THUMB COLOUR. isOverflowing IS SET BY
-   containWorkArea AND zoomMainCanvas. scrollbar-color FOR CHROME AND FIREFOX, THE ::-webkit- PAIR FOR SAFARI
-   (sir, 2026-10-03: "the color can just be the same as --bg so it blends in then just change to default color if there's overflow") */
 #canvasBorder:not(.isOverflowing) {
     scrollbar-color: var(--bg) var(--bg);
 }
@@ -214,10 +205,10 @@
     width: 8px;
     height: 6px;
     transition: .2s;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
