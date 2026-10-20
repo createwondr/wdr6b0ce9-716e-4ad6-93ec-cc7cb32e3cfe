@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr - Selecting and moving</title>
+    <meta name="description" content="Select layers in Wondr with a click, Ctrl-click or a selection box, then move, resize, rotate, snap and lock them.">
+    <link rel="canonical" href="https://createwondr.io/learn/selecting">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Wondr">
+    <meta property="og:title" content="Wondr - Selecting and moving">
+    <meta property="og:description" content="Select layers in Wondr with a click, Ctrl-click or a selection box, then move, resize, rotate, snap and lock them.">
+    <meta property="og:url" content="https://createwondr.io/learn/selecting">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Selecting and moving","description":"Select layers in Wondr with a click, Ctrl-click or a selection box, then move, resize, rotate, snap and lock them.","url":"https://createwondr.io/learn/selecting","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Learn","item":"https://createwondr.io/learn"},{"@type":"ListItem","position":2,"name":"Canvas"},{"@type":"ListItem","position":3,"name":"Selecting and moving","item":"https://createwondr.io/learn/selecting"}]}]}</script>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/res/css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="prefetch" href="/learn/basic-properties">
+    <script src="/res/js/sec/paths.js"></script>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+
+        <header id="docHeader">
+            <div class="headRow">
+                <button id="btnDocMenu" type="button" aria-label="Topics" aria-expanded="false" aria-controls="docNav">
+                    <span></span><span></span><span></span>
+                </button>
+                <a class="brand" href="/">
+                    <img src="/favicon.svg" alt="" width="28" height="16">
+                    <span>Wondr</span>
+                </a>
+                <a class="brandSub" href="/learn">Learn</a>
+                <nav class="headLinks">
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/learn">Learn</a>
+                    <a href="/#faq">FAQs</a>
+                </nav>
+                <a class="btnLogin" href="/login">Login</a>
+            </div>
+        </header>
+
+        <div class="docLayout">
+
+            <aside id="docNav" aria-label="Topics">
+                <div class="searchbox">
+                    <div class="searchIcon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1919 12.6061A7 7 0 1 1 12.6061 11.1919L16 14.5858L14.5858 16L11.1919 12.6061ZM12 7C12 9.76142 9.76142 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7Z" fill="var(--muted-blue-text)"/></svg>
+                    </div>
+                    <input id="txtDocSearch" class="txtSearch" type="search" placeholder="Search topics" aria-label="Search topics" autocomplete="off" spellcheck="false">
+                    <button class="btnDelSearch" type="button" aria-label="Clear search">
+                        <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><path d="M6.63586 0.233983C6.94784 -0.0779945 7.45406 -0.0779945 7.76603 0.233983C8.07783 0.545908 8.07778 1.05168 7.76603 1.36363L5.12966 3.99949L7.76603 6.63586C8.07798 6.94784 8.078 7.45406 7.76603 7.76603C7.45407 8.078 6.94784 8.07798 6.63586 7.76603L3.99949 5.12966L1.36364 7.76603C1.05168 8.0778 0.545916 8.07783 0.233984 7.76603C-0.0779945 7.45405 -0.0779945 6.94784 0.233984 6.63586L2.86984 3.99949L0.233984 1.36363C-0.0779296 1.05165 -0.0779729 0.54594 0.233984 0.233983C0.54594 -0.0779681 1.05165 -0.0779279 1.36364 0.233983L3.99949 2.86984L6.63586 0.233983Z" fill="white"/></svg>
+                    </button>
+                </div>
+                <details class="navGroup"><summary>Getting started</summary><div class="navLinks"><a href="/learn">Welcome to Wondr</a><a href="/learn/studio">The studio at a glance</a><a href="/learn/first-design">Your first design</a></div></details>
+<details class="navGroup"><summary>Toolbar</summary><div class="navLinks"><a href="/learn/designs">Designs</a><a href="/learn/patterns">Patterns</a><a href="/learn/uploads">Uploads</a><a href="/learn/elements">Elements</a><a href="/learn/text">Text</a><a href="/learn/layers">Layers</a><a href="/learn/save">Save</a><a href="/learn/settings">Settings</a></div></details>
+<details class="navGroup" open><summary>Canvas</summary><div class="navLinks"><a href="/learn/canvas-properties">Canvas properties</a><a href="/learn/zoom-and-view">Zoom, 2D and 3D view</a><a href="/learn/selecting" class="on" aria-current="page">Selecting and moving</a></div></details>
+<details class="navGroup"><summary>Properties</summary><div class="navLinks"><a href="/learn/basic-properties">Basic properties</a><a href="/learn/text-properties">Text properties</a><a href="/learn/image-properties">Image properties</a><a href="/learn/vectors-and-shapes">Vectors and shapes</a><a href="/learn/lines">Lines</a><a href="/learn/pattern-properties">Pattern properties</a><a href="/learn/3d-mockups">3D mockups</a></div></details>
+<details class="navGroup"><summary>Saving and exporting</summary><div class="navLinks"><a href="/learn/autosave">Autosave</a><a href="/learn/wondr-files">Wondr files</a><a href="/learn/export">Export</a></div></details>
+<details class="navGroup"><summary>Account</summary><div class="navLinks"><a href="/learn/plans-and-credits">Plans and AI credits</a><a href="/learn/account">Account and sign-in</a></div></details>
+<details class="navGroup"><summary>Reference</summary><div class="navLinks"><a href="/learn/shortcuts">Keyboard shortcuts</a><a href="/learn/troubleshooting">Troubleshooting</a></div></details>
+                <p id="lblNoTopics" hidden>No topics match your search.</p>
+            </aside>
+
+            <main class="docMain">
+                <nav class="crumbs" aria-label="Breadcrumb">
+                    <a href="/learn">Learn</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Canvas</span>
+                </nav>
+                <article class="docBody">
+                    <h1>Selecting and moving</h1>
+                    <p>Most work in Wondr starts with a selection. Selected layers show a box with handles, and the panel on the right shows their properties.</p>
+<h2 id="select-layers">Select layers</h2>
+<ul><li><strong>Click</strong> a layer to select it. A click always picks the layer that is on top at that spot.</li><li><strong>Ctrl + click</strong> adds a layer to the selection, or removes it.</li><li><strong>Drag on an empty spot</strong> to draw a selection box. Every layer the box touches is selected, even partly.</li><li><strong>Ctrl + A</strong> with the pointer over the work area selects everything. Press it again to deselect everything.</li><li><strong>Click an empty spot</strong> of the work area to clear the selection.</li></ul>
+<aside class="callout note"><p><strong>Note:</strong> Pattern layers cover the whole canvas, so you select them from the <a href="/learn/layers">Layers</a> menu instead of the canvas.</p></aside>
+<p>Locked and hidden layers are skipped by the selection box.</p>
+<h2 id="move">Move</h2>
+<ul><li>Drag a selected layer, or drag inside the box of a group selection.</li><li>Press the <strong>arrow keys</strong> to nudge the selection by 2 pixels at a time.</li><li>For an exact spot, type values in <strong>X-axis</strong> and <strong>Y-axis</strong> in <a href="/learn/basic-properties">Basic properties</a>.</li></ul>
+<h2 id="resize">Resize</h2>
+<ul><li>Drag one of the handles on the corners and edges.</li><li>Hold <strong>Shift</strong> while dragging to keep the proportions.</li><li>A selected line has one handle at each end.</li></ul>
+<p>Resizing a text box switches it to a fixed size. On very small layers some handles hide. Zoom in to bring them back.</p>
+<h2 id="rotate">Rotate</h2>
+<p>There is no separate rotate handle. Hover just outside a corner handle until the cursor becomes a curved arrow, then drag. Hold <strong>Shift</strong> to rotate in 15 degree steps. For an exact angle, use <strong>Rotation</strong> in <a href="/learn/basic-properties">Basic properties</a>.</p>
+<p>Groups move, resize and rotate together.</p>
+<h2 id="snapping">Snapping</h2>
+<p>Turn on <strong>Snapping</strong> in <a href="/learn/settings">Settings</a> to snap layers to the edges, centers and middles of other layers and to equal gaps between them. Distance numbers show while you drag. <strong>Snap Sensitivity</strong> sets how close a layer has to be before it snaps.</p>
+<h2 id="lock-a-layer">Lock a layer</h2>
+<p>Click the lock icon on the layer&#x27;s row in the <a href="/learn/layers">Layers</a> menu. A locked layer cannot be clicked, boxed or nudged on the canvas, but you can still select it from the Layers menu.</p>
+<h2 id="right-click-menus">Right-click menus</h2>
+<p><strong>Right-click an empty spot</strong> for Select all, Paste, Undo, Redo, Save and Download.</p>
+<figure><img src="/res/learn/img/context-canvas.webp" alt="The right-click menu on an empty spot" width="266" height="286" loading="lazy"><figcaption>The right-click menu on an empty spot</figcaption></figure>
+<p><strong>Right-click a layer</strong> for actions on it. Which items show depends on the layer and on how many layers are selected:</p>
+<ul><li><strong>Select all</strong> or <strong>Deselect all</strong>.</li><li><strong>Clone</strong> (<strong>Ctrl + C</strong>) makes a copy just above the original.</li><li><strong>Remove background</strong> with <strong>Soft edge</strong> or <strong>Hard edge</strong>, for a single image. See <a href="/learn/image-properties">Image properties</a>.</li><li><strong>Edit text</strong> (<strong>Ctrl + E</strong>) for text.</li><li><strong>Undo</strong> and <strong>Redo</strong>.</li><li><strong>Position layer</strong>: Move to top, Move up, Move down or Move to bottom.</li><li><strong>Delete</strong> (<strong>Ctrl + X</strong> or the <strong>Delete</strong> key).</li></ul>
+<aside class="callout note"><p><strong>Note:</strong> Line layers do not have a right-click menu. Use the keyboard shortcuts or the <a href="/learn/layers">Layers</a> menu for them.</p></aside>
+<p><strong>Paste</strong> pastes an image from your clipboard. If your browser blocks clipboard access, press <strong>Ctrl + V</strong> instead.</p>
+                </article>
+                <nav class="pager" aria-label="More topics">
+                    <a class="pagerPrev" href="/learn/zoom-and-view"><small>&larr; Previous</small><span>Zoom, 2D and 3D view</span></a><a class="pagerNext" href="/learn/basic-properties"><small>Next &rarr;</small><span>Basic properties</span></a>
+                </nav>
+                <footer class="docFoot">
+                    <span>&copy; <span id="lblYear">2026</span> Wondr</span>
+                    <span class="docFootLinks">
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="mailto:support@createwondr.io">Support</a>
+                    </span>
+                </footer>
+            </main>
+
+            <aside class="onPage" aria-label="On this page">
+                <p>On this page</p>
+                <nav id="docOnPage"><a href="#select-layers">Select layers</a><a href="#move">Move</a><a href="#resize">Resize</a><a href="#rotate">Rotate</a><a href="#snapping">Snapping</a><a href="#lock-a-layer">Lock a layer</a><a href="#right-click-menus">Right-click menus</a></nav>
+            </aside>
+
+        </div>
+
+        <div id="docScrim"></div>
+    </div>
+
+    <script src="/res/js/sec/learn.js"></script>
+</body>
+</html>

@@ -7,6 +7,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -32,6 +33,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -57,6 +59,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -82,6 +85,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -106,7 +110,7 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
     cursor: default;
     border: none;
@@ -139,6 +143,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border-radius: 3px;
@@ -163,7 +168,7 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
     cursor: default;
     border: none;
@@ -189,6 +194,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -219,6 +225,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border-radius: 3px;
@@ -245,7 +252,7 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
     cursor: default;
     border: none;
@@ -270,7 +277,7 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
     cursor: default;
     border: none;
@@ -296,6 +303,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -326,6 +334,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border-radius: 3px;
@@ -353,7 +362,7 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
     cursor: default;
     border: none;
@@ -379,6 +388,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -404,6 +414,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -429,6 +440,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -466,7 +478,7 @@
 .btnImageLabel h2 {
     color: var(--sharp);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     margin: auto;
     white-space: nowrap;
@@ -518,7 +530,7 @@
     padding: 0.5em;
     color: var(--muted-blue-text);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     text-align: center;
 }

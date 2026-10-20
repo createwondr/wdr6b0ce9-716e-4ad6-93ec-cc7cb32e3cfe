@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr - Basic properties</title>
+    <meta name="description" content="Set a layer&#x27;s blend mode, size, position, flip, opacity and rotation in Wondr, type values with sums and units, and use the color picker.">
+    <link rel="canonical" href="https://createwondr.io/learn/basic-properties">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Wondr">
+    <meta property="og:title" content="Wondr - Basic properties">
+    <meta property="og:description" content="Set a layer&#x27;s blend mode, size, position, flip, opacity and rotation in Wondr, type values with sums and units, and use the color picker.">
+    <meta property="og:url" content="https://createwondr.io/learn/basic-properties">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Basic properties","description":"Set a layer's blend mode, size, position, flip, opacity and rotation in Wondr, type values with sums and units, and use the color picker.","url":"https://createwondr.io/learn/basic-properties","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Learn","item":"https://createwondr.io/learn"},{"@type":"ListItem","position":2,"name":"Properties"},{"@type":"ListItem","position":3,"name":"Basic properties","item":"https://createwondr.io/learn/basic-properties"}]}]}</script>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/res/css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="prefetch" href="/learn/text-properties">
+    <script src="/res/js/sec/paths.js"></script>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+
+        <header id="docHeader">
+            <div class="headRow">
+                <button id="btnDocMenu" type="button" aria-label="Topics" aria-expanded="false" aria-controls="docNav">
+                    <span></span><span></span><span></span>
+                </button>
+                <a class="brand" href="/">
+                    <img src="/favicon.svg" alt="" width="28" height="16">
+                    <span>Wondr</span>
+                </a>
+                <a class="brandSub" href="/learn">Learn</a>
+                <nav class="headLinks">
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/learn">Learn</a>
+                    <a href="/#faq">FAQs</a>
+                </nav>
+                <a class="btnLogin" href="/login">Login</a>
+            </div>
+        </header>
+
+        <div class="docLayout">
+
+            <aside id="docNav" aria-label="Topics">
+                <div class="searchbox">
+                    <div class="searchIcon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1919 12.6061A7 7 0 1 1 12.6061 11.1919L16 14.5858L14.5858 16L11.1919 12.6061ZM12 7C12 9.76142 9.76142 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7Z" fill="var(--muted-blue-text)"/></svg>
+                    </div>
+                    <input id="txtDocSearch" class="txtSearch" type="search" placeholder="Search topics" aria-label="Search topics" autocomplete="off" spellcheck="false">
+                    <button class="btnDelSearch" type="button" aria-label="Clear search">
+                        <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><path d="M6.63586 0.233983C6.94784 -0.0779945 7.45406 -0.0779945 7.76603 0.233983C8.07783 0.545908 8.07778 1.05168 7.76603 1.36363L5.12966 3.99949L7.76603 6.63586C8.07798 6.94784 8.078 7.45406 7.76603 7.76603C7.45407 8.078 6.94784 8.07798 6.63586 7.76603L3.99949 5.12966L1.36364 7.76603C1.05168 8.0778 0.545916 8.07783 0.233984 7.76603C-0.0779945 7.45405 -0.0779945 6.94784 0.233984 6.63586L2.86984 3.99949L0.233984 1.36363C-0.0779296 1.05165 -0.0779729 0.54594 0.233984 0.233983C0.54594 -0.0779681 1.05165 -0.0779279 1.36364 0.233983L3.99949 2.86984L6.63586 0.233983Z" fill="white"/></svg>
+                    </button>
+                </div>
+                <details class="navGroup"><summary>Getting started</summary><div class="navLinks"><a href="/learn">Welcome to Wondr</a><a href="/learn/studio">The studio at a glance</a><a href="/learn/first-design">Your first design</a></div></details>
+<details class="navGroup"><summary>Toolbar</summary><div class="navLinks"><a href="/learn/designs">Designs</a><a href="/learn/patterns">Patterns</a><a href="/learn/uploads">Uploads</a><a href="/learn/elements">Elements</a><a href="/learn/text">Text</a><a href="/learn/layers">Layers</a><a href="/learn/save">Save</a><a href="/learn/settings">Settings</a></div></details>
+<details class="navGroup"><summary>Canvas</summary><div class="navLinks"><a href="/learn/canvas-properties">Canvas properties</a><a href="/learn/zoom-and-view">Zoom, 2D and 3D view</a><a href="/learn/selecting">Selecting and moving</a></div></details>
+<details class="navGroup" open><summary>Properties</summary><div class="navLinks"><a href="/learn/basic-properties" class="on" aria-current="page">Basic properties</a><a href="/learn/text-properties">Text properties</a><a href="/learn/image-properties">Image properties</a><a href="/learn/vectors-and-shapes">Vectors and shapes</a><a href="/learn/lines">Lines</a><a href="/learn/pattern-properties">Pattern properties</a><a href="/learn/3d-mockups">3D mockups</a></div></details>
+<details class="navGroup"><summary>Saving and exporting</summary><div class="navLinks"><a href="/learn/autosave">Autosave</a><a href="/learn/wondr-files">Wondr files</a><a href="/learn/export">Export</a></div></details>
+<details class="navGroup"><summary>Account</summary><div class="navLinks"><a href="/learn/plans-and-credits">Plans and AI credits</a><a href="/learn/account">Account and sign-in</a></div></details>
+<details class="navGroup"><summary>Reference</summary><div class="navLinks"><a href="/learn/shortcuts">Keyboard shortcuts</a><a href="/learn/troubleshooting">Troubleshooting</a></div></details>
+                <p id="lblNoTopics" hidden>No topics match your search.</p>
+            </aside>
+
+            <main class="docMain">
+                <nav class="crumbs" aria-label="Breadcrumb">
+                    <a href="/learn">Learn</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Properties</span>
+                </nav>
+                <article class="docBody">
+                    <h1>Basic properties</h1>
+                    <p>When you select a layer, the panel on the right shows its properties. The first tab, <strong>Basic Properties</strong>, is the same for images, vectors, shapes, lines, text and 3D mockups.</p>
+<figure><img src="/res/learn/img/basic-properties@2x.webp" alt="The Basic Properties tab" width="300" height="500" loading="lazy"><figcaption>The Basic Properties tab</figcaption></figure>
+<h2 id="switch-between-tabs">Switch between tabs</h2>
+<p>The icons along the bottom of the panel switch between its tabs. The title at the top of the panel tells you which tab you are on, for example <strong>Basic Properties</strong>, <strong>Image Color</strong> or <strong>Text Style</strong>.</p>
+<h2 id="blend-mode">Blend mode</h2>
+<p>The menu at the top, <strong>Normal</strong> by default, sets how the layer mixes with the layers under it: <strong>Normal</strong>, <strong>Lighten</strong>, <strong>Screen</strong>, <strong>Overlay</strong>, <strong>Soft-light</strong>, <strong>Darken</strong>, <strong>Multiply</strong>, <strong>Difference</strong> or <strong>Exclusion</strong>.</p>
+<h2 id="size-and-position">Size and position</h2>
+<ul><li><strong>Width</strong> and <strong>Height</strong> set the layer&#x27;s size in pixels. The top-left corner stays where it is.</li><li><strong>X-axis</strong> and <strong>Y-axis</strong> set the position of the layer&#x27;s top-left corner on the canvas.</li></ul>
+<aside class="callout note"><p><strong>Note:</strong> Typing a width or height for a text layer switches that text to a fixed size box. See <a href="/learn/text-properties">Text properties</a>.</p></aside>
+<h2 id="flip-opacity-and-rotation">Flip, opacity and rotation</h2>
+<ul><li><strong>Flip X</strong> mirrors the layer from left to right. <strong>Flip Y</strong> mirrors it from top to bottom.</li><li><strong>Opacity</strong> goes from 0 (invisible) to 100.</li><li><strong>Rotation</strong> goes from 0 to 359 degrees.</li></ul>
+<h2 id="typing-values">Typing values</h2>
+<p>Every number box understands more than plain numbers:</p>
+<ul><li><strong>Sums:</strong> <code>200 + 50</code>, <code>1080 / 2</code> or <code>(1920 - 540) / 2</code>. The result is rounded to a whole number.</li><li><strong>Percent for size and position:</strong> <code>50%</code> in <strong>Width</strong> or <strong>X-axis</strong> means half of the canvas width. In <strong>Height</strong> or <strong>Y-axis</strong> it means half of the canvas height.</li><li><strong>Percent elsewhere:</strong> in a box with a fixed range, such as Opacity, <code>%</code> is a share of its maximum.</li><li><strong>Units:</strong> pixel boxes accept <code>px</code>, <code>em</code> and <code>rem</code> (16 pixels each). Angle boxes accept <code>deg</code> or <code>°</code>.</li><li><strong>Arrow keys:</strong> <strong>Up</strong> and <strong>Down</strong> change the value by 1.</li></ul>
+<p>Press <strong>Enter</strong> or click outside the box to apply it. If what you typed cannot be read, the box goes back to its old value.</p>
+<h2 id="editing-several-layers-at-once">Editing several layers at once</h2>
+<p>With several layers selected, a change in the panel is applied to all of them. The panel shows the values of the layer you selected last.</p>
+<h2 id="the-color-picker">The color picker</h2>
+<p>Click any color swatch to open the color picker. You can also type a six-digit hex value or a color name such as <code>aliceblue</code> into the box next to the swatch.</p>
+<figure><img src="/res/learn/img/color-picker@2x.webp" alt="The color picker" width="234" height="268" loading="lazy"><figcaption>The color picker</figcaption></figure>
+<ul><li>Drag in the large square to choose the shade, and along the bar to choose the hue.</li><li>The box on the bottom left sets the transparency, from 0% to 100%.</li><li>Click <strong>Hex</strong> to switch the value box between Hex, RGB and HSB.</li><li><strong>Eyedropper:</strong> while the picker is open, move the pointer over the canvas. A magnifier shows the color under it. Click to pick that color.</li></ul>
+<p>Click <strong>Gradient</strong> at the top to make a gradient:</p>
+<ul><li>Drag the markers on the gradient bar to move the color stops.</li><li>Click <strong>+</strong> next to <strong>Stops</strong> to add a stop, up to seven. Click the minus button on a row to remove one. A gradient needs at least two stops.</li><li>Click <strong>Linear</strong> to switch to <strong>Radial</strong>. A linear gradient can be rotated from 0 to 360 degrees.</li><li>Click <strong>Solid</strong> to go back to a single color.</li></ul>
+<p>Some colors are solid only, such as glows, shadows, lines and 3D model colors. Their picker has no Gradient tab.</p>
+<p>Press <strong>Escape</strong> or click the swatch again to close the picker.</p>
+<h2 id="what-is-not-here">What is not here</h2>
+<ul><li><strong>Lock, hide and mask</strong> are buttons in the <a href="/learn/layers">Layers</a> menu.</li><li>There are no align or distribute buttons. Use <strong>X-axis</strong> and <strong>Y-axis</strong> with percent, for example <code>50% - 270</code> to center a 540 pixel wide layer on the canvas.</li></ul>
+                </article>
+                <nav class="pager" aria-label="More topics">
+                    <a class="pagerPrev" href="/learn/selecting"><small>&larr; Previous</small><span>Selecting and moving</span></a><a class="pagerNext" href="/learn/text-properties"><small>Next &rarr;</small><span>Text properties</span></a>
+                </nav>
+                <footer class="docFoot">
+                    <span>&copy; <span id="lblYear">2026</span> Wondr</span>
+                    <span class="docFootLinks">
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="mailto:support@createwondr.io">Support</a>
+                    </span>
+                </footer>
+            </main>
+
+            <aside class="onPage" aria-label="On this page">
+                <p>On this page</p>
+                <nav id="docOnPage"><a href="#switch-between-tabs">Switch between tabs</a><a href="#blend-mode">Blend mode</a><a href="#size-and-position">Size and position</a><a href="#flip-opacity-and-rotation">Flip, opacity and rotation</a><a href="#typing-values">Typing values</a><a href="#editing-several-layers-at-once">Editing several layers at once</a><a href="#the-color-picker">The color picker</a><a href="#what-is-not-here">What is not here</a></nav>
+            </aside>
+
+        </div>
+
+        <div id="docScrim"></div>
+    </div>
+
+    <script src="/res/js/sec/learn.js"></script>
+</body>
+</html>

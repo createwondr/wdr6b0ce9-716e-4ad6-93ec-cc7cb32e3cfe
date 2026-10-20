@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr - Home</title>
+    <meta name="description" content="Wondr is a design studio in your browser. Shape every detail on a pro canvas, put it on a 3D product, and export it ready to print or post.">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wondr">
+    <meta property="og:title" content="Wondr | Design it. Make it real.">
+    <meta property="og:description" content="A design studio in your browser, with 3D product mockups and AI background removal built in.">
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/res/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <script src="/res/js/sec/paths.js"></script>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+
+        <header id="navTop">
+            <div class="wrap navRow">
+                <a class="brand" href="#top" aria-label="Wondr home">
+                    <img src="/favicon.svg" alt="" width="30" height="17">
+                    <span>Wondr</span>
+                </a>
+                <nav id="navLinks">
+                    <a href="#pricing">Pricing</a>
+                    <a href="/learn">Learn</a>
+                    <a href="#faq">FAQs</a>
+                </nav>
+                <a class="btnGhost btnSmall" href="/login">Login</a>
+                <button id="btnBurger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="top">
+
+            <section class="hero">
+                <div class="heroLight"></div>
+                <div class="wrap">
+
+                    <div class="founding rv">
+                        <div class="foundingBadge">
+                            <svg viewBox="0 0 1835 1922" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M59.5896 638.802C89.1618 657.474 130.132 683.344 141.06 723.276C149.611 695.237 160.418 667.771 173.888 641.408C166.504 660.618 157.195 692.38 149.237 733.625C169.031 704.428 203.15 678.273 258.138 677.885L257.831 679.055C244.94 728.062 224.85 804.437 139.675 794.276C137.025 815.603 134.906 838.461 133.586 862.598C151.343 831.038 183.208 801.962 237.425 793.081L237.29 794.402C231.7 849.056 223.03 933.829 132.305 939.371C132.755 960.37 133.878 982.015 135.808 1004.18C150.855 971.889 179.458 941.194 230.422 926.099L230.454 927.473C231.773 983.138 233.804 1068.86 146.95 1088.69C150.526 1108.8 154.83 1129.19 159.949 1149.76C169.179 1112.5 193.1 1074.11 243.987 1047.72L244.301 1049.17C257.131 1108.16 276.954 1199.31 186.544 1237.28C195.695 1262.59 206.212 1288.02 218.248 1313.41C216.004 1272.74 228.563 1226.03 273.926 1184.44L274.621 1185.79C303.841 1242.23 349.426 1330.29 260.856 1392.32C273.648 1413.29 287.604 1434.14 302.812 1454.78C295.321 1411.36 302.881 1359.77 345.412 1309.01L346.363 1310.37C385.435 1366.39 445.9 1453.07 366.755 1531.99C374.274 1540.11 382.019 1548.17 389.994 1556.17L391.215 1557.4C391.652 1557.84 392.108 1558.3 392.582 1558.78L392.594 1558.79L392.597 1558.8L392.604 1558.8C400.039 1566.3 412.025 1578.38 428.461 1593.26C407.579 1548.85 400.557 1490.03 436.91 1423.65L438.154 1424.85C490.138 1474.79 571.075 1552.54 500.324 1651.25C522.946 1667.5 548.782 1684.34 577.765 1700.61C550.952 1661.38 535.243 1606.74 557.522 1537.74L558.961 1538.68C618.046 1577.11 709.467 1636.56 664.496 1742.68C690.979 1753.61 719.267 1763.6 749.33 1772.15C712.77 1737.78 684.208 1685.15 690.772 1609.13L692.49 1609.76C758.785 1633.99 859.172 1670.69 853.341 1775.39L832.269 1796.46C824.459 1804.27 824.459 1816.93 832.269 1824.74L844.214 1836.69C807.925 1886.69 722.179 1953.47 602.842 1904.12L603.958 1902.67C632.925 1865.06 671.909 1814.46 724.165 1796.63C702.006 1789.66 679.363 1781.53 656.452 1772.13C615.987 1811.33 518.995 1862.91 415.045 1788.96L416.371 1787.87C449.976 1760.24 494.935 1723.27 545.04 1716.63C524.804 1704.64 504.624 1691.54 484.642 1677.28C434.926 1707.08 334.15 1733.81 248.9 1644.79L250.414 1643.96C288.342 1623.27 338.933 1595.66 389.058 1597.8C375.212 1584.45 361.594 1570.41 348.261 1555.65C297.418 1575.94 192.234 1586.4 126.129 1482.66L127.716 1482.17C170.675 1468.73 229.137 1450.45 278.725 1467.96C265.635 1449.11 252.991 1429.36 240.865 1408.69C190.948 1419.06 100.74 1412.19 55.4334 1314.94L56.9246 1314.68C97.2619 1307.69 152.15 1298.17 194.786 1319.84C184.709 1297.75 175.182 1274.77 166.267 1250.87C118.837 1251.68 24.2025 1225.96 4.90213 1115.15L6.37186 1115.28C47.7769 1119.09 104.725 1124.34 139.096 1159.13C134.867 1140.44 130.574 1118.95 126.719 1095.3C126.492 1096.35 126.254 1097.4 126.006 1098.46C83.2134 1091.94 -1.88998 1052.24 0.0320125 945.591L1.35135 945.974C39.2409 956.963 91.6283 972.159 116.366 1011.66C114.556 990.139 113.345 967.733 112.973 944.758C71.957 931.642 -0.310434 883.139 14.0457 783.872L15.2654 784.399C49.2404 799.081 95.8288 819.214 115.876 857.751C117.639 837.307 120.233 816.729 123.806 796.212C88.6722 778.097 31.9548 724.516 58.5672 638.156L59.5896 638.802Z" fill="white"/>
+                                <path d="M1776.28 638.156C1802.89 724.516 1746.17 778.097 1711.04 796.212C1714.61 816.729 1717.2 837.307 1718.97 857.751C1739.02 819.214 1785.6 799.081 1819.58 784.399L1820.8 783.872C1835.15 883.138 1762.89 931.641 1721.87 944.757C1721.5 967.732 1720.29 990.139 1718.48 1011.66C1743.21 972.158 1795.6 956.963 1833.49 945.974L1834.81 945.591C1836.73 1052.24 1751.63 1091.94 1708.84 1098.46C1708.59 1097.4 1708.35 1096.35 1708.12 1095.3C1704.27 1118.95 1699.98 1140.44 1695.75 1159.13C1730.12 1124.34 1787.07 1119.09 1828.47 1115.28L1829.94 1115.14C1810.64 1225.96 1716.01 1251.68 1668.58 1250.87C1659.66 1274.77 1650.14 1297.75 1640.06 1319.84C1682.69 1298.17 1737.58 1307.69 1777.92 1314.68L1779.41 1314.94C1734.1 1412.19 1643.9 1419.06 1593.98 1408.69C1581.85 1429.36 1569.21 1449.11 1556.12 1467.96C1605.71 1450.45 1664.17 1468.73 1707.13 1482.17L1708.72 1482.66C1642.61 1586.4 1537.43 1575.94 1486.58 1555.65C1473.25 1570.41 1459.63 1584.45 1445.79 1597.8C1495.91 1595.66 1546.5 1623.27 1584.43 1643.96L1585.94 1644.79C1500.69 1733.81 1399.92 1707.08 1350.2 1677.28C1330.22 1691.54 1310.04 1704.64 1289.8 1716.63C1339.91 1723.27 1384.87 1760.24 1418.47 1787.87L1419.8 1788.96C1315.85 1862.91 1218.86 1811.33 1178.39 1772.13C1155.48 1781.53 1132.84 1789.66 1110.68 1796.63C1162.94 1814.46 1201.92 1865.06 1230.89 1902.66L1232 1904.11C1112.39 1953.58 1026.52 1886.38 990.379 1836.34L1001.98 1824.74C1009.79 1816.93 1009.79 1804.27 1001.98 1796.46L981.541 1776.02C975.267 1670.83 1075.93 1634.04 1142.35 1609.76L1144.07 1609.13C1150.64 1685.15 1122.07 1737.78 1085.51 1772.15C1115.58 1763.6 1143.87 1753.61 1170.35 1742.68C1125.38 1636.56 1216.8 1577.11 1275.88 1538.68L1277.32 1537.74C1299.6 1606.74 1283.89 1661.38 1257.08 1700.61C1286.06 1684.34 1311.9 1667.5 1334.52 1651.25C1263.77 1552.54 1344.71 1474.79 1396.69 1424.85L1397.93 1423.65C1434.29 1490.03 1427.27 1548.85 1406.38 1593.26C1422.83 1578.37 1434.83 1566.28 1442.26 1558.78L1442.26 1558.78L1442.39 1558.65C1443.28 1557.76 1444.1 1556.93 1444.85 1556.17C1452.83 1548.17 1460.57 1540.11 1468.09 1531.99C1388.94 1453.07 1449.41 1366.39 1488.48 1310.37L1489.43 1309.01C1531.96 1359.77 1539.52 1411.36 1532.03 1454.78C1547.24 1434.14 1561.2 1413.29 1573.99 1392.32C1485.42 1330.29 1531 1242.23 1560.22 1185.79L1560.92 1184.44C1606.28 1226.03 1618.84 1272.74 1616.6 1313.41C1628.63 1288.02 1639.15 1262.59 1648.3 1237.28C1557.89 1199.31 1577.71 1108.16 1590.54 1049.17L1590.86 1047.72C1641.74 1074.11 1665.67 1112.5 1674.9 1149.76C1680.01 1129.19 1684.32 1108.8 1687.89 1088.69C1601.04 1068.86 1603.07 983.138 1604.39 927.473L1604.42 926.099C1655.39 941.194 1683.99 971.888 1699.04 1004.18C1700.97 982.014 1702.09 960.37 1702.54 939.371C1611.81 933.829 1603.14 849.056 1597.55 794.402L1597.42 793.08C1651.64 801.961 1683.5 831.037 1701.26 862.597C1699.94 838.46 1697.82 815.603 1695.17 794.276C1609.99 804.436 1589.9 728.062 1577.01 679.055L1576.7 677.885C1631.69 678.273 1665.81 704.428 1685.61 733.625C1677.65 692.38 1668.34 660.618 1660.96 641.408C1674.43 667.771 1685.23 695.237 1693.78 723.276C1704.71 683.344 1745.68 657.474 1775.25 638.802L1776.28 638.156Z" fill="white"/>
+                                <path d="M909.767 1747.68C913.673 1743.77 920.004 1743.77 923.909 1747.68L980.477 1804.25C984.383 1808.15 984.383 1814.48 980.477 1818.39L923.909 1874.96C920.004 1878.86 913.672 1878.86 909.767 1874.96L853.199 1818.39C849.294 1814.48 849.294 1808.15 853.199 1804.25L909.767 1747.68Z" fill="white"/>
+                                <path d="M1158.83 759.506H866.328V905.307H1079.13V1037.61H866.328V1298.61H709.727V623.606H1158.83V759.506Z" fill="white"/>
+                                <path d="M208.844 448.725C210.787 445.496 215.469 445.496 217.412 448.725L244.951 494.486C245.649 495.646 246.788 496.474 248.107 496.779L300.139 508.83C303.811 509.681 305.257 514.132 302.787 516.978L267.775 557.311C266.888 558.334 266.453 559.673 266.57 561.021L271.187 614.23C271.513 617.985 267.726 620.737 264.256 619.266L215.078 598.432C213.831 597.904 212.424 597.905 211.178 598.432L161.999 619.266C158.529 620.737 154.741 617.985 155.067 614.23L159.685 561.021C159.802 559.673 159.367 558.334 158.479 557.311L123.469 516.978C120.998 514.132 122.444 509.68 126.116 508.83L178.148 496.779C179.467 496.474 180.605 495.646 181.303 494.486L208.844 448.725Z" fill="white"/>
+                                <path d="M1620.84 448.725C1622.79 445.496 1627.47 445.496 1629.41 448.725L1656.95 494.486C1657.65 495.646 1658.79 496.474 1660.11 496.779L1712.14 508.83C1715.81 509.681 1717.26 514.132 1714.79 516.978L1679.78 557.311C1678.89 558.334 1678.45 559.673 1678.57 561.021L1683.19 614.23C1683.51 617.985 1679.73 620.737 1676.26 619.266L1627.08 598.432C1625.83 597.904 1624.42 597.904 1623.18 598.432L1574 619.266C1570.53 620.736 1566.74 617.985 1567.07 614.23L1571.69 561.021C1571.8 559.673 1571.37 558.334 1570.48 557.311L1535.47 516.978C1533 514.132 1534.44 509.68 1538.12 508.83L1590.15 496.779C1591.47 496.474 1592.61 495.646 1593.3 494.486L1620.84 448.725Z" fill="white"/>
+                                <path d="M401.844 248.725C403.787 245.496 408.468 245.496 410.411 248.725L437.951 294.486C438.649 295.646 439.788 296.474 441.107 296.779L493.138 308.83C496.81 309.68 498.257 314.132 495.787 316.978L460.775 357.311C459.888 358.334 459.452 359.673 459.569 361.021L464.187 414.23C464.513 417.985 460.726 420.737 457.256 419.267L408.078 398.433C406.831 397.904 405.423 397.904 404.177 398.433L354.999 419.267C351.529 420.737 347.741 417.985 348.067 414.23L352.685 361.021C352.802 359.673 352.367 358.334 351.479 357.311L316.468 316.978C313.997 314.132 315.445 309.68 319.116 308.83L371.147 296.779C372.466 296.474 373.605 295.646 374.303 294.486L401.844 248.725Z" fill="white"/>
+                                <path d="M1420.84 248.725C1422.79 245.496 1427.47 245.496 1429.41 248.725L1456.95 294.486C1457.65 295.646 1458.79 296.474 1460.11 296.779L1512.14 308.83C1515.81 309.68 1517.26 314.132 1514.79 316.978L1479.78 357.311C1478.89 358.334 1478.45 359.673 1478.57 361.021L1483.19 414.23C1483.51 417.985 1479.73 420.737 1476.26 419.267L1427.08 398.433C1425.83 397.904 1424.42 397.904 1423.18 398.433L1374 419.267C1370.53 420.737 1366.74 417.985 1367.07 414.23L1371.69 361.021C1371.8 359.673 1371.37 358.334 1370.48 357.311L1335.47 316.978C1333 314.132 1334.44 309.68 1338.12 308.83L1390.15 296.779C1391.47 296.474 1392.61 295.646 1393.3 294.486L1420.84 248.725Z" fill="white"/>
+                                <path d="M624.844 117.725C626.787 114.496 631.469 114.496 633.412 117.725L660.951 163.486C661.649 164.646 662.788 165.474 664.107 165.779L716.139 177.83C719.811 178.681 721.257 183.132 718.787 185.978L683.775 226.311C682.888 227.334 682.453 228.673 682.57 230.021L687.187 283.23C687.513 286.985 683.726 289.737 680.256 288.267L631.078 267.433C629.831 266.904 628.424 266.905 627.177 267.433L577.999 288.267C574.529 289.737 570.741 286.985 571.067 283.23L575.685 230.021C575.802 228.673 575.367 227.334 574.479 226.311L539.469 185.978C536.998 183.132 538.444 178.68 542.116 177.83L594.148 165.779C595.467 165.474 596.605 164.646 597.303 163.486L624.844 117.725Z" fill="white"/>
+                                <path d="M1203.84 117.725C1205.79 114.496 1210.47 114.496 1212.41 117.725L1239.95 163.486C1240.65 164.646 1241.79 165.474 1243.11 165.779L1295.14 177.83C1298.81 178.68 1300.26 183.132 1297.79 185.978L1262.78 226.311C1261.89 227.334 1261.45 228.673 1261.57 230.021L1266.19 283.23C1266.51 286.985 1262.73 289.737 1259.26 288.267L1210.08 267.433C1208.83 266.904 1207.42 266.904 1206.18 267.433L1157 288.267C1153.53 289.737 1149.74 286.985 1150.07 283.23L1154.69 230.021C1154.8 228.673 1154.37 227.334 1153.48 226.311L1118.47 185.978C1116 183.132 1117.44 178.68 1121.12 177.83L1173.15 165.779C1174.47 165.474 1175.61 164.646 1176.3 163.486L1203.84 117.725Z" fill="white"/>
+                                <path d="M908.559 4.84365C912.446 -1.61455 921.808 -1.61455 925.695 4.84365L964.317 69.0185C965.713 71.3386 967.991 72.9934 970.629 73.6044L1043.6 90.5048C1050.94 92.2054 1053.83 101.11 1048.89 106.802L999.793 163.364C998.018 165.409 997.148 168.086 997.383 170.784L1003.86 245.404C1004.51 252.913 996.935 258.417 989.995 255.476L921.028 226.259C918.535 225.202 915.72 225.202 913.226 226.259L844.26 255.476C837.319 258.417 829.745 252.913 830.396 245.404L836.872 170.784C837.106 168.086 836.237 165.409 834.462 163.364L785.361 106.802C780.42 101.11 783.314 92.2054 790.657 90.5048L863.626 73.6044C866.264 72.9934 868.542 71.3386 869.938 69.0185L908.559 4.84365Z" fill="white"/>
+                            </svg>
+                            <span>Founding Member</span>
+                        </div>
+                        <p>Limited seats. Lifetime access.</p>
+                    </div>
+
+                    <h1 class="rv">Design it.<br><span class="grad">Make it real.</span></h1>
+                    <p class="lead rv">Shape every detail on a professional canvas, place it on a 3D product, and export it ready for print or screen. A complete design studio that opens in your browser.</p>
+                    <div class="heroCta rv">
+                        <a class="btnCta" href="#pricing">Get started</a>
+                        <a class="btnGhost" href="#mockups">See it in action <span aria-hidden="true">&darr;</span></a>
+                    </div>
+                </div>
+
+                <div class="wrap wrapHeroMedia rv">
+                    <div class="media mediaHero">
+                        <video muted loop playsinline preload="none" data-src="/res/video/hero.mp4" aria-label="Wondr studio overview"></video>
+                        <div class="mediaEmpty">
+                            <span class="mediaPlay"></span>
+                            <b>Studio overview</b>
+                            <small>Video slot: res/video/hero.mp4 &middot; 2560 &times; 1440 &middot; 15 to 25 s loop</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="caps" aria-label="What is inside">
+                <div class="marquee">
+                    <div class="track" id="capTrack"></div>
+                </div>
+            </section>
+
+            <section class="intro">
+                <div class="wrap">
+                    <div class="split rv">
+                        <div>
+                            <p class="kicker">The studio</p>
+                            <h2>Professional tools,<br>made approachable.</h2>
+                        </div>
+                        <p class="splitText">Everything you need to go from first idea to finished piece lives on one canvas. No plugins to hunt for, no extra apps to switch between.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature" id="mockups">
+                <div class="wrap featureRow">
+                    <div class="featureText rv">
+                        <p class="kicker">3D mockups</p>
+                        <h3>See your design on the real thing.</h3>
+                        <p>Wrap your artwork onto a 3D product, turn it to the best angle and light it with studio, outdoor or filmic environments. Show clients the finished product before anything is printed.</p>
+                        <ul class="points">
+                            <li>Rotate, offset and scale the print area</li>
+                            <li>Indoor, outdoor, warm, cool and filmic lighting</li>
+                            <li>Background blur and exposure controls</li>
+                        </ul>
+                    </div>
+                    <div class="media rv">
+                        <video muted loop playsinline preload="none" data-src="/res/video/3d-mockups.mp4" aria-label="3D mockups demo"></video>
+                        <div class="mediaEmpty">
+                            <span class="mediaPlay"></span>
+                            <b>3D mockups</b>
+                            <small>Video slot: res/video/3d-mockups.mp4</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature">
+                <div class="wrap featureRow flip">
+                    <div class="featureText rv">
+                        <p class="kicker">AI background removal</p>
+                        <h3>Clean cutouts in one click.</h3>
+                        <p>Lift a product or a person out of any photo and keep working with it as a layer. Choose a soft edge for hair and fur, or a hard edge for crisp objects.</p>
+                        <ul class="points">
+                            <li>Soft edge and hard edge modes</li>
+                            <li>Undo and redo like any other edit</li>
+                            <li>Daily AI credits included with every plan</li>
+                        </ul>
+                    </div>
+                    <div class="media rv">
+                        <video muted loop playsinline preload="none" data-src="/res/video/background-removal.mp4" aria-label="Background removal demo"></video>
+                        <div class="mediaEmpty">
+                            <span class="mediaPlay"></span>
+                            <b>Background removal</b>
+                            <small>Video slot: res/video/background-removal.mp4</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature">
+                <div class="wrap featureRow">
+                    <div class="featureText rv">
+                        <p class="kicker">Layers and vectors</p>
+                        <h3>Every detail, under your control.</h3>
+                        <p>Stack layers, mask images into any shape, blend them together and edit vector paths point by point. Precise numbers when you need them, free dragging when you don't.</p>
+                        <ul class="points">
+                            <li>Masks, blend modes and filters</li>
+                            <li>Vector path editing with fill, stroke and dash</li>
+                            <li>Full undo history, saved with your project</li>
+                        </ul>
+                    </div>
+                    <div class="media rv">
+                        <video muted loop playsinline preload="none" data-src="/res/video/layers.mp4" aria-label="Layers and vectors demo"></video>
+                        <div class="mediaEmpty">
+                            <span class="mediaPlay"></span>
+                            <b>Layers and vectors</b>
+                            <small>Video slot: res/video/layers.mp4</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature">
+                <div class="wrap featureRow flip">
+                    <div class="featureText rv">
+                        <p class="kicker">Typography</p>
+                        <h3>Type with presence.</h3>
+                        <p>Pick from a large library of Google Fonts and give your words depth with outline, glow and shadow styles you can tune to the pixel. Your fonts travel with the project.</p>
+                        <ul class="points">
+                            <li>Searchable font library</li>
+                            <li>Outline, glow and shadow styles</li>
+                            <li>Emojis and symbols built in</li>
+                        </ul>
+                    </div>
+                    <div class="media rv">
+                        <video muted loop playsinline preload="none" data-src="/res/video/typography.mp4" aria-label="Typography demo"></video>
+                        <div class="mediaEmpty">
+                            <span class="mediaPlay"></span>
+                            <b>Typography</b>
+                            <small>Video slot: res/video/typography.mp4</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature">
+                <div class="wrap featureRow">
+                    <div class="featureText rv">
+                        <p class="kicker">Patterns</p>
+                        <h3>Patterns in seconds.</h3>
+                        <p>Turn any shape into a seamless pattern. Adjust spacing and scale, add a random spin, cascade it in any direction and finish it with a vignette or bloom.</p>
+                        <ul class="points">
+                            <li>Spacing, scale and random spin</li>
+                            <li>Cascade, frame, vignette and bloom styles</li>
+                            <li>Blend patterns with the rest of your design</li>
+                        </ul>
+                    </div>
+                    <div class="media rv">
+                        <video muted loop playsinline preload="none" data-src="/res/video/patterns.mp4" aria-label="Pattern maker demo"></video>
+                        <div class="mediaEmpty">
+                            <span class="mediaPlay"></span>
+                            <b>Pattern maker</b>
+                            <small>Video slot: res/video/patterns.mp4</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature">
+                <div class="wrap featureRow flip">
+                    <div class="featureText rv">
+                        <p class="kicker">Templates and assets</p>
+                        <h3>Never start from a blank page.</h3>
+                        <p>Begin with a ready-made template, drop in stock photos, shapes and graphics, and make it yours. Every template can be used for personal or commercial work.</p>
+                        <ul class="points">
+                            <li>Ready-made templates</li>
+                            <li>Stock photos, elements and graphics</li>
+                            <li>Export PNG, JPEG, WEBP or PDF, watermark-free</li>
+                        </ul>
+                    </div>
+                    <div class="media rv">
+                        <video muted loop playsinline preload="none" data-src="/res/video/templates.mp4" aria-label="Templates demo"></video>
+                        <div class="mediaEmpty">
+                            <span class="mediaPlay"></span>
+                            <b>Templates and assets</b>
+                            <small>Video slot: res/video/templates.mp4</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <div class="wrap">
+                    <div class="split rv">
+                        <div>
+                            <p class="kicker">Your work</p>
+                            <h2>Built to respect<br>what you make.</h2>
+                        </div>
+                        <p class="splitText">Your designs belong to you. Wondr keeps them safe while you work and never uses them for anything else.</p>
+                    </div>
+                    <div class="trio">
+                        <article class="trioItem rv">
+                            <h4>Cloud autosave</h4>
+                            <p>Your latest work is saved to your private cloud space as you go, so you can pick up right where you left off.</p>
+                        </article>
+                        <article class="trioItem rv">
+                            <h4>A project file you keep</h4>
+                            <p>Save the whole project to your own computer as a Wondr file, including its undo history if you want it.</p>
+                        </article>
+                        <article class="trioItem rv">
+                            <h4>Never used to train AI</h4>
+                            <p>We never use your designs to train AI models or to build datasets. It is written into our terms.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block" id="how">
+                <div class="wrap">
+                    <div class="split rv">
+                        <div>
+                            <p class="kicker">How it works</p>
+                            <h2>Three steps to<br>a finished design.</h2>
+                        </div>
+                        <p class="splitText">Works best on a desktop or laptop computer. Nothing to download.</p>
+                    </div>
+                    <ol class="steps">
+                        <li class="step rv">
+                            <span class="stepNum">01</span>
+                            <h4>Sign in</h4>
+                            <p>Continue with your Google account and the studio opens in seconds.</p>
+                        </li>
+                        <li class="step rv">
+                            <span class="stepNum">02</span>
+                            <h4>Create</h4>
+                            <p>Start from a template or a blank canvas and shape it with layers, type, patterns and 3D mockups.</p>
+                        </li>
+                        <li class="step rv">
+                            <span class="stepNum">03</span>
+                            <h4>Export</h4>
+                            <p>Download it at the size you need, ready to post, print or send to a client.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="block" id="pricing">
+                <div class="wrap">
+                    <div class="split rv">
+                        <div>
+                            <p class="kicker">Pricing</p>
+                            <h2>Choose how you<br>want to create.</h2>
+                        </div>
+                        <p class="splitText">Every plan unlocks the full studio. Prices are shown in US dollars and set for your country.</p>
+                    </div>
+                    <div class="plans">
+
+                        <article class="plan rv" id="planMonthly">
+                            <div class="planTop">
+                                <p class="planName">Monthly</p>
+                                <p class="planPrice"><b id="lblPriceMonthly">&nbsp;</b><span>per month</span></p>
+                                <p class="planNote">Pay month by month. No auto-renewal.</p>
+                            </div>
+                            <ul class="perks">
+                                <li>Full access to every feature, template and asset</li>
+                                <li>50 AI background-removal credits, every day</li>
+                                <li>Future updates and features included</li>
+                                <li>Save projects and export without watermarks</li>
+                            </ul>
+                            <a class="btnGhost btnWide" href="/login?plan=monthly">Choose Monthly</a>
+                        </article>
+
+                        <article class="plan planFounding rv" id="planFounding">
+                            <div class="planTop">
+                                <p class="planName">Founding Member <span class="planTag">Limited seats</span></p>
+                                <p class="planPrice"><b id="lblPriceFounding">&nbsp;</b><span>one-time</span></p>
+                                <p class="planNote">One payment. Lifetime access.</p>
+                            </div>
+                            <ul class="perks">
+                                <li>Lifetime, full access to every feature, template and asset</li>
+                                <li>50 AI background-removal credits, every day</li>
+                                <li>Future updates and features included</li>
+                                <li>Founding Member badge on your account</li>
+                            </ul>
+                            <a class="btnCta btnWide" id="btnFounding" href="/login?plan=founding">Choose Founding Member</a>
+                        </article>
+
+                    </div>
+                    <p class="plansFine">Secure checkout with PayPal or card. Background removal is the only feature that uses credits.</p>
+                </div>
+            </section>
+
+            <section class="block" id="faq">
+                <div class="wrap">
+                <div class="faqGrid">
+                    <div class="faqHead rv">
+                        <p class="kicker">FAQs</p>
+                        <h2>Questions,<br>answered.</h2>
+                        <p class="splitText">Can't find what you need? Write to <a href="mailto:support@createwondr.io">support@createwondr.io</a> and we'll help.</p>
+                    </div>
+                    <div class="faq">
+                        <details class="rv">
+                            <summary>What is Wondr?</summary>
+                            <p>Wondr is a design studio that runs in your browser. You can create social posts, posters, banners and product visuals with layers, vectors, type, patterns, AI background removal and 3D mockups, then export them ready to use.</p>
+                        </details>
+                        <details class="rv">
+                            <summary>Do I need to install anything?</summary>
+                            <p>No. Sign in with your Google account and the studio opens in your browser. It works best on a desktop or laptop computer; on phones some features may be limited.</p>
+                        </details>
+                        <details class="rv">
+                            <summary>Can I use my designs commercially?</summary>
+                            <p>Yes. Everything you export is watermark-free and yours to use for personal or commercial work, including designs made from templates. Stock photos follow the Pexels license.</p>
+                        </details>
+                        <details class="rv">
+                            <summary>Who owns what I make?</summary>
+                            <p>You do. We claim no rights over your designs, and we never use them to train AI models or to build datasets.</p>
+                        </details>
+                        <details class="rv">
+                            <summary>How do AI credits work?</summary>
+                            <p>Background removal is the only feature that uses credits; everything else is included with your plan. Credits refresh every day at 00:00 UTC, and unused credits don't carry over.</p>
+                        </details>
+                        <details class="rv">
+                            <summary>Why is the price different in my country?</summary>
+                            <p>Prices are set per country so Wondr stays fair wherever you are. They are shown in US dollars, and your country is estimated from your connection.</p>
+                        </details>
+                        <details class="rv">
+                            <summary>Can I keep a copy of my project?</summary>
+                            <p>Yes. Besides cloud autosave, you can save the full project to your computer as a Wondr file and open it again in any account with an active plan.</p>
+                        </details>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="final">
+                <div class="finalGlow"></div>
+                <div class="wrap rv">
+                    <h2>Your next design<br><span class="grad">starts here.</span></h2>
+                    <a class="btnCta" href="#pricing">See plans</a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="footBottom">
+            <div class="wrap footGrid">
+                <div class="footBrand">
+                    <a class="brand" href="#top" aria-label="Wondr home">
+                        <img src="/favicon.svg" alt="" width="30" height="17">
+                        <span>Wondr</span>
+                    </a>
+                    <p>The design studio in your browser.</p>
+                </div>
+                <div class="footCol">
+                    <p>Product</p>
+                    <a href="#pricing">Pricing</a>
+                    <a href="/learn">Learn</a>
+                    <a href="#faq">FAQs</a>
+                    <a href="/login">Login</a>
+                </div>
+                <div class="footCol">
+                    <p>Social</p>
+                    <a href="#" target="_blank" rel="noopener">Facebook</a>
+                    <a href="#" target="_blank" rel="noopener">Instagram</a>
+                    <a href="#" target="_blank" rel="noopener">TikTok</a>
+                    <a href="#" target="_blank" rel="noopener">Threads</a>
+                    <a href="#" target="_blank" rel="noopener">YouTube</a>
+                    <a href="#" target="_blank" rel="noopener">Reddit</a>
+                </div>
+                <div class="footCol">
+                    <p>Legal</p>
+                    <a href="/terms-of-service">Terms of Service</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/attribution">Attribution</a>
+                </div>
+                <div class="footCol">
+                    <p>Support</p>
+                    <a href="mailto:support@createwondr.io">support@createwondr.io</a>
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="footBase">
+                    <span>&copy; <span id="lblYear">2026</span> Wondr. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="/res/js/sec/home.js"></script>
+</body>
+</html>

@@ -31,3 +31,11 @@
     --glow: radial-gradient(circle at 50% -10%, rgba(122, 142, 255, .10), transparent 38%);
 
 }
+
+@font-face {
+    font-family: "Uncut Sans";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("../fonts/uncut-sans/UncutSans-Variable-Wondr.woff2") format("woff2");
+}

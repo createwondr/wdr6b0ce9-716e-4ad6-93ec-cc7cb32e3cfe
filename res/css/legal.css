@@ -1,7 +1,8 @@
 * {
     margin: 0px;
     padding: 0px;    
-    font-family: "Inter";
+    font-family: "Uncut Sans", "Inter", sans-serif;
+    font-feature-settings: "ss05";
     color: var(--sharp);
 }
   
@@ -93,4 +94,29 @@ body h6 {
     font-weight: 300;
     margin-top: 4em;
     margin-bottom: 4em;
+}
+
+#notFound {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+#notFound h2 {
+    margin: 0px;
+}
+
+#notFound a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted-blue-text);
+    filter: brightness(140%);
+    text-decoration: none;
+}
+
+#notFound a:hover {
+    text-decoration: underline;
 }

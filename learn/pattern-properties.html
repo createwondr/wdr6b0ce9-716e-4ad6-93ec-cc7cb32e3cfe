@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr - Pattern properties</title>
+    <meta name="description" content="Change a Wondr pattern&#x27;s position, tile size, opacity, rotation, color, stroke, scaling, spacing, random spin and layout presets.">
+    <link rel="canonical" href="https://createwondr.io/learn/pattern-properties">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Wondr">
+    <meta property="og:title" content="Wondr - Pattern properties">
+    <meta property="og:description" content="Change a Wondr pattern&#x27;s position, tile size, opacity, rotation, color, stroke, scaling, spacing, random spin and layout presets.">
+    <meta property="og:url" content="https://createwondr.io/learn/pattern-properties">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Pattern properties","description":"Change a Wondr pattern's position, tile size, opacity, rotation, color, stroke, scaling, spacing, random spin and layout presets.","url":"https://createwondr.io/learn/pattern-properties","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Learn","item":"https://createwondr.io/learn"},{"@type":"ListItem","position":2,"name":"Properties"},{"@type":"ListItem","position":3,"name":"Pattern properties","item":"https://createwondr.io/learn/pattern-properties"}]}]}</script>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/res/css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="prefetch" href="/learn/3d-mockups">
+    <script src="/res/js/sec/paths.js"></script>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+
+        <header id="docHeader">
+            <div class="headRow">
+                <button id="btnDocMenu" type="button" aria-label="Topics" aria-expanded="false" aria-controls="docNav">
+                    <span></span><span></span><span></span>
+                </button>
+                <a class="brand" href="/">
+                    <img src="/favicon.svg" alt="" width="28" height="16">
+                    <span>Wondr</span>
+                </a>
+                <a class="brandSub" href="/learn">Learn</a>
+                <nav class="headLinks">
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/learn">Learn</a>
+                    <a href="/#faq">FAQs</a>
+                </nav>
+                <a class="btnLogin" href="/login">Login</a>
+            </div>
+        </header>
+
+        <div class="docLayout">
+
+            <aside id="docNav" aria-label="Topics">
+                <div class="searchbox">
+                    <div class="searchIcon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1919 12.6061A7 7 0 1 1 12.6061 11.1919L16 14.5858L14.5858 16L11.1919 12.6061ZM12 7C12 9.76142 9.76142 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7Z" fill="var(--muted-blue-text)"/></svg>
+                    </div>
+                    <input id="txtDocSearch" class="txtSearch" type="search" placeholder="Search topics" aria-label="Search topics" autocomplete="off" spellcheck="false">
+                    <button class="btnDelSearch" type="button" aria-label="Clear search">
+                        <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><path d="M6.63586 0.233983C6.94784 -0.0779945 7.45406 -0.0779945 7.76603 0.233983C8.07783 0.545908 8.07778 1.05168 7.76603 1.36363L5.12966 3.99949L7.76603 6.63586C8.07798 6.94784 8.078 7.45406 7.76603 7.76603C7.45407 8.078 6.94784 8.07798 6.63586 7.76603L3.99949 5.12966L1.36364 7.76603C1.05168 8.0778 0.545916 8.07783 0.233984 7.76603C-0.0779945 7.45405 -0.0779945 6.94784 0.233984 6.63586L2.86984 3.99949L0.233984 1.36363C-0.0779296 1.05165 -0.0779729 0.54594 0.233984 0.233983C0.54594 -0.0779681 1.05165 -0.0779279 1.36364 0.233983L3.99949 2.86984L6.63586 0.233983Z" fill="white"/></svg>
+                    </button>
+                </div>
+                <details class="navGroup"><summary>Getting started</summary><div class="navLinks"><a href="/learn">Welcome to Wondr</a><a href="/learn/studio">The studio at a glance</a><a href="/learn/first-design">Your first design</a></div></details>
+<details class="navGroup"><summary>Toolbar</summary><div class="navLinks"><a href="/learn/designs">Designs</a><a href="/learn/patterns">Patterns</a><a href="/learn/uploads">Uploads</a><a href="/learn/elements">Elements</a><a href="/learn/text">Text</a><a href="/learn/layers">Layers</a><a href="/learn/save">Save</a><a href="/learn/settings">Settings</a></div></details>
+<details class="navGroup"><summary>Canvas</summary><div class="navLinks"><a href="/learn/canvas-properties">Canvas properties</a><a href="/learn/zoom-and-view">Zoom, 2D and 3D view</a><a href="/learn/selecting">Selecting and moving</a></div></details>
+<details class="navGroup" open><summary>Properties</summary><div class="navLinks"><a href="/learn/basic-properties">Basic properties</a><a href="/learn/text-properties">Text properties</a><a href="/learn/image-properties">Image properties</a><a href="/learn/vectors-and-shapes">Vectors and shapes</a><a href="/learn/lines">Lines</a><a href="/learn/pattern-properties" class="on" aria-current="page">Pattern properties</a><a href="/learn/3d-mockups">3D mockups</a></div></details>
+<details class="navGroup"><summary>Saving and exporting</summary><div class="navLinks"><a href="/learn/autosave">Autosave</a><a href="/learn/wondr-files">Wondr files</a><a href="/learn/export">Export</a></div></details>
+<details class="navGroup"><summary>Account</summary><div class="navLinks"><a href="/learn/plans-and-credits">Plans and AI credits</a><a href="/learn/account">Account and sign-in</a></div></details>
+<details class="navGroup"><summary>Reference</summary><div class="navLinks"><a href="/learn/shortcuts">Keyboard shortcuts</a><a href="/learn/troubleshooting">Troubleshooting</a></div></details>
+                <p id="lblNoTopics" hidden>No topics match your search.</p>
+            </aside>
+
+            <main class="docMain">
+                <nav class="crumbs" aria-label="Breadcrumb">
+                    <a href="/learn">Learn</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Properties</span>
+                </nav>
+                <article class="docBody">
+                    <h1>Pattern properties</h1>
+                    <p>A selected pattern has three tabs: <strong>Pattern Properties</strong>, <strong>Pattern Style</strong> and <strong>Pattern Presets</strong>. Select a pattern from the <a href="/learn/layers">Layers</a> menu, because patterns have no handles on the canvas.</p>
+<h2 id="pattern-properties">Pattern Properties</h2>
+<figure><img src="/res/learn/img/pattern-properties@2x.webp" alt="The Pattern Properties tab" width="300" height="433" loading="lazy"><figcaption>The Pattern Properties tab</figcaption></figure>
+<ul><li><strong>Blend mode:</strong> the menu at the top. See <a href="/learn/basic-properties">Basic properties</a>.</li><li><strong>X-axis</strong> and <strong>Y-axis:</strong> shift the whole pattern sideways or up and down, one tile at a time.</li><li><strong>Box Size:</strong> the size of each tile, from 20 to 100. Smaller tiles mean more of them.</li><li><strong>Opacity:</strong> 0 to 100.</li><li><strong>Rotation:</strong> turns the whole pattern, from 0 to 359 degrees.</li></ul>
+<h2 id="pattern-style">Pattern Style</h2>
+<figure><img src="/res/learn/img/pattern-style@2x.webp" alt="The Pattern Style tab" width="300" height="417" loading="lazy"><figcaption>The Pattern Style tab</figcaption></figure>
+<ul><li><strong>Stroke or Fill:</strong> the menu at the top draws each motif as an outline or filled in.</li><li><strong>Color:</strong> solid or gradient.</li><li><strong>Width:</strong> the outline thickness, from 1 to 10. Hidden when you choose <strong>Fill</strong>.</li><li><strong>Scaling:</strong> how big the motif is inside its tile, from 1 to 10. At 10 it fills the tile.</li><li><strong>Spacing:</strong> adds empty tiles between motifs, from 0 to 5.</li><li><strong>Random Spin:</strong> turns each motif by a random angle, up to 90 degrees either way.</li></ul>
+<h2 id="pattern-presets">Pattern Presets</h2>
+<figure><img src="/res/learn/img/pattern-presets@2x.webp" alt="The Pattern Presets tab" width="300" height="194" loading="lazy"><figcaption>The Pattern Presets tab</figcaption></figure>
+<p>Presets change how the motifs are laid out across the canvas:</p>
+<ul><li><strong>Default:</strong> an even grid.</li><li><strong>Frame:</strong> only the outer ring of tiles, like a border.</li><li><strong>Margin:</strong> everything except the outer ring.</li><li><strong>Vignette:</strong> motifs grow toward the corners.</li><li><strong>Bloom:</strong> motifs are largest in the center.</li><li><strong>Cascade Down, Up, Left and Right:</strong> motifs grow in size across the canvas in that direction.</li></ul>
+<p>Turn on <strong>Random Seed</strong> to give each motif a random size, up to the <strong>Scaling</strong> value. Random Seed works with Default, Frame and Margin. For the other presets it is greyed out.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> Try <strong>Frame</strong> with a small <strong>Box Size</strong> for a quick decorative border, or <strong>Vignette</strong> with a low <strong>Opacity</strong> for a soft background.</p></aside>
+                </article>
+                <nav class="pager" aria-label="More topics">
+                    <a class="pagerPrev" href="/learn/lines"><small>&larr; Previous</small><span>Lines</span></a><a class="pagerNext" href="/learn/3d-mockups"><small>Next &rarr;</small><span>3D mockups</span></a>
+                </nav>
+                <footer class="docFoot">
+                    <span>&copy; <span id="lblYear">2026</span> Wondr</span>
+                    <span class="docFootLinks">
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="mailto:support@createwondr.io">Support</a>
+                    </span>
+                </footer>
+            </main>
+
+            <aside class="onPage" aria-label="On this page">
+                <p>On this page</p>
+                <nav id="docOnPage"><a href="#pattern-properties">Pattern Properties</a><a href="#pattern-style">Pattern Style</a><a href="#pattern-presets">Pattern Presets</a></nav>
+            </aside>
+
+        </div>
+
+        <div id="docScrim"></div>
+    </div>
+
+    <script src="/res/js/sec/learn.js"></script>
+</body>
+</html>

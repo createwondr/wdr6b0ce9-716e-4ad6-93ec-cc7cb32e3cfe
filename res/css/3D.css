@@ -12,7 +12,7 @@
     display: flex;
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -36,7 +36,7 @@
     display: flex;
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -61,7 +61,7 @@
     display: flex;
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -84,7 +84,7 @@
     display: flex;
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -137,6 +137,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -162,6 +163,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -187,6 +189,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -210,7 +213,7 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
     cursor: default;
     border: none;
@@ -230,6 +233,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border-radius: 3px;
@@ -255,6 +259,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -279,6 +284,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -302,6 +308,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -348,6 +355,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -373,6 +381,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -398,6 +407,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -423,6 +433,7 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -450,9 +461,10 @@
 #cnvEnv canvas {
     /*
     clip-path: inset(0 100% 0 0);
-    */
     clip-path: circle(0% at 50% 50%);
-    transition: .3s;
+    */
+    opacity: 0;
+    transition: .2s;
     width: 100%;
     height: 100%;
 }
@@ -480,7 +492,7 @@
 #btnRemoveMockup h2{
     color: var(--sharp);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     margin: auto;
     cursor: pointer;

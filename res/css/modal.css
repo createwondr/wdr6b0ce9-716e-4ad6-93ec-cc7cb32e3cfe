@@ -1,5 +1,5 @@
 * {
-    font-family: "Inter";
+    font-family: "Uncut Sans", "Inter", sans-serif;
 }
 
 #blurWrapper {
@@ -68,7 +68,7 @@
 
 #modalMessage h2 {
     color: var(--sharp);
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 300;
     line-height: 1.5em;
     word-spacing: 1px;
@@ -121,7 +121,7 @@
     font-weight: 500;
     overflow: hidden;
     color: var(--sharp);
-    font-size: 12px;
+    font-size: 12.5px;
     margin: auto;
     letter-spacing: 0.5px;
 }

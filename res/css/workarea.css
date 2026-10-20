@@ -130,7 +130,7 @@
 #divCredits h2 {
     
     color: var(--sharp);
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     margin: auto;
     margin-left: 0.25em;
@@ -180,7 +180,7 @@
 
 .chkContainer h2 {
     color: var(--sharp);
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 700;
     margin: auto;
 }
@@ -280,7 +280,7 @@
 
 #txtZoom h2 {
     color: var(--muted-blue-text);
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     transition: .2s;
     margin: auto;
@@ -328,7 +328,7 @@
     display: flex;
     color: var(--sharp);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -436,7 +436,7 @@
 .rcOption h2 {
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     margin-top: auto;
     margin-bottom: auto;
@@ -462,7 +462,7 @@
 .rcOptionRed h2 {
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     margin-top: auto;
     margin-bottom: auto;
@@ -488,7 +488,7 @@
 .rcOptionExt h2 {
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     margin-top: auto;
     margin-bottom: auto;
@@ -524,7 +524,7 @@
 
 .rcShortcut h2 {
     color: var(--sharp);
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     margin: auto;
     font-weight: 400;

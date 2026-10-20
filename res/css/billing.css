@@ -11,7 +11,8 @@ html {
 body {
     margin: 0px;
     min-height: 100vh;
-    font-family: "Inter", sans-serif;
+    font-family: "Uncut Sans", "Inter", sans-serif;
+    font-feature-settings: "ss05";
     color: var(--sharp);
 
     background: var(--bg);

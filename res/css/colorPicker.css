@@ -29,7 +29,7 @@
 
 .btnSwitchFake h2 {
     color: var(--sharp);
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     letter-spacing: 1px;
     margin: auto;
@@ -50,7 +50,7 @@
     color: var(--muted-blue-text);
     margin: auto;
     margin-top: 0px;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     transition: .2s;
     letter-spacing: 1px;
@@ -137,7 +137,7 @@
     height: 24px;
     outline: none;
     color: var(--sharp) !important;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
     cursor: default;
     text-align: center;
@@ -169,6 +169,7 @@
     outline: none;
     color: var(--sharp);
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     text-align: center;
@@ -194,7 +195,7 @@
 #dropdownColorValue h2 {
     color: var(--sharp);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 12.5px;
     margin: auto;
 }
 

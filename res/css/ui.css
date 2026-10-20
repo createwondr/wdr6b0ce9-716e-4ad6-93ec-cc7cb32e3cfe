@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;    
-    font-family: "Inter";
+    font-family: "Uncut Sans", "Inter", sans-serif;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -151,7 +151,7 @@ h2 {
 .btnHeader h2 {
     color: var(--sharp);
     font-weight: 700;
-    font-size: 12px;
+    font-size: 12.5px;
     margin: auto;
     letter-spacing: 1px;
 }
@@ -222,7 +222,7 @@ h2 {
 .pnlTitle h2 {
     color: var(--sharp);
     font-weight: 700;
-    font-size: 12px;
+    font-size: 12.5px;
     margin: auto;
     letter-spacing: 1px;
 }
@@ -239,7 +239,7 @@ h2 {
 .pnlEntry h2 {
     color: var(--sharp);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     margin-top: auto;
     margin-bottom: auto;
@@ -288,7 +288,7 @@ h2 {
 .dropdown h2{
     color: var(--sharp);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     margin: auto;
     cursor: pointer;
@@ -421,7 +421,7 @@ h2 {
     display: flex;
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -444,7 +444,7 @@ h2 {
     display: flex;
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -469,6 +469,7 @@ h2 {
     margin-left: auto;
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border-radius: 3px;
@@ -494,6 +495,7 @@ h2 {
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -519,6 +521,7 @@ h2 {
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -925,7 +928,7 @@ h2 {
 .adSmallRect h2 {
     color: var(--muted-track);
     font-weight: 700;
-    font-size: 12px;
+    font-size: 12.5px;
     margin: auto;
     letter-spacing: 1px;
 }
@@ -944,7 +947,7 @@ h2 {
 .adMedRect h2 {
     color: var(--muted-track);
     font-weight: 700;
-    font-size: 12px;
+    font-size: 12.5px;
     margin: auto;
     letter-spacing: 1px;
 }
@@ -990,7 +993,7 @@ h2 {
     outline: none;
     color: var(--sharp);
     font-weight: 700;
-    font-size: 12px;
+    font-size: 12.5px;
     text-align: center;
     cursor: pointer;
     letter-spacing: 1px;
@@ -1097,8 +1100,8 @@ h2 {
     height: 40px;
     outline: none;
     border: none;
-    font-family: "Inter";
-    font-size: 13px;
+    font-family: "Uncut Sans", "Inter", sans-serif;
+    font-size: 13.5px;
     font-weight: 600;
     color: var(--sharp);
     background-color: transparent;
@@ -1122,8 +1125,8 @@ h2 {
     height: 40px;
     outline: none;
     border: none;
-    font-family: "Inter";
-    font-size: 13px;
+    font-family: "Uncut Sans", "Inter", sans-serif;
+    font-size: 13.5px;
     font-weight: 600;
     color: var(--sharp);
     background-color: transparent;
@@ -1146,8 +1149,8 @@ h2 {
     height: 40px;
     outline: none;
     border: none;
-    font-family: "Inter";
-    font-size: 13px;
+    font-family: "Uncut Sans", "Inter", sans-serif;
+    font-size: 13.5px;
     font-weight: 600;
     color: var(--sharp);
     background-color: transparent;
@@ -1240,7 +1243,7 @@ h2 {
 #divWelcomeMsg h1 {
     color: hsl(var(--hue) 30% 60%);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 12.5px;
     margin: auto;
     letter-spacing: 2px;
     word-break: normal;
@@ -1270,7 +1273,7 @@ h2 {
 
 .menuFooter h2 {
     color: var(--sharp);
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 500;
     margin: auto;
     letter-spacing: 0.5px;
@@ -1295,7 +1298,7 @@ h2 {
 .btnMenuFooter h2 {
     margin: auto;
     color: var(--sharp);
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 600;
 }
 
@@ -1407,7 +1410,7 @@ h2 {
 .frTop div h2{
     margin: auto;
     color: var(--muted-blue-text);
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -1507,7 +1510,7 @@ h2 {
 .previewTitle h2 {
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 600px;
     letter-spacing: 1px;
 }
@@ -1761,7 +1764,7 @@ h2 {
     display: flex;
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -1785,7 +1788,7 @@ h2 {
     display: flex;
     color: var(--sharp);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 1px;
     cursor: pointer;
     align-items: center;
@@ -1851,7 +1854,7 @@ h2 {
 #tooltip h2 {
     color: var(--sharp);
     font-weight: 300;
-    font-size: 10px;
+    font-size: 10.5px;
     letter-spacing: 2px;
     margin-top: auto;
     margin-bottom: auto;
@@ -1921,7 +1924,7 @@ h2 {
     background-clip: text;
     color: transparent;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 10.5px;
     margin: auto;
     margin-left: 0px;
     text-transform: uppercase;

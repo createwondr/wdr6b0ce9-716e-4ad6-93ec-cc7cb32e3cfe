@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr - Troubleshooting</title>
+    <meta name="description" content="Fixes for common Wondr problems, from being signed out and autosave errors to background removal limits, Wondr file errors, export questions and slow loading.">
+    <link rel="canonical" href="https://createwondr.io/learn/troubleshooting">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Wondr">
+    <meta property="og:title" content="Wondr - Troubleshooting">
+    <meta property="og:description" content="Fixes for common Wondr problems, from being signed out and autosave errors to background removal limits, Wondr file errors, export questions and slow loading.">
+    <meta property="og:url" content="https://createwondr.io/learn/troubleshooting">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Troubleshooting","description":"Fixes for common Wondr problems, from being signed out and autosave errors to background removal limits, Wondr file errors, export questions and slow loading.","url":"https://createwondr.io/learn/troubleshooting","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Learn","item":"https://createwondr.io/learn"},{"@type":"ListItem","position":2,"name":"Reference"},{"@type":"ListItem","position":3,"name":"Troubleshooting","item":"https://createwondr.io/learn/troubleshooting"}]}]}</script>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/res/css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="prefetch" href="">
+    <script src="/res/js/sec/paths.js"></script>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+
+        <header id="docHeader">
+            <div class="headRow">
+                <button id="btnDocMenu" type="button" aria-label="Topics" aria-expanded="false" aria-controls="docNav">
+                    <span></span><span></span><span></span>
+                </button>
+                <a class="brand" href="/">
+                    <img src="/favicon.svg" alt="" width="28" height="16">
+                    <span>Wondr</span>
+                </a>
+                <a class="brandSub" href="/learn">Learn</a>
+                <nav class="headLinks">
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/learn">Learn</a>
+                    <a href="/#faq">FAQs</a>
+                </nav>
+                <a class="btnLogin" href="/login">Login</a>
+            </div>
+        </header>
+
+        <div class="docLayout">
+
+            <aside id="docNav" aria-label="Topics">
+                <div class="searchbox">
+                    <div class="searchIcon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1919 12.6061A7 7 0 1 1 12.6061 11.1919L16 14.5858L14.5858 16L11.1919 12.6061ZM12 7C12 9.76142 9.76142 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7Z" fill="var(--muted-blue-text)"/></svg>
+                    </div>
+                    <input id="txtDocSearch" class="txtSearch" type="search" placeholder="Search topics" aria-label="Search topics" autocomplete="off" spellcheck="false">
+                    <button class="btnDelSearch" type="button" aria-label="Clear search">
+                        <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><path d="M6.63586 0.233983C6.94784 -0.0779945 7.45406 -0.0779945 7.76603 0.233983C8.07783 0.545908 8.07778 1.05168 7.76603 1.36363L5.12966 3.99949L7.76603 6.63586C8.07798 6.94784 8.078 7.45406 7.76603 7.76603C7.45407 8.078 6.94784 8.07798 6.63586 7.76603L3.99949 5.12966L1.36364 7.76603C1.05168 8.0778 0.545916 8.07783 0.233984 7.76603C-0.0779945 7.45405 -0.0779945 6.94784 0.233984 6.63586L2.86984 3.99949L0.233984 1.36363C-0.0779296 1.05165 -0.0779729 0.54594 0.233984 0.233983C0.54594 -0.0779681 1.05165 -0.0779279 1.36364 0.233983L3.99949 2.86984L6.63586 0.233983Z" fill="white"/></svg>
+                    </button>
+                </div>
+                <details class="navGroup"><summary>Getting started</summary><div class="navLinks"><a href="/learn">Welcome to Wondr</a><a href="/learn/studio">The studio at a glance</a><a href="/learn/first-design">Your first design</a></div></details>
+<details class="navGroup"><summary>Toolbar</summary><div class="navLinks"><a href="/learn/designs">Designs</a><a href="/learn/patterns">Patterns</a><a href="/learn/uploads">Uploads</a><a href="/learn/elements">Elements</a><a href="/learn/text">Text</a><a href="/learn/layers">Layers</a><a href="/learn/save">Save</a><a href="/learn/settings">Settings</a></div></details>
+<details class="navGroup"><summary>Canvas</summary><div class="navLinks"><a href="/learn/canvas-properties">Canvas properties</a><a href="/learn/zoom-and-view">Zoom, 2D and 3D view</a><a href="/learn/selecting">Selecting and moving</a></div></details>
+<details class="navGroup"><summary>Properties</summary><div class="navLinks"><a href="/learn/basic-properties">Basic properties</a><a href="/learn/text-properties">Text properties</a><a href="/learn/image-properties">Image properties</a><a href="/learn/vectors-and-shapes">Vectors and shapes</a><a href="/learn/lines">Lines</a><a href="/learn/pattern-properties">Pattern properties</a><a href="/learn/3d-mockups">3D mockups</a></div></details>
+<details class="navGroup"><summary>Saving and exporting</summary><div class="navLinks"><a href="/learn/autosave">Autosave</a><a href="/learn/wondr-files">Wondr files</a><a href="/learn/export">Export</a></div></details>
+<details class="navGroup"><summary>Account</summary><div class="navLinks"><a href="/learn/plans-and-credits">Plans and AI credits</a><a href="/learn/account">Account and sign-in</a></div></details>
+<details class="navGroup" open><summary>Reference</summary><div class="navLinks"><a href="/learn/shortcuts">Keyboard shortcuts</a><a href="/learn/troubleshooting" class="on" aria-current="page">Troubleshooting</a></div></details>
+                <p id="lblNoTopics" hidden>No topics match your search.</p>
+            </aside>
+
+            <main class="docMain">
+                <nav class="crumbs" aria-label="Breadcrumb">
+                    <a href="/learn">Learn</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Reference</span>
+                </nav>
+                <article class="docBody">
+                    <h1>Troubleshooting</h1>
+                    <p>Most problems in Wondr have a quick fix. Find yours below, or email <strong>support@createwondr.io</strong> if it is not here.</p>
+<h2 id="i-was-signed-out-suddenly">I was signed out suddenly</h2>
+<p>Your account was signed in on another device. You can use one device at a time, so signing in somewhere else signs this device out. Sign in again to continue here, which signs the other device out. See <a href="/learn/account">Account and sign-in</a>.</p>
+<h2 id="i-see-resume-your-work">I see &quot;Resume your work?&quot;</h2>
+<p>Wondr found work autosaved from your last session. Click <strong>Okay</strong> to load it, or <strong>Close</strong> to start fresh. Editing anything before you click <strong>Okay</strong> also starts fresh and replaces the older autosave. See <a href="/learn/autosave">Autosave</a>.</p>
+<h2 id="something-went-wrong-while-i-work">&quot;Something went wrong&quot; while I work</h2>
+<p>A save could not reach the server, usually because of the connection. Close the message. Wondr tries again on its own once you are back online.</p>
+<h2 id="remove-background-does-not-work">Remove background does not work</h2>
+<ul><li><strong>Daily credits have maxed out:</strong> you have used today&#x27;s credits, or the image costs more than you have left. Wait for the refresh at 00:00 UTC, or try a smaller image. See <a href="/learn/plans-and-credits">Plans and AI credits</a>.</li><li><strong>Image too large:</strong> the image is more than 4096 pixels on one side. Resize it first.</li><li><strong>Something went wrong:</strong> try again in a moment. You are not charged for a failed removal.</li><li><strong>The option is missing:</strong> select only one image. Remove background is not offered for several layers at once.</li></ul>
+<h2 id="a-photo-shows-failed-to-fetch-image">A photo shows &quot;Failed to fetch image&quot;</h2>
+<p>Click <strong>Retry?</strong> on the layer. The message is never saved into your files or exports.</p>
+<h2 id="stock-photos-show-api-unavailable">Stock photos show &quot;API Unavailable&quot;</h2>
+<p>The stock photo service did not answer. Click <strong>Retry</strong>.</p>
+<h2 id="a-template-search-finds-nothing">A template search finds nothing</h2>
+<p>Type at least two letters, then pick a suggestion or press <strong>Enter</strong>. If no suggestions appear, try a different word.</p>
+<h2 id="my-wondr-file-will-not-open">My Wondr file will not open</h2>
+<ul><li><strong>Invalid file format:</strong> the file was changed outside Wondr, damaged, or is not a Wondr file.</li><li>Opening and saving Wondr files needs an internet connection.</li><li>Use the <strong>file icon</strong> next to the search box in the <a href="/learn/designs">Designs</a> menu. Dragging a file onto the studio does not open it.</li></ul>
+<h2 id="my-export-has-a-white-background">My export has a white background</h2>
+<p>JPEG, WEBP and PDF exports always have a white background. See <a href="/learn/export">Export</a>.</p>
+<h2 id="the-text-in-my-pdf-cannot-be-selected">The text in my PDF cannot be selected</h2>
+<p>PDF exports contain your design as one high quality image. To make the PDF sharper, raise the <strong>Output Width</strong> and <strong>Output Height</strong>.</p>
+<h2 id="a-layer-is-missing-from-my-export">A layer is missing from my export</h2>
+<p>Hidden layers are not exported. Show the layer with its eye in the <a href="/learn/layers">Layers</a> menu.</p>
+<h2 id="shortcuts-do-nothing-on-my-mac">Shortcuts do nothing on my Mac</h2>
+<p>Use <strong>Control</strong> instead of <strong>Command</strong>. See <a href="/learn/shortcuts">Keyboard shortcuts</a>.</p>
+<h2 id="paste-from-the-menu-does-not-work">Paste from the menu does not work</h2>
+<p>Your browser blocked clipboard access. Allow it in the site settings, or press <strong>Ctrl + V</strong>.</p>
+<h2 id="the-sign-in-window-does-not-open">The sign-in window does not open</h2>
+<p>Sign-in opens in a pop-up window. Allow pop-ups for createwondr.io and try again.</p>
+<h2 id="templates-fonts-or-3d-look-out-of-date-or-load-slowly">Templates, fonts or 3D look out of date or load slowly</h2>
+<p>Open <a href="/learn/settings">Settings</a> and click <strong>Clear Cache</strong>. Fresh copies download next time. This also signs you out, so sign in again afterwards. Your autosave stays safe in the cloud.</p>
+<h2 id="3d-mockups-do-not-show">3D mockups do not show</h2>
+<p>3D needs a browser with graphics acceleration turned on. Use a desktop browser and check that hardware acceleration is enabled in its settings.</p>
+<h2 id="fonts-look-different-from-what-i-picked">Fonts look different from what I picked</h2>
+<p>Fonts load from Google Fonts. If your network or a browser extension blocks Google Fonts, text may show in another font. Check your connection and extensions.</p>
+<h2 id="using-wondr-on-a-phone-or-tablet">Using Wondr on a phone or tablet</h2>
+<p>Wondr works best on a desktop or laptop computer. On phones some features may be limited.</p>
+<h2 id="i-can-t-undo-far-enough">I can&#x27;t undo far enough</h2>
+<p>Wondr keeps up to 999 undo steps, and your autosave keeps them too. To carry them in a file, save a Wondr file with <strong>Include History</strong> turned on. See <a href="/learn/wondr-files">Wondr files</a>.</p>
+<h2 id="still-stuck">Still stuck?</h2>
+<p>Email <strong>support@createwondr.io</strong> and tell us what you were doing and what you saw.</p>
+                </article>
+                <nav class="pager" aria-label="More topics">
+                    <a class="pagerPrev" href="/learn/shortcuts"><small>&larr; Previous</small><span>Keyboard shortcuts</span></a>
+                </nav>
+                <footer class="docFoot">
+                    <span>&copy; <span id="lblYear">2026</span> Wondr</span>
+                    <span class="docFootLinks">
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="mailto:support@createwondr.io">Support</a>
+                    </span>
+                </footer>
+            </main>
+
+            <aside class="onPage" aria-label="On this page">
+                <p>On this page</p>
+                <nav id="docOnPage"><a href="#i-was-signed-out-suddenly">I was signed out suddenly</a><a href="#i-see-resume-your-work">I see &quot;Resume your work?&quot;</a><a href="#something-went-wrong-while-i-work">&quot;Something went wrong&quot; while I work</a><a href="#remove-background-does-not-work">Remove background does not work</a><a href="#a-photo-shows-failed-to-fetch-image">A photo shows &quot;Failed to fetch image&quot;</a><a href="#stock-photos-show-api-unavailable">Stock photos show &quot;API Unavailable&quot;</a><a href="#a-template-search-finds-nothing">A template search finds nothing</a><a href="#my-wondr-file-will-not-open">My Wondr file will not open</a><a href="#my-export-has-a-white-background">My export has a white background</a><a href="#the-text-in-my-pdf-cannot-be-selected">The text in my PDF cannot be selected</a><a href="#a-layer-is-missing-from-my-export">A layer is missing from my export</a><a href="#shortcuts-do-nothing-on-my-mac">Shortcuts do nothing on my Mac</a><a href="#paste-from-the-menu-does-not-work">Paste from the menu does not work</a><a href="#the-sign-in-window-does-not-open">The sign-in window does not open</a><a href="#templates-fonts-or-3d-look-out-of-date-or-load-slowly">Templates, fonts or 3D look out of date or load slowly</a><a href="#3d-mockups-do-not-show">3D mockups do not show</a><a href="#fonts-look-different-from-what-i-picked">Fonts look different from what I picked</a><a href="#using-wondr-on-a-phone-or-tablet">Using Wondr on a phone or tablet</a><a href="#i-can-t-undo-far-enough">I can&#x27;t undo far enough</a><a href="#still-stuck">Still stuck?</a></nav>
+            </aside>
+
+        </div>
+
+        <div id="docScrim"></div>
+    </div>
+
+    <script src="/res/js/sec/learn.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr - Zoom, 2D and 3D view</title>
+    <meta name="description" content="Zoom in and out of the Wondr canvas, scroll around it, and switch between the 2D canvas and the 3D environment view.">
+    <link rel="canonical" href="https://createwondr.io/learn/zoom-and-view">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Wondr">
+    <meta property="og:title" content="Wondr - Zoom, 2D and 3D view">
+    <meta property="og:description" content="Zoom in and out of the Wondr canvas, scroll around it, and switch between the 2D canvas and the 3D environment view.">
+    <meta property="og:url" content="https://createwondr.io/learn/zoom-and-view">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Zoom, 2D and 3D view","description":"Zoom in and out of the Wondr canvas, scroll around it, and switch between the 2D canvas and the 3D environment view.","url":"https://createwondr.io/learn/zoom-and-view","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Learn","item":"https://createwondr.io/learn"},{"@type":"ListItem","position":2,"name":"Canvas"},{"@type":"ListItem","position":3,"name":"Zoom, 2D and 3D view","item":"https://createwondr.io/learn/zoom-and-view"}]}]}</script>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/res/css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="prefetch" href="/learn/selecting">
+    <script src="/res/js/sec/paths.js"></script>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+
+        <header id="docHeader">
+            <div class="headRow">
+                <button id="btnDocMenu" type="button" aria-label="Topics" aria-expanded="false" aria-controls="docNav">
+                    <span></span><span></span><span></span>
+                </button>
+                <a class="brand" href="/">
+                    <img src="/favicon.svg" alt="" width="28" height="16">
+                    <span>Wondr</span>
+                </a>
+                <a class="brandSub" href="/learn">Learn</a>
+                <nav class="headLinks">
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/learn">Learn</a>
+                    <a href="/#faq">FAQs</a>
+                </nav>
+                <a class="btnLogin" href="/login">Login</a>
+            </div>
+        </header>
+
+        <div class="docLayout">
+
+            <aside id="docNav" aria-label="Topics">
+                <div class="searchbox">
+                    <div class="searchIcon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1919 12.6061A7 7 0 1 1 12.6061 11.1919L16 14.5858L14.5858 16L11.1919 12.6061ZM12 7C12 9.76142 9.76142 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7Z" fill="var(--muted-blue-text)"/></svg>
+                    </div>
+                    <input id="txtDocSearch" class="txtSearch" type="search" placeholder="Search topics" aria-label="Search topics" autocomplete="off" spellcheck="false">
+                    <button class="btnDelSearch" type="button" aria-label="Clear search">
+                        <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><path d="M6.63586 0.233983C6.94784 -0.0779945 7.45406 -0.0779945 7.76603 0.233983C8.07783 0.545908 8.07778 1.05168 7.76603 1.36363L5.12966 3.99949L7.76603 6.63586C8.07798 6.94784 8.078 7.45406 7.76603 7.76603C7.45407 8.078 6.94784 8.07798 6.63586 7.76603L3.99949 5.12966L1.36364 7.76603C1.05168 8.0778 0.545916 8.07783 0.233984 7.76603C-0.0779945 7.45405 -0.0779945 6.94784 0.233984 6.63586L2.86984 3.99949L0.233984 1.36363C-0.0779296 1.05165 -0.0779729 0.54594 0.233984 0.233983C0.54594 -0.0779681 1.05165 -0.0779279 1.36364 0.233983L3.99949 2.86984L6.63586 0.233983Z" fill="white"/></svg>
+                    </button>
+                </div>
+                <details class="navGroup"><summary>Getting started</summary><div class="navLinks"><a href="/learn">Welcome to Wondr</a><a href="/learn/studio">The studio at a glance</a><a href="/learn/first-design">Your first design</a></div></details>
+<details class="navGroup"><summary>Toolbar</summary><div class="navLinks"><a href="/learn/designs">Designs</a><a href="/learn/patterns">Patterns</a><a href="/learn/uploads">Uploads</a><a href="/learn/elements">Elements</a><a href="/learn/text">Text</a><a href="/learn/layers">Layers</a><a href="/learn/save">Save</a><a href="/learn/settings">Settings</a></div></details>
+<details class="navGroup" open><summary>Canvas</summary><div class="navLinks"><a href="/learn/canvas-properties">Canvas properties</a><a href="/learn/zoom-and-view" class="on" aria-current="page">Zoom, 2D and 3D view</a><a href="/learn/selecting">Selecting and moving</a></div></details>
+<details class="navGroup"><summary>Properties</summary><div class="navLinks"><a href="/learn/basic-properties">Basic properties</a><a href="/learn/text-properties">Text properties</a><a href="/learn/image-properties">Image properties</a><a href="/learn/vectors-and-shapes">Vectors and shapes</a><a href="/learn/lines">Lines</a><a href="/learn/pattern-properties">Pattern properties</a><a href="/learn/3d-mockups">3D mockups</a></div></details>
+<details class="navGroup"><summary>Saving and exporting</summary><div class="navLinks"><a href="/learn/autosave">Autosave</a><a href="/learn/wondr-files">Wondr files</a><a href="/learn/export">Export</a></div></details>
+<details class="navGroup"><summary>Account</summary><div class="navLinks"><a href="/learn/plans-and-credits">Plans and AI credits</a><a href="/learn/account">Account and sign-in</a></div></details>
+<details class="navGroup"><summary>Reference</summary><div class="navLinks"><a href="/learn/shortcuts">Keyboard shortcuts</a><a href="/learn/troubleshooting">Troubleshooting</a></div></details>
+                <p id="lblNoTopics" hidden>No topics match your search.</p>
+            </aside>
+
+            <main class="docMain">
+                <nav class="crumbs" aria-label="Breadcrumb">
+                    <a href="/learn">Learn</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Canvas</span>
+                </nav>
+                <article class="docBody">
+                    <h1>Zoom, 2D and 3D view</h1>
+                    <p>The controls for how you see your canvas sit above it: the <strong>zoom controls</strong> in the center and the <strong>2D / 3D switch</strong> on the right. Zooming only changes your view. It never changes the size of your design or your export.</p>
+<h2 id="zoom">Zoom</h2>
+<figure><img src="/res/learn/img/zoom-controls@2x.webp" alt="The zoom slider and percent menu" width="226" height="50" loading="lazy"><figcaption>The zoom slider and percent menu</figcaption></figure>
+<ul><li><strong>Slider:</strong> drag it to zoom between <strong>20%</strong> and <strong>200%</strong>.</li><li><strong>Percent menu:</strong> click the percentage to pick 20%, 35%, 50%, 75%, 100%, 125%, 150% or 200%.</li><li><strong>Ctrl + mouse wheel:</strong> each notch zooms by 2%. Over the canvas it zooms toward the spot under your pointer.</li></ul>
+<p>The studio always opens at 50%.</p>
+<aside class="callout note"><p><strong>Note:</strong> Ctrl + Plus and Ctrl + Minus zoom the whole browser page, not the canvas. Use the slider, the percent menu or Ctrl + mouse wheel instead.</p></aside>
+<h2 id="move-around-the-canvas">Move around the canvas</h2>
+<p>When the zoomed canvas is bigger than the work area, scrollbars appear. Scroll with the mouse wheel, or drag the scrollbars. There is no hand tool.</p>
+<h2 id="2d-and-3d-view">2D and 3D view</h2>
+<figure><img src="/res/learn/img/mode-switch@2x.webp" alt="The 2D and 3D switch" width="76" height="50" loading="lazy"><figcaption>The 2D and 3D switch</figcaption></figure>
+<p>Click the switch on the top right of the work area to change between <strong>2D</strong> and <strong>3D</strong>.</p>
+<ul><li><strong>2D</strong> is the plain canvas.</li><li><strong>3D</strong> places a lit 3D environment behind your layers. The first time, it may take a moment to load.</li></ul>
+<p>With nothing selected in 3D view, the panel on the right shows <strong>3D Environment</strong>:</p>
+<figure><img src="/res/learn/img/environment@2x.webp" alt="The 3D Environment panel" width="300" height="361" loading="lazy"><figcaption>The 3D Environment panel</figcaption></figure>
+<ul><li><strong>Environment menu:</strong> Indoor White Light, Outdoor White Light, Outdoor Warm Light or Outdoor Cool Light.</li><li><strong>Filmic Color:</strong> a film-like color grade.</li><li><strong>Background Blur:</strong> 0 to 100%.</li><li><strong>Background Rotation:</strong> turns the environment from -180 to 180 degrees.</li><li><strong>Background Exposure:</strong> 0 to 200%, 100 by default.</li></ul>
+<p>The environment camera does not move with the mouse. Use <strong>Background Rotation</strong> to turn it.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> When you export in 3D view, the environment is included as the background. Switch back to 2D for a plain background.</p></aside>
+<p>Switching views is an undo step, and the view is saved with your project. 3D mockup layers work in both views. See <a href="/learn/3d-mockups">3D mockups</a>.</p>
+                </article>
+                <nav class="pager" aria-label="More topics">
+                    <a class="pagerPrev" href="/learn/canvas-properties"><small>&larr; Previous</small><span>Canvas properties</span></a><a class="pagerNext" href="/learn/selecting"><small>Next &rarr;</small><span>Selecting and moving</span></a>
+                </nav>
+                <footer class="docFoot">
+                    <span>&copy; <span id="lblYear">2026</span> Wondr</span>
+                    <span class="docFootLinks">
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="mailto:support@createwondr.io">Support</a>
+                    </span>
+                </footer>
+            </main>
+
+            <aside class="onPage" aria-label="On this page">
+                <p>On this page</p>
+                <nav id="docOnPage"><a href="#zoom">Zoom</a><a href="#move-around-the-canvas">Move around the canvas</a><a href="#2d-and-3d-view">2D and 3D view</a></nav>
+            </aside>
+
+        </div>
+
+        <div id="docScrim"></div>
+    </div>
+
+    <script src="/res/js/sec/learn.js"></script>
+</body>
+</html>

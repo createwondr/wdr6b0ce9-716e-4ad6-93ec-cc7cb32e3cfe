@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr - Text properties</title>
+    <meta name="description" content="Edit the words of a text layer in Wondr, and set its font, weight, size, color, spacing, case, box size and alignment, plus Outline, Glow and Shadow styles.">
+    <link rel="canonical" href="https://createwondr.io/learn/text-properties">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Wondr">
+    <meta property="og:title" content="Wondr - Text properties">
+    <meta property="og:description" content="Edit the words of a text layer in Wondr, and set its font, weight, size, color, spacing, case, box size and alignment, plus Outline, Glow and Shadow styles.">
+    <meta property="og:url" content="https://createwondr.io/learn/text-properties">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Text properties","description":"Edit the words of a text layer in Wondr, and set its font, weight, size, color, spacing, case, box size and alignment, plus Outline, Glow and Shadow styles.","url":"https://createwondr.io/learn/text-properties","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Learn","item":"https://createwondr.io/learn"},{"@type":"ListItem","position":2,"name":"Properties"},{"@type":"ListItem","position":3,"name":"Text properties","item":"https://createwondr.io/learn/text-properties"}]}]}</script>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/res/css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="prefetch" href="/learn/image-properties">
+    <script src="/res/js/sec/paths.js"></script>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+
+        <header id="docHeader">
+            <div class="headRow">
+                <button id="btnDocMenu" type="button" aria-label="Topics" aria-expanded="false" aria-controls="docNav">
+                    <span></span><span></span><span></span>
+                </button>
+                <a class="brand" href="/">
+                    <img src="/favicon.svg" alt="" width="28" height="16">
+                    <span>Wondr</span>
+                </a>
+                <a class="brandSub" href="/learn">Learn</a>
+                <nav class="headLinks">
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/learn">Learn</a>
+                    <a href="/#faq">FAQs</a>
+                </nav>
+                <a class="btnLogin" href="/login">Login</a>
+            </div>
+        </header>
+
+        <div class="docLayout">
+
+            <aside id="docNav" aria-label="Topics">
+                <div class="searchbox">
+                    <div class="searchIcon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1919 12.6061A7 7 0 1 1 12.6061 11.1919L16 14.5858L14.5858 16L11.1919 12.6061ZM12 7C12 9.76142 9.76142 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7Z" fill="var(--muted-blue-text)"/></svg>
+                    </div>
+                    <input id="txtDocSearch" class="txtSearch" type="search" placeholder="Search topics" aria-label="Search topics" autocomplete="off" spellcheck="false">
+                    <button class="btnDelSearch" type="button" aria-label="Clear search">
+                        <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><path d="M6.63586 0.233983C6.94784 -0.0779945 7.45406 -0.0779945 7.76603 0.233983C8.07783 0.545908 8.07778 1.05168 7.76603 1.36363L5.12966 3.99949L7.76603 6.63586C8.07798 6.94784 8.078 7.45406 7.76603 7.76603C7.45407 8.078 6.94784 8.07798 6.63586 7.76603L3.99949 5.12966L1.36364 7.76603C1.05168 8.0778 0.545916 8.07783 0.233984 7.76603C-0.0779945 7.45405 -0.0779945 6.94784 0.233984 6.63586L2.86984 3.99949L0.233984 1.36363C-0.0779296 1.05165 -0.0779729 0.54594 0.233984 0.233983C0.54594 -0.0779681 1.05165 -0.0779279 1.36364 0.233983L3.99949 2.86984L6.63586 0.233983Z" fill="white"/></svg>
+                    </button>
+                </div>
+                <details class="navGroup"><summary>Getting started</summary><div class="navLinks"><a href="/learn">Welcome to Wondr</a><a href="/learn/studio">The studio at a glance</a><a href="/learn/first-design">Your first design</a></div></details>
+<details class="navGroup"><summary>Toolbar</summary><div class="navLinks"><a href="/learn/designs">Designs</a><a href="/learn/patterns">Patterns</a><a href="/learn/uploads">Uploads</a><a href="/learn/elements">Elements</a><a href="/learn/text">Text</a><a href="/learn/layers">Layers</a><a href="/learn/save">Save</a><a href="/learn/settings">Settings</a></div></details>
+<details class="navGroup"><summary>Canvas</summary><div class="navLinks"><a href="/learn/canvas-properties">Canvas properties</a><a href="/learn/zoom-and-view">Zoom, 2D and 3D view</a><a href="/learn/selecting">Selecting and moving</a></div></details>
+<details class="navGroup" open><summary>Properties</summary><div class="navLinks"><a href="/learn/basic-properties">Basic properties</a><a href="/learn/text-properties" class="on" aria-current="page">Text properties</a><a href="/learn/image-properties">Image properties</a><a href="/learn/vectors-and-shapes">Vectors and shapes</a><a href="/learn/lines">Lines</a><a href="/learn/pattern-properties">Pattern properties</a><a href="/learn/3d-mockups">3D mockups</a></div></details>
+<details class="navGroup"><summary>Saving and exporting</summary><div class="navLinks"><a href="/learn/autosave">Autosave</a><a href="/learn/wondr-files">Wondr files</a><a href="/learn/export">Export</a></div></details>
+<details class="navGroup"><summary>Account</summary><div class="navLinks"><a href="/learn/plans-and-credits">Plans and AI credits</a><a href="/learn/account">Account and sign-in</a></div></details>
+<details class="navGroup"><summary>Reference</summary><div class="navLinks"><a href="/learn/shortcuts">Keyboard shortcuts</a><a href="/learn/troubleshooting">Troubleshooting</a></div></details>
+                <p id="lblNoTopics" hidden>No topics match your search.</p>
+            </aside>
+
+            <main class="docMain">
+                <nav class="crumbs" aria-label="Breadcrumb">
+                    <a href="/learn">Learn</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Properties</span>
+                </nav>
+                <article class="docBody">
+                    <h1>Text properties</h1>
+                    <p>A selected text layer has three tabs: <strong>Basic Properties</strong>, <strong>Text Format</strong> and <strong>Text Style</strong>. To change the words themselves, open the text editor.</p>
+<h2 id="edit-the-words">Edit the words</h2>
+<ol><li>Select the text layer.</li><li>Press <strong>Ctrl + E</strong>, or right-click it and choose <strong>Edit text</strong>.</li><li>Type in the box. Press <strong>Enter</strong> for a new line.</li><li>Click <strong>Save Edit</strong>, press <strong>Ctrl + E</strong> again, or press <strong>Escape</strong>. Clicking somewhere else also saves.</li></ol>
+<figure><img src="/res/learn/img/text-editor@2x.webp" alt="The text editor" width="300" height="280" loading="lazy"><figcaption>The text editor</figcaption></figure>
+<p>Below the editor you can add <strong>Emojis</strong> and <strong>Symbols</strong>. Pick a tab, browse the categories or use <strong>Search</strong>, then click one to add it to your text.</p>
+<h2 id="text-format">Text Format</h2>
+<figure><img src="/res/learn/img/text-format@2x.webp" alt="The Text Format tab" width="300" height="433" loading="lazy"><figcaption>The Text Format tab</figcaption></figure>
+<p>From top to bottom:</p>
+<ul><li><strong>Weight:</strong> the menu at the top lists only the weights and italics the font has, from Thin to Black.</li><li><strong>Font:</strong> the button below shows the font&#x27;s name. Click it to change the font. It reads <strong>Select a new font</strong>, and the Text menu opens. Double-click a font, pick one from a search, or click another text layer on the canvas to copy its font. See <a href="/learn/text">Text</a>.</li><li><strong>Size:</strong> the box next to the arrows icon sets the font size in pixels. New text starts at 48.</li><li><strong>Color:</strong> the hex box and swatch beside the size. Text can be a solid color or a gradient.</li><li><strong>Letter spacing:</strong> the box next to the spaced <strong>A</strong> icon.</li><li><strong>Line height:</strong> the box showing <strong>Auto</strong>. Type <code>12</code> for a line height of 1.2, <code>15</code> for 1.5, and so on. Clear the box to go back to Auto.</li></ul>
+<p>Then, in the bottom rows:</p>
+<ul><li><strong>Case:</strong> <strong>Ab</strong> capitalizes each word, <strong>AB</strong> makes everything uppercase, <strong>ab</strong> lowercase. Click the active button again to turn it off.</li><li><strong>Box size:</strong> <strong>Auto Width</strong> keeps one line and grows sideways. <strong>Auto Height</strong> wraps the words to the box width and grows downward. <strong>Fixed Size</strong> wraps the words and keeps the box size.</li><li><strong>Alignment:</strong> left, center or right, and top, middle or bottom inside the box.</li></ul>
+<aside class="callout note"><p><strong>Note:</strong> Dragging a handle or typing a width or height switches the text to <strong>Fixed Size</strong>.</p></aside>
+<p>Styling applies to the whole text layer. To mix styles, use separate text layers.</p>
+<h2 id="text-style">Text Style</h2>
+<figure><img src="/res/learn/img/text-style@2x.webp" alt="The Text Style tab with Outline chosen" width="300" height="248" loading="lazy"><figcaption>The Text Style tab with Outline chosen</figcaption></figure>
+<p>Pick a style in <strong>Choose a Style</strong>. A text layer has one style at a time, and <strong>Remove</strong> takes it off.</p>
+<ul><li><strong>Outline:</strong> a stroke around the letters. Set its <strong>Color</strong> (solid or gradient) and <strong>Width</strong>, from 1 to 30.</li><li><strong>Glow:</strong> a soft light around the letters. Set its <strong>Color</strong> and <strong>Spread</strong>, from 0 to 100.</li><li><strong>Shadow:</strong> a shadow behind the letters. Set its <strong>Color</strong>, <strong>Distance</strong>, <strong>Spread</strong> and <strong>Rotation</strong>. At a rotation of 0 the shadow falls straight down.</li></ul>
+<aside class="callout tip"><p><strong>Tip:</strong> For see-through letters with an outline, set the text color&#x27;s transparency to 0% and add an <strong>Outline</strong>.</p></aside>
+                </article>
+                <nav class="pager" aria-label="More topics">
+                    <a class="pagerPrev" href="/learn/basic-properties"><small>&larr; Previous</small><span>Basic properties</span></a><a class="pagerNext" href="/learn/image-properties"><small>Next &rarr;</small><span>Image properties</span></a>
+                </nav>
+                <footer class="docFoot">
+                    <span>&copy; <span id="lblYear">2026</span> Wondr</span>
+                    <span class="docFootLinks">
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="mailto:support@createwondr.io">Support</a>
+                    </span>
+                </footer>
+            </main>
+
+            <aside class="onPage" aria-label="On this page">
+                <p>On this page</p>
+                <nav id="docOnPage"><a href="#edit-the-words">Edit the words</a><a href="#text-format">Text Format</a><a href="#text-style">Text Style</a></nav>
+            </aside>
+
+        </div>
+
+        <div id="docScrim"></div>
+    </div>
+
+    <script src="/res/js/sec/learn.js"></script>
+</body>
+</html>

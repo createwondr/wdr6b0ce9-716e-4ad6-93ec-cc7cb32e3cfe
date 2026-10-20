@@ -1,7 +1,7 @@
 a {
   text-decoration: none;
   font-weight: 500; 
-  font-size: 11px; 
+  font-size: 11.5px; 
   color: var(--muted-blue-text);
   cursor: pointer;
   transition: .2s;
@@ -53,6 +53,7 @@ a:active {
     margin-left: auto;
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border-radius: 3px;
@@ -78,6 +79,7 @@ a:active {
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border: none;
@@ -104,6 +106,7 @@ a:active {
     margin-left: auto;
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border-radius: 3px;
@@ -129,6 +132,7 @@ a:active {
     margin-left: auto;
     text-align: center;
     font-size: 12px;
+    font-family: "Inter";
     font-weight: 500;
     cursor: default;
     border-radius: 3px;
@@ -154,7 +158,7 @@ a:active {
 
 #footerCopyright h2 {
     color: var(--muted-blue-text); 
-    font-size: 11px;
+    font-size: 11.5px;
 }
 
 #footerLinks {
