@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /design
+Disallow: /billing
+Disallow: /google_authentication_callback
+
+Sitemap: https://createwondr.io/sitemap.xml
