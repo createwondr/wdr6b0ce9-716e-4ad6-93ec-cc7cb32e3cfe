@@ -43,9 +43,11 @@ body::after {
     transition: opacity 0.2s;
 }
 
-/*sir, 2026-10-22: VIEW TRANSITIONS BETWEEN LEARN TOPICS. BOTH PAGES OPT IN HERE, SO ONLY LEARN -> LEARN ANIMATES
-  (paths.js SKIPS ITS FADE FOR THOSE LINKS). THE HEADER STAYS STILL, THE SIDEBAR'S LIT TOPIC BLENDS OVER, AND THE
-  ARTICLE + "ON THIS PAGE" CROSS-FADE IN 0.2s, THE SAME TIME AS THE #blurWrapper FADE. BROWSERS WITHOUT IT IGNORE ALL OF THIS*/
+/*sir, 2026-10-22: VIEW TRANSITIONS BETWEEN LEARN TOPICS. BOTH PAGES OPT IN HERE, SO ONLY LEARN -> LEARN USES IT
+  (paths.js SKIPS ITS OWN FADE FOR THOSE LINKS). IT IS THE SAME FADE AS EVERY OTHER PAGE: THE SCREEN YOU SEE FADES OUT
+  (0.2s) WHERE YOU ARE, THEN THE NEW PAGE FADES IN FRESH AT THE TOP (0.2s) - BUT WITH NO BLANK LOADING GAP IN BETWEEN.
+  THE WHOLE SCREEN FADES AS ONE PICTURE ON PURPOSE: NAMING PARTS OF THE PAGE MADE THEM SLIDE, SO A PAGE LEFT FROM
+  THE BOTTOM LOOKED LIKE IT SCROLLED UP FAST. BROWSERS WITHOUT VIEW TRANSITIONS IGNORE ALL OF THIS*/
 @view-transition {
     navigation: auto;
 }
@@ -55,29 +57,24 @@ html[data-view-transition] #blurWrapper {
     transition: none;
 }
 
-#docHeader {
-    view-transition-name: docHeader;
+::view-transition-old(root) {
+    animation: 0.2s ease-out both learnFadeOut;
 }
 
-#docNav {
-    view-transition-name: docNav;
+::view-transition-new(root) {
+    animation: 0.2s ease-in 0.2s both learnFadeIn;
 }
 
-.docMain {
-    view-transition-name: docMain;
+@keyframes learnFadeOut {
+    to {
+        opacity: 0;
+    }
 }
 
-.onPage {
-    view-transition-name: docOnPage;
-}
-
-::view-transition-group(*) {
-    animation-duration: 0.2s;
-}
-
-::view-transition-old(docHeader),
-::view-transition-new(docHeader) {
-    animation: none;
+@keyframes learnFadeIn {
+    from {
+        opacity: 0;
+    }
 }
 
 a {
