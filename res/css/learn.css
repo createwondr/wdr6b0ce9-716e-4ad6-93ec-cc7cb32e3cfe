@@ -43,6 +43,43 @@ body::after {
     transition: opacity 0.2s;
 }
 
+/*sir, 2026-10-22: VIEW TRANSITIONS BETWEEN LEARN TOPICS. BOTH PAGES OPT IN HERE, SO ONLY LEARN -> LEARN ANIMATES
+  (paths.js SKIPS ITS FADE FOR THOSE LINKS). THE HEADER STAYS STILL, THE SIDEBAR'S LIT TOPIC BLENDS OVER, AND THE
+  ARTICLE + "ON THIS PAGE" CROSS-FADE IN 0.2s, THE SAME TIME AS THE #blurWrapper FADE. BROWSERS WITHOUT IT IGNORE ALL OF THIS*/
+@view-transition {
+    navigation: auto;
+}
+
+html[data-view-transition] #blurWrapper {
+    opacity: 1;
+    transition: none;
+}
+
+#docHeader {
+    view-transition-name: docHeader;
+}
+
+#docNav {
+    view-transition-name: docNav;
+}
+
+.docMain {
+    view-transition-name: docMain;
+}
+
+.onPage {
+    view-transition-name: docOnPage;
+}
+
+::view-transition-group(*) {
+    animation-duration: 0.2s;
+}
+
+::view-transition-old(docHeader),
+::view-transition-new(docHeader) {
+    animation: none;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -641,12 +678,17 @@ a {
     color: var(--sharp);
 }
 
+/*sir, 2026-10-21: THE PANEL NEVER GROWS PAST THE SCREEN. IT FILLS THE ROOM BETWEEN THE HEADER AND THE FOOTER
+  (learn.js fitOnPage SETS THE EXACT HEIGHT WHILE YOU SCROLL; THIS IS THE FIRST-LOAD VALUE: SCREEN MINUS THE 65px HEADER)
+  A LONG LIST SCROLLS INSIDE #docOnPage WITH THE STUDIO SCROLLBAR, THE "ON THIS PAGE" TITLE STAYS PUT*/
 .onPage {
     position: sticky;
     top: 0px;
     align-self: start;
-    max-height: 100vh;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 65px);
+    height: calc(100dvh - 65px);
     padding: 36px 24px 24px 8px;
 }
 
@@ -659,14 +701,36 @@ a {
     color: var(--muted-blue-text);
 }
 
+/*THE LEFT LINE IS AN INSET SHADOW, NOT A BORDER: A SCROLL BOX CLIPS ITS BORDER AREA, AND THE LIT LINK'S 2px BAR SITS ON THAT LINE*/
 #docOnPage {
+    position: relative;
     display: flex;
     flex-direction: column;
-    border-left: 1px solid var(--muted-line);
+    flex: 1;
+    min-height: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    box-shadow: inset 1px 0px 0px var(--muted-line);
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+#docOnPage::-webkit-scrollbar {
+    width: 1px;
+}
+
+#docOnPage::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
+}
+
+#docOnPage::-webkit-scrollbar-corner {
+    background: transparent;
 }
 
 #docOnPage a {
-    margin-left: -1px;
+    flex-shrink: 0;
     padding: 6px 0px 6px 14px;
     border-left: 2px solid transparent;
     font-size: 13px;
@@ -770,6 +834,10 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
+    @view-transition {
+        navigation: none;
+    }
 
     *,
     *::before,
