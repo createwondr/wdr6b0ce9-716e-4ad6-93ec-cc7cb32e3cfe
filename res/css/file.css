@@ -156,10 +156,6 @@
     background-color: transparent;
 }
 
-.optFile:hover {
-    background-color: var(--accent);
-}
-
 .txtOutputWidth, .txtOutputHeight {
     width: 40px;
     height: 24px;

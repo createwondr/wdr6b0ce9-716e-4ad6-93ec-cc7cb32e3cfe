@@ -393,8 +393,4 @@
     background-color: transparent;
 }
 
-.optElementColor:hover {
-    background-color: var(--accent);
-}
-
 

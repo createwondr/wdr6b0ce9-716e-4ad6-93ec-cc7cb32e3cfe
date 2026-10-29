@@ -5,25 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wondr - Page Not Found</title>
+    <meta name="robots" content="noindex">
 
     <link rel="icon" href="/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="/res/css/root.css">
     <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/res/css/legal.css">
+    <link rel="stylesheet" href="/res/css/site.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap" crossorigin>
 
     <script src="/res/js/sec/paths.js"></script>
 </head>
 <body data-reveal="auto">
 
     <div id="blurWrapper">
-        <div id="notFound">
+
+        <svg class="sprite" aria-hidden="true">
+            <symbol id="icon-wondr" viewBox="0 0 36 20" fill="none">
+                    <path d="M8.60764 2.44309C9.37892 1.14478 8.19494 2.25289 8.6078 0.820243C9.2712 -1.48185 2.3411 5.68898 0.412882 12.7216C-1.1297 18.3477 2.01973 17.9509 3.78726 17.0492C5.71549 16.5083 12.96 9.1137 13.9104 8.93479C14.5 8.8238 15.3566 8.93478 14.3925 13.8035C13.4284 18.6722 16.3543 20.7577 20.1771 19.7542C24 18.7506 30.6486 6.61785 31.6216 4.96339C32.5946 3.30893 33.6836 2.44315 34.6476 2.44318C35.6117 2.44321 36.5506 1.33292 35.6117 0.279234C35.2374 -0.140927 34.2388 -0.134896 33.7527 0.629958C32.6003 2.4432 32.3918 3.04566 31.7553 4.066C29.345 8.03309 22.8766 15.9672 20.1771 15.9672C16.8027 15.9672 18.4828 10.5403 18.731 8.39374C19 6.06637 18.5 4.96339 17.8662 4.60696C17.2324 4.25055 16.1799 4.60696 15 5.51488C11.9749 7.84256 6.58301 11.6395 6.19736 9.47567C5.81172 7.3118 7.64353 3.88567 8.60764 2.44309Z" fill="url(#navLogoGrad)"/>
+                    <defs>
+                    <linearGradient id="navLogoGrad" x1="-1.03331" y1="12.1805" x2="34.6401" y2="11.7509" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#CBA6FF"/>
+                    <stop offset="0.370192" stop-color="#7A8EFF"/>
+                    <stop offset="0.879808" stop-color="#75FFF5"/>
+                    </linearGradient>
+                    </defs>
+                </symbol>
+        </svg>
+
+        <div id="notFoundView">
+
+        <div class="container">
+            <header id="homeNav">
+
+                <a class="navBrand" href="/" aria-label="Wondr home">
+                    <svg class="navLogo" width="36" height="20" aria-hidden="true"><use href="#icon-wondr"/></svg>
+                    <span class="navName">Wondr</span>
+                </a>
+
+                <nav class="navLinks" aria-label="Main">
+                    <a href="/#features">Features</a>
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/#faq">FAQs</a>
+                    <a href="/tutorials">Tutorials</a>
+                </nav>
+
+                <div class="navCtas">
+                    <a class="btnGetStarted" href="/#pricing"><span>Get started</span></a>
+                    <a class="btnLogin" href="/login"><span>Log in</span></a>
+                </div>
+
+            </header>
+        </div>
+
+        <main id="notFound">
             <h2>Page not found</h2>
             <p>The page you're looking for doesn't exist.</p>
             <a href="/">Back to Wondr</a>
+        </main>
+
         </div>
+
+        <footer class="foot">
+
+            <div class="container">
+
+                <div class="footGrid">
+
+                    <div class="footBrand">
+                        <a class="navBrand" href="/" aria-label="Wondr home">
+                            <svg class="navLogo" width="36" height="20" aria-hidden="true"><use href="#icon-wondr"/></svg>
+                            <span class="navName">Wondr</span>
+                        </a>
+                        <div class="divCopyright">
+                            <span>&copy; <span id="lblYear">2026</span> Wondr. All rights reserved.</span>
+                        </div>
+                    </div>
+
+                    <div class="footCol">
+                        <p>Product</p>
+                        <a href="/#features">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQs</a>
+                        <a href="/tutorials">Tutorials</a>
+                        <a href="/login">Log in</a>
+                    </div>
+
+                    <div class="footCol">
+                        <p>Social</p>
+                        <a href="https://www.instagram.com/createwondrio" target="_blank">Instagram</a>
+                        <a href="https://www.tiktok.com/@createwondr.io" target="_blank">TikTok</a>
+                        <a href="https://www.threads.com/@createwondrio" target="_blank">Threads</a>
+                        <a href="https://www.youtube.com/@createwondrio" target="_blank">YouTube</a>
+                        <a href="https://www.reddit.com/user/Ozydeus/" target="_blank">Reddit</a>
+                    </div>
+
+                    <div class="footCol">
+                        <p>Legal</p>
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="/attribution">Attribution</a>
+                    </div>
+
+                    <div class="footCol">
+                        <p>Support</p>
+                        <a href="mailto:support@createwondr.io">support@createwondr.io</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
     </div>
 
 </body>

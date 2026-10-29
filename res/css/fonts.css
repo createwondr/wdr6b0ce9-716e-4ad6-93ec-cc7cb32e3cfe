@@ -52,12 +52,13 @@
 
 #tabFontCategory {
     width: 264px;
-    height: 700px;
+    height: 100%; /* was 700px + resizeContent() in tabFonts.js; now follows .configScrollText on any height (F11) */
     overflow: hidden;
 }
 
 #tabSliderFont {
     width: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     transition: .2s;
@@ -346,10 +347,6 @@
     -ms-user-select: none; 
     user-select: none; 
     background-color: transparent;
-}
-
-.optFonts:hover {
-    background-color: var(--accent);
 }
 
 .optResults {

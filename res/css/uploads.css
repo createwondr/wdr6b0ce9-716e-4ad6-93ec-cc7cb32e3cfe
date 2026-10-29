@@ -9,15 +9,28 @@
 */
 
 #configContainer {
-    width: 246px;
-    height: 794px;
+    width: 100%; /* was 246px; the list sits at the left as before, the scrollbar on the right like Elements */
+    height: calc(100% - 30px); /* was 794px: did not grow on F11 */
     max-height: calc(100% - 30px);
     margin-top: .5em;
+    overflow-y: auto; /* was not scrollable: many uploads were cut off */
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+#configContainer::-webkit-scrollbar {
+    width: 4px;
+}
+
+#configContainer::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 99px;
 }
 
 #wrapUploads {
     width: 246px;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

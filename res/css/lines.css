@@ -181,10 +181,6 @@
     background-color: transparent;
 }
 
-.optLineHead:hover {
-    background-color: var(--accent);
-}
-
 .optLineHead svg {
     width: 40%;
     height: auto;

@@ -16,7 +16,6 @@ html {
 body {
     background: var(--bg);
     transition: opacity 0.2s;
-    overflow: hidden;
     min-width: 350px !important;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -25,43 +24,13 @@ body {
     cursor: default;
 }
 
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: var(--glow);
-    mix-blend-mode: screen;
-    pointer-events: none;
-    z-index: 100;
-}
-
-a {
-  text-decoration: none;
-  font-weight: 500; 
-  font-size: 11px; 
-  color: var(--muted-blue-text);
-  cursor: pointer;
-  transition: .2s;
-  filter: brightness(140%);
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:visited {
-  filter: brightness(140%);
-}
-
-a:active {
-  text-decoration: underline;
-}
-
-#blurWrapper {
+body #blurWrapper {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: max(100vh, 600px);
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -70,7 +39,11 @@ a:active {
   width: 18em;
   min-width: 18em;
   height: auto;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0px;
   border-radius: 1em;
   padding: 1em;
   /*
@@ -100,16 +73,6 @@ a:active {
   height: 100%;
 }
 
-#lblLogin {
-  font-weight: 500;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
-  color: var(--muted-blue-text); 
-  font-size: 11px;
-  line-height: 18px;
-}
-
 #btnLogin {
   width: calc(100% - 40px);
   height: 40px;
@@ -134,6 +97,20 @@ a:active {
     color: var(--sharp);
     font-size: 14px;
     margin: auto;
+}
+
+#lblConsent {
+  margin-top: 0.5em;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--muted);
+}
+
+#lblConsent a {
+  color: var(--sharp);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 #toastNotice {

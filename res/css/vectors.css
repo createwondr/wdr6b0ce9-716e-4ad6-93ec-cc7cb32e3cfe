@@ -217,10 +217,6 @@
     background-color: transparent;
 }
 
-.optVectorColor:hover {
-    background-color: var(--accent);
-}
-
 .tabVectorFill {
     display: none;
 }

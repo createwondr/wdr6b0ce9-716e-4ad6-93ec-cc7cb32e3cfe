@@ -98,15 +98,10 @@
     z-index: 99 !important;
 }
 
-
 html.is-gesturing #cnvPin * {
     cursor: inherit !important;
 }
 
 .is-gesturing .pinBody { will-change: transform; }
 
-/*sir, 2026-10-21: WHILE A ROTATE OR RESIZE IS IN PROGRESS EVERY CANVAS LAYER GETS ITS OWN GPU LAYER, SO TURNING
-  OR MOVING IT IS A CHEAP REPOSITION INSTEAD OF REDRAWING THE FULL-SIZE PHOTO EVERY FRAME. A GROUP OF BIG PEXELS
-  PHOTOS REDREW THREE TIMES MORE THAN ONE IMAGE AND FELL BEHIND THE FRAME (MEASURED). IT COMES OFF THE MOMENT THE
-  GESTURE ENDS, SO TEXT AND PHOTOS ARE REDRAWN SHARP AT THEIR FINAL ANGLE*/
 #canvasBorder:has(#cnvPin.isGesturing) .cnvLayers { will-change: transform; }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondr - Lines</title>
+    <meta name="description" content="Style line layers in Wondr with arrow heads, color, width, dashes and caps, and add a glow or shadow.">
+    <link rel="canonical" href="https://createwondr.io/tutorials/lines">
+    <meta name="theme-color" content="#191919">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Wondr">
+    <meta property="og:title" content="Wondr - Lines">
+    <meta property="og:description" content="Style line layers in Wondr with arrow heads, color, width, dashes and caps, and add a glow or shadow.">
+    <meta property="og:url" content="https://createwondr.io/tutorials/lines">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Lines","description":"Style line layers in Wondr with arrow heads, color, width, dashes and caps, and add a glow or shadow.","url":"https://createwondr.io/tutorials/lines","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tutorials","item":"https://createwondr.io/tutorials"},{"@type":"ListItem","position":2,"name":"Properties"},{"@type":"ListItem","position":3,"name":"Lines","item":"https://createwondr.io/tutorials/lines"}]}]}</script>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/res/css/root.css">
+    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/res/css/tutorials.css">
+    <link rel="stylesheet" href="/res/css/site.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap" crossorigin>
+    <link rel="prefetch" href="/tutorials/pattern-properties">
+    <script src="/res/js/sec/paths.js"></script>
+</head>
+<body data-reveal="auto">
+
+    <div id="blurWrapper">
+
+        <svg class="sprite" aria-hidden="true">
+            <symbol id="icon-wondr" viewBox="0 0 36 20" fill="none">
+                    <path d="M8.60764 2.44309C9.37892 1.14478 8.19494 2.25289 8.6078 0.820243C9.2712 -1.48185 2.3411 5.68898 0.412882 12.7216C-1.1297 18.3477 2.01973 17.9509 3.78726 17.0492C5.71549 16.5083 12.96 9.1137 13.9104 8.93479C14.5 8.8238 15.3566 8.93478 14.3925 13.8035C13.4284 18.6722 16.3543 20.7577 20.1771 19.7542C24 18.7506 30.6486 6.61785 31.6216 4.96339C32.5946 3.30893 33.6836 2.44315 34.6476 2.44318C35.6117 2.44321 36.5506 1.33292 35.6117 0.279234C35.2374 -0.140927 34.2388 -0.134896 33.7527 0.629958C32.6003 2.4432 32.3918 3.04566 31.7553 4.066C29.345 8.03309 22.8766 15.9672 20.1771 15.9672C16.8027 15.9672 18.4828 10.5403 18.731 8.39374C19 6.06637 18.5 4.96339 17.8662 4.60696C17.2324 4.25055 16.1799 4.60696 15 5.51488C11.9749 7.84256 6.58301 11.6395 6.19736 9.47567C5.81172 7.3118 7.64353 3.88567 8.60764 2.44309Z" fill="url(#navLogoGrad)"/>
+                    <defs>
+                    <linearGradient id="navLogoGrad" x1="-1.03331" y1="12.1805" x2="34.6401" y2="11.7509" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#CBA6FF"/>
+                    <stop offset="0.370192" stop-color="#7A8EFF"/>
+                    <stop offset="0.879808" stop-color="#75FFF5"/>
+                    </linearGradient>
+                    </defs>
+                </symbol>
+        </svg>
+
+        <div class="container">
+            <header id="homeNav">
+
+                <a class="navBrand" href="/" aria-label="Wondr home">
+                    <svg class="navLogo" width="36" height="20" aria-hidden="true"><use href="#icon-wondr"/></svg>
+                    <span class="navName">Wondr</span>
+                </a>
+
+            </header>
+        </div>
+
+        <div class="docLayout">
+
+            <aside id="docNav" aria-label="Topics">
+                <div class="searchbox">
+                    <div class="searchIcon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1919 12.6061A7 7 0 1 1 12.6061 11.1919L16 14.5858L14.5858 16L11.1919 12.6061ZM12 7C12 9.76142 9.76142 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7Z" fill="var(--muted-blue-text)"/></svg>
+                    </div>
+                    <input id="txtDocSearch" class="txtSearch" type="search" placeholder="Search topics" aria-label="Search topics" autocomplete="off" spellcheck="false">
+                    <button class="btnDelSearch" type="button" aria-label="Clear search">
+                        <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><path d="M6.63586 0.233983C6.94784 -0.0779945 7.45406 -0.0779945 7.76603 0.233983C8.07783 0.545908 8.07778 1.05168 7.76603 1.36363L5.12966 3.99949L7.76603 6.63586C8.07798 6.94784 8.078 7.45406 7.76603 7.76603C7.45407 8.078 6.94784 8.07798 6.63586 7.76603L3.99949 5.12966L1.36364 7.76603C1.05168 8.0778 0.545916 8.07783 0.233984 7.76603C-0.0779945 7.45405 -0.0779945 6.94784 0.233984 6.63586L2.86984 3.99949L0.233984 1.36363C-0.0779296 1.05165 -0.0779729 0.54594 0.233984 0.233983C0.54594 -0.0779681 1.05165 -0.0779279 1.36364 0.233983L3.99949 2.86984L6.63586 0.233983Z" fill="white"/></svg>
+                    </button>
+                </div>
+                <details class="navGroup"><summary>Getting started</summary><div class="navLinks"><a href="/tutorials">Welcome to Wondr</a><a href="/tutorials/wondr-at-a-glance">Wondr at a glance</a><a href="/tutorials/first-design">Your first design</a></div></details>
+<details class="navGroup"><summary>Toolbar</summary><div class="navLinks"><a href="/tutorials/designs">Designs</a><a href="/tutorials/patterns">Patterns</a><a href="/tutorials/uploads">Uploads</a><a href="/tutorials/elements">Elements</a><a href="/tutorials/text">Text</a><a href="/tutorials/layers">Layers</a><a href="/tutorials/save">Save</a><a href="/tutorials/settings">Settings</a></div></details>
+<details class="navGroup"><summary>Canvas</summary><div class="navLinks"><a href="/tutorials/canvas-properties">Canvas properties</a><a href="/tutorials/zoom-and-view">Zoom, 2D and 3D view</a><a href="/tutorials/selecting">Selecting and moving</a></div></details>
+<details class="navGroup" open><summary>Properties</summary><div class="navLinks"><a href="/tutorials/basic-properties">Basic properties</a><a href="/tutorials/text-properties">Text properties</a><a href="/tutorials/image-properties">Image properties</a><a href="/tutorials/vectors-and-shapes">Vectors and shapes</a><a href="/tutorials/lines" class="on" aria-current="page">Lines</a><a href="/tutorials/pattern-properties">Pattern properties</a><a href="/tutorials/3d-mockups">3D mockups</a></div></details>
+<details class="navGroup"><summary>Saving and exporting</summary><div class="navLinks"><a href="/tutorials/autosave">Autosave</a><a href="/tutorials/wondr-files">Wondr files</a><a href="/tutorials/export">Export</a></div></details>
+<details class="navGroup"><summary>Account</summary><div class="navLinks"><a href="/tutorials/plans-and-credits">Plans and AI credits</a><a href="/tutorials/account">Account and sign-in</a></div></details>
+<details class="navGroup"><summary>Reference</summary><div class="navLinks"><a href="/tutorials/shortcuts">Keyboard shortcuts</a><a href="/tutorials/troubleshooting">Troubleshooting</a></div></details>
+                <p id="lblNoTopics" hidden>No topics match your search.</p>
+            </aside>
+
+            <main class="docMain">
+                <button id="btnDocMenu" type="button" aria-label="Topics" aria-expanded="false" aria-controls="docNav">
+                    <span class="menuIcon"><i></i><i></i><i></i></span>Topics
+                </button>
+                <article class="docBody">
+                    <h1>Lines</h1>
+                    <p>Lines come from the <strong>Shapes</strong> category of the <a href="/tutorials/elements">Elements</a> menu. A selected line has three tabs: <strong>Basic Properties</strong>, <strong>Line Properties</strong> and <strong>Line Style</strong>.</p>
+<h2 id="line-properties">Line Properties</h2>
+<figure><img src="/res/tutorials/img/line-properties@2x.webp" alt="The Line Properties tab" width="300" height="379" loading="lazy"><figcaption>The Line Properties tab</figcaption></figure>
+<ul><li><strong>Heads:</strong> the two menus at the top set the start and the end of the line. Choose a flat or round end, or an arrow, circle, diamond, square or triangle, each as an outline or filled.</li><li><strong>Color:</strong> a solid color for the line and its heads.</li><li><strong>Width:</strong> the line&#x27;s thickness. The heads grow with it.</li><li><strong>Dash</strong> and <strong>Gap:</strong> make a dashed line. A <strong>Dash</strong> of 0 gives a solid line.</li><li><strong>Cap:</strong> rounds the ends of the line and of each dash.</li></ul>
+<p><strong>Corner</strong> shows a dash because lines have no corners.</p>
+<h2 id="line-style">Line Style</h2>
+<p>Pick <strong>Glow</strong> or <strong>Shadow</strong> in <strong>Choose a Style</strong>, or <strong>Remove</strong> to take it off. They work like the image styles. See <a href="/tutorials/image-properties">Image properties</a>.</p>
+<h2 id="move-resize-and-rotate-a-line">Move, resize and rotate a line</h2>
+<ul><li>A selected line has a handle at each end. Drag one to make the line longer or shorter.</li><li>To angle the line, use <strong>Rotation</strong> in <a href="/tutorials/basic-properties">Basic properties</a>, or hover just past one of its ends until the cursor curves, then drag.</li></ul>
+<aside class="callout note"><p><strong>Note:</strong> Lines are straight. There are no curved or multi-point lines.</p></aside>
+                </article>
+                <nav class="pager" aria-label="More topics">
+                    <a class="pagerPrev" href="/tutorials/vectors-and-shapes"><small>&larr; Previous</small><span>Vectors and shapes</span></a><a class="pagerNext" href="/tutorials/pattern-properties"><small>Next &rarr;</small><span>Pattern properties</span></a>
+                </nav>
+            </main>
+
+            <aside class="onPage" aria-label="On this page">
+                <p>On this page</p>
+                <nav id="docOnPage"><a href="#line-properties">Line Properties</a><a href="#line-style">Line Style</a><a href="#move-resize-and-rotate-a-line">Move, resize and rotate a line</a></nav>
+            </aside>
+
+        </div>
+
+        <footer class="footMini">
+            <p>&copy; <span id="lblYear">2026</span> Wondr. All rights reserved.</p>
+        </footer>
+
+        <div id="docScrim"></div>
+    </div>
+
+    <script src="/res/js/sec/tutorials.js"></script>
+</body>
+</html>

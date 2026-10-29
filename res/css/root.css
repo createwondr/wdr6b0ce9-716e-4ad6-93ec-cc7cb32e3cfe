@@ -1,9 +1,8 @@
-
 :root {
 
     color-scheme: dark;
     --ads: hsl(0 0% 11%);
-    --bg: hsl(0 0% 10%);
+    --bg: #191919;
     --dark1: hsl(0 0% 9%);
     --dark2: hsl(0 0% 8%);
     --dark3: hsl(0 0% 11%);
@@ -11,7 +10,7 @@
     --darkline: hsl(0 0% 5%);
     --breakline: hsl(0 0% 20%);
     --placeholder: hsl(0 0% 50%);
-    --muted: hsl(222 4% 48.6%);
+    --muted: hsl(0 0% 70%);
 
     --hue: 223;
     --sat: 20%;
@@ -28,8 +27,12 @@
     --selection: hsl(var(--hue) 31% 65%);
     --overlay-light: rgba(255, 255, 255, 0.075);
     --gradient: linear-gradient(100deg, #CBA6FF, #7A8EFF 45%, #75FFF5);
-    --glow: radial-gradient(circle at 50% -10%, rgba(122, 142, 255, .10), transparent 38%);
 
+    --gold-1: #392D13;
+    --gold-2: #4D3C19;
+    --gold-3: #735B26;
+    --gold-4: hsl(41, 50%, 50%);
+    --gold-5: hsl(41, 50%, 70%);
 }
 
 @font-face {
@@ -38,4 +41,52 @@
     font-weight: 300 700;
     font-display: swap;
     src: url("../fonts/uncut-sans/UncutSans-Variable-Wondr.woff2") format("woff2");
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+html[data-view-transition] #blurWrapper {
+    opacity: 1;
+    transition: none;
+}
+
+::view-transition-old(root) {
+    animation: 0.2s ease-out both pageFadeOut;
+}
+
+::view-transition-new(root) {
+    animation: 0.2s ease-in 0.2s both pageFadeIn;
+}
+
+::view-transition-group(wondrBrand) {
+    animation-duration: 0.4s;
+}
+
+::view-transition-old(wondrBrand):only-child {
+    animation: 0.2s ease-out both pageFadeOut;
+}
+
+::view-transition-new(wondrBrand):only-child {
+    animation: 0.2s ease-in 0.2s both pageFadeIn;
+}
+
+@keyframes pageFadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    @view-transition {
+        navigation: none;
+    }
 }

@@ -1,0 +1,238 @@
+.plan {
+    --check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 7.5L6 10.5L11 4' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: 0px;
+    padding: 2em;
+    border: 1px solid var(--sharp-track);
+    border-radius: 8px;
+}
+
+#planFounding {
+    position: relative;
+    border-color: transparent;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--gold-5);
+}
+
+#planFounding::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+  
+    pointer-events: none;
+}
+
+.plan :where(p, ul, li) {
+    margin: 0px;
+    padding: 0px;
+}
+
+#planFounding .planTop {
+    padding-right: 3em;
+}
+
+.planRibbon {
+    position: absolute;
+    top: -1px;
+    right: 0.5em;
+    z-index: 1;
+    pointer-events: none;
+    width: 15%;
+    height: auto;
+}
+
+/*
+#planMonthly {
+    border: 1px solid var(--placeholder-line);
+}
+*/
+
+.planTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.planTop .badgeGold {
+    margin-right: auto;
+}
+
+.planName {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--sharp);
+}
+
+.planPrice {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-top: 1em;
+}
+
+.planPrice[hidden] {
+    display: none;
+}
+
+.planPrice b {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--sharp);
+}
+
+.planPrice span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.planNote {
+    margin-top: 24px;
+    padding: 16px 0px;
+    border-top: 1px solid var(--muted-track);
+    border-bottom: 1px solid var(--muted-track);
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.5px;
+}
+
+.planList {
+    padding-top: 24px;
+}
+
+.planListLabel {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.5px;
+}
+
+#planFounding .planListLabel {
+    position: relative;
+    padding-left: 30px;
+    color: var(--sharp);
+}
+
+#planFounding .planListLabel::before,
+#planFounding .planListLabel::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#planFounding .planListLabel::before {
+    left: 0px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--gold-5);
+}
+
+#planFounding .planListLabel::after {
+    left: 4px;
+    width: 14px;
+    height: 14px;
+    background: var(--bg);
+    -webkit-mask: var(--check) center / contain no-repeat;
+    mask: var(--check) center / contain no-repeat;
+}
+
+.planPerks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    list-style: none;
+}
+
+.planPerks li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--sharp);
+    letter-spacing: 0.5px;
+}
+
+.planPerks li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    background: aquamarine;
+    -webkit-mask: var(--check) center / contain no-repeat;
+    mask: var(--check) center / contain no-repeat;
+}
+
+#planFounding .planPerks li::before {
+    background: var(--gold-5);
+}
+
+.btnPlan {
+    display: inline-flex;
+    justify-self: start;
+    align-self: end;
+    height: 48px;
+    margin-top: 32px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btnPlan span {
+    margin: auto;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--sharp);
+    letter-spacing: 0.5px;
+}
+
+.btnPlanAccent {
+  
+    border: 1px solid var(--accent);
+    box-sizing: border-box;
+    transition: filter 0.2s;
+}
+
+.btnPlanAccent:hover {
+    filter: brightness(110%);
+}
+
+.btnPlanGold {
+    background:
+        linear-gradient(135deg, transparent 40%, var(--gold-5) 50%, transparent 60%),
+        linear-gradient(135deg, var(--gold-5), var(--gold-4) 30%, var(--gold-3));
+    background-size: 300% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    transition: filter 0.2s;
+    animation: goldShine 4s ease-in-out infinite;
+}
+
+@keyframes goldShine {
+    0% {
+        background-position: 100% 0%, 0% 0%;
+    }
+    50%,
+    100% {
+        background-position: 0% 0%, 0% 0%;
+    }
+}
+
+.btnPlanGold:hover {
+    filter: brightness(110%);
+}
+
+.btnPlan.off {
+    opacity: 0.4;
+    pointer-events: none;
+}

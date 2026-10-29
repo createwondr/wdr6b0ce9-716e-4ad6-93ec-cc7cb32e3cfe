@@ -1,112 +1,72 @@
 * {
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;
+    box-sizing: border-box;
     font-family: "Uncut Sans", "Inter", sans-serif;
     font-feature-settings: "ss05";
-    color: var(--sharp);
 }
-  
+
 html {
     background: var(--bg);
 }
 
 body {
-    display: flex;
-
     background: var(--bg);
-    min-width: 350px !important;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    color: var(--sharp);
+    min-width: 320px;
+    overflow-x: clip;
     cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
 }
 
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: var(--glow);
-    mix-blend-mode: screen;
-    pointer-events: none;
-    z-index: 100;
+a {
+    color: inherit;
+    text-decoration: none;
 }
-
 
 #blurWrapper {
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
+    flex-direction: column;
     opacity: 0;
     transition: opacity 0.2s;
 }
 
-#legalCard {
-    width: 50vw;
-    height: auto;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    /*
-    border-left: 2px solid var(--muted-track);
-    border-radius: 10px;
-    */
-    padding: 2em;
-    padding-top: 4em;
-    padding-bottom: 4em;
+#notFoundView {
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
-
-}
-
-body p {
-
-    font-size: 14px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
-    font-weight: 300;
-   
-    line-height: 1.5em;
-}
-
-body h2 {
-
-    font-size: 18px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
-    font-weight: 500;
-    margin-top: 2em;
-    margin-bottom: 1em;
-}
-
-body h3 {
-    font-size: 14px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
-    font-weight: 500;
-    margin-bottom: 1em;
-}
-
-body h6 {
-    letter-spacing: 1px;
-    word-spacing: 1px;
-    font-weight: 300;
-    margin-top: 4em;
-    margin-bottom: 4em;
 }
 
 #notFound {
-    margin: auto;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 12px;
+    padding: 4em 1em;
     text-align: center;
 }
 
 #notFound h2 {
-    margin: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+#notFound p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.5em;
 }
 
 #notFound a {
@@ -114,7 +74,6 @@ body h6 {
     font-weight: 500;
     color: var(--muted-blue-text);
     filter: brightness(140%);
-    text-decoration: none;
 }
 
 #notFound a:hover {

@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wondr - Privacy Policy</title>
+    <meta name="description" content="How Wondr, the graphic design web app, collects, uses and protects your information.">
+    <link rel="canonical" href="https://createwondr.io/privacy-policy">
     <link rel="icon" href="favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="res/css/root.css">
     <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="res/css/learn.css">
+    <link rel="stylesheet" href="res/css/tutorials.css">
+    <link rel="stylesheet" href="res/css/site.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" crossorigin>
 
     <script src="res/js/sec/paths.js"></script>
@@ -20,35 +23,37 @@
 
     <div id="blurWrapper">
 
-        <header id="docHeader">
-            <div class="headRow">
-                <button id="btnDocMenu" type="button" aria-label="Topics" aria-expanded="false" aria-controls="docNav">
-                    <span></span><span></span><span></span>
-                </button>
-                <a class="brand" href="/">
-                    <img src="/favicon.svg" alt="" width="28" height="16">
-                    <span>Wondr</span>
+        <svg class="sprite" aria-hidden="true">
+            <symbol id="icon-wondr" viewBox="0 0 36 20" fill="none">
+                    <path d="M8.60764 2.44309C9.37892 1.14478 8.19494 2.25289 8.6078 0.820243C9.2712 -1.48185 2.3411 5.68898 0.412882 12.7216C-1.1297 18.3477 2.01973 17.9509 3.78726 17.0492C5.71549 16.5083 12.96 9.1137 13.9104 8.93479C14.5 8.8238 15.3566 8.93478 14.3925 13.8035C13.4284 18.6722 16.3543 20.7577 20.1771 19.7542C24 18.7506 30.6486 6.61785 31.6216 4.96339C32.5946 3.30893 33.6836 2.44315 34.6476 2.44318C35.6117 2.44321 36.5506 1.33292 35.6117 0.279234C35.2374 -0.140927 34.2388 -0.134896 33.7527 0.629958C32.6003 2.4432 32.3918 3.04566 31.7553 4.066C29.345 8.03309 22.8766 15.9672 20.1771 15.9672C16.8027 15.9672 18.4828 10.5403 18.731 8.39374C19 6.06637 18.5 4.96339 17.8662 4.60696C17.2324 4.25055 16.1799 4.60696 15 5.51488C11.9749 7.84256 6.58301 11.6395 6.19736 9.47567C5.81172 7.3118 7.64353 3.88567 8.60764 2.44309Z" fill="url(#navLogoGrad)"/>
+                    <defs>
+                    <linearGradient id="navLogoGrad" x1="-1.03331" y1="12.1805" x2="34.6401" y2="11.7509" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#CBA6FF"/>
+                    <stop offset="0.370192" stop-color="#7A8EFF"/>
+                    <stop offset="0.879808" stop-color="#75FFF5"/>
+                    </linearGradient>
+                    </defs>
+                </symbol>
+        </svg>
+
+        <div class="container">
+            <header id="homeNav">
+
+                <a class="navBrand" href="/" aria-label="Wondr home">
+                    <svg class="navLogo" width="36" height="20" aria-hidden="true"><use href="#icon-wondr"/></svg>
+                    <span class="navName">Wondr</span>
                 </a>
-                <nav class="headLinks">
-                    <a href="/#pricing">Pricing</a>
-                    <a href="/learn">Learn</a>
-                    <a href="/#faq">FAQs</a>
-                </nav>
-                <a class="btnLogin" href="/login">Login</a>
-            </div>
-        </header>
+
+            </header>
+        </div>
 
         <div class="docLayout docLegal">
-
-            <aside id="docNav" aria-label="Topics">
-                <details class="navGroup" open><summary>Privacy Policy</summary><div class="navLinks"><a href="#1-information-we-collect">1. Information We Collect</a><a class="sub" href="#1-information-we-collect-1-1-account-information-google-sign-in">1.1 Account Information (Google Sign-In)</a><a class="sub" href="#1-information-we-collect-1-2-plan-usage-information">1.2 Plan &amp; Usage Information</a><a class="sub" href="#1-information-we-collect-1-3-your-cloud-save">1.3 Your Cloud Save</a><a class="sub" href="#1-information-we-collect-1-4-payment-information">1.4 Payment Information</a><a class="sub" href="#1-information-we-collect-1-5-country-for-pricing">1.5 Country for Pricing</a><a class="sub" href="#1-information-we-collect-1-6-images-for-background-removal">1.6 Images for Background Removal</a><a href="#2-what-we-don-t-do">2. What We Don’t Do</a><a href="#3-how-we-use-your-information">3. How We Use Your Information</a><a href="#4-wondr-files-wdr">4. Wondr Files (.wdr)</a><a href="#5-storage-security">5. Storage &amp; Security</a><a href="#6-service-providers-we-work-with">6. Service Providers We Work With</a><a href="#7-cookies-browser-storage">7. Cookies &amp; Browser Storage</a><a href="#8-how-long-we-keep-information">8. How Long We Keep Information</a><a href="#9-children-s-privacy">9. Children’s Privacy</a><a href="#10-international-data-processing">10. International Data Processing</a><a href="#11-your-rights">11. Your Rights</a><a href="#12-changes-to-this-policy">12. Changes to This Policy</a><a href="#13-contact-us">13. Contact Us</a></div></details>
-            </aside>
 
             <main class="docMain">
                 <article class="docBody">
                     <h1>Privacy Policy</h1>
-                    <p class="docUpdated">Updated: October 21, 2026</p>
-                    <p>Your privacy matters to us. This Privacy Policy explains what information Wondr (“we”, “our”, “us”) collects when you use our website and design studio (the “Service”), how we use it, and how we keep it safe.</p>
+                    <p class="docUpdated">Updated: October 25, 2026</p>
+                    <p>Your privacy matters to us. This Privacy Policy explains what information Wondr (“we”, “our”, “us”) collects when you use our website and graphic design web app (the “Service”), how we use it, and how we keep it safe.</p>
                     <p>We operate from the Republic of the Philippines, and this Policy follows the Philippine Data Privacy Act of 2012 (Republic Act No. 10173).</p>
                     <h2 id="1-information-we-collect">1. Information We Collect</h2>
                     <h3 id="1-information-we-collect-1-1-account-information-google-sign-in">1.1 Account Information (Google Sign-In)</h3>
@@ -76,7 +81,7 @@
                         <li>the payment confirmation the payment provider sends us, which may include payer details such as your name and email address</li>
                     </ul>
                     <h3 id="1-information-we-collect-1-5-country-for-pricing">1.5 Country for Pricing</h3>
-                    <p>When you visit the billing page, our server sends your IP address to a geolocation service (country.is) to find your country, so we can show you the right local price. We keep only the resulting country, not your IP address, with your account to keep your price consistent during checkout, and with your payment record if you make a purchase.</p>
+                    <p>When you view our prices on the homepage or the billing page, our server sends your IP address to a geolocation service (country.is) to find your country, so we can show you the right local price. On the homepage, nothing is kept. We keep only the resulting country, not your IP address, with your account to keep your price consistent during checkout, and with your payment record if you make a purchase.</p>
                     <h3 id="1-information-we-collect-1-6-images-for-background-removal">1.6 Images for Background Removal</h3>
                     <p>When you use background removal, the selected image is sent to our background-removal service on Google Cloud (Singapore), processed, and returned to you. Images are used only to complete your request and are not stored afterward.</p>
                     <h2 id="2-what-we-don-t-do">2. What We Don’t Do</h2>
@@ -134,7 +139,7 @@
                     <p>We don’t use advertising, tracking, or behavioral analytics cookies.</p>
                     <h2 id="8-how-long-we-keep-information">8. How Long We Keep Information</h2>
                     <ul>
-                        <li>your account information and cloud save are kept while your account exists, including after a Monthly plan ends, so your design is there when you return</li>
+                        <li>your account information and cloud save are kept while your account exists, including after a Pro plan ends, so your design is there when you return</li>
                         <li>each new autosave replaces the previous one; earlier versions are not kept</li>
                         <li>payment records are kept for as long as required for accounting, tax, and legal purposes</li>
                         <li>records of closed or suspended accounts may be kept where needed to prevent repeated misuse</li>
@@ -165,22 +170,22 @@
                     <p>support@createwondr.io</p>
                     <p>https://www.createwondr.io</p>
                 </article>
-                <footer class="docFoot">
-                    <span>&copy; <span id="lblYear">2026</span> Wondr</span>
-                    <span class="docFootLinks">
-                        <a href="/terms-of-service">Terms of Service</a>
-                        <a href="/privacy-policy">Privacy Policy</a>
-                        <a href="mailto:support@createwondr.io">Support</a>
-                    </span>
-                </footer>
             </main>
+
+            <aside class="onPage" aria-label="On this page">
+                <p>On this page</p>
+                <nav id="docOnPage"><a href="#1-information-we-collect">1. Information We Collect</a><a class="sub" href="#1-information-we-collect-1-1-account-information-google-sign-in">1.1 Account Information (Google Sign-In)</a><a class="sub" href="#1-information-we-collect-1-2-plan-usage-information">1.2 Plan &amp; Usage Information</a><a class="sub" href="#1-information-we-collect-1-3-your-cloud-save">1.3 Your Cloud Save</a><a class="sub" href="#1-information-we-collect-1-4-payment-information">1.4 Payment Information</a><a class="sub" href="#1-information-we-collect-1-5-country-for-pricing">1.5 Country for Pricing</a><a class="sub" href="#1-information-we-collect-1-6-images-for-background-removal">1.6 Images for Background Removal</a><a href="#2-what-we-don-t-do">2. What We Don’t Do</a><a href="#3-how-we-use-your-information">3. How We Use Your Information</a><a href="#4-wondr-files-wdr">4. Wondr Files (.wdr)</a><a href="#5-storage-security">5. Storage &amp; Security</a><a href="#6-service-providers-we-work-with">6. Service Providers We Work With</a><a href="#7-cookies-browser-storage">7. Cookies &amp; Browser Storage</a><a href="#8-how-long-we-keep-information">8. How Long We Keep Information</a><a href="#9-children-s-privacy">9. Children’s Privacy</a><a href="#10-international-data-processing">10. International Data Processing</a><a href="#11-your-rights">11. Your Rights</a><a href="#12-changes-to-this-policy">12. Changes to This Policy</a><a href="#13-contact-us">13. Contact Us</a></nav>
+            </aside>
 
         </div>
 
-        <div id="docScrim"></div>
+        <footer class="footMini">
+            <p>&copy; <span id="lblYear">2026</span> Wondr. All rights reserved.</p>
+        </footer>
+
     </div>
 
-    <script src="res/js/sec/learn.js"></script>
+    <script src="res/js/sec/tutorials.js"></script>
 </body>
 
 </html>

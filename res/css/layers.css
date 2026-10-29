@@ -192,10 +192,6 @@
     background-color: transparent;
 }
 
-.optLayerBlend:hover {
-    background-color: var(--accent);
-}
-
 .optTextWeight {
     width: 100%;
     height: 32px;
@@ -213,10 +209,6 @@
     -ms-user-select: none; 
     user-select: none; 
     background-color: transparent;
-}
-
-.optTextWeight:hover {
-    background-color: var(--accent);
 }
 
 .optLayerStyle {
@@ -238,10 +230,6 @@
     background-color: transparent;
 }
 
-.optLayerStyle:hover {
-    background-color: var(--accent);
-}
-
 .optLayerStyleImage {
     width: 100%;
     height: 32px;
@@ -259,10 +247,6 @@
     -ms-user-select: none; 
     user-select: none; 
     background-color: transparent;
-}
-
-.optLayerStyleImage:hover {
-    background-color: var(--accent);
 }
 
 .optLayerStyleElement {
@@ -284,10 +268,6 @@
     background-color: transparent;
 }
 
-.optLayerStyleElement:hover {
-    background-color: var(--accent);
-}
-
 .optLayerStyleText {
     width: 100%;
     height: 32px;
@@ -305,10 +285,6 @@
     -ms-user-select: none; 
     user-select: none; 
     background-color: transparent;
-}
-
-.optLayerStyleText:hover {
-    background-color: var(--accent);
 }
 
 .contentImages {

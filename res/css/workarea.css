@@ -27,7 +27,7 @@
 }
 
 #canvasBorder:not(.isOverflowing) {
-    scrollbar-color: var(--bg) var(--bg);
+    scrollbar-color: transparent transparent;
 }
 
 #canvasBorder:not(.isOverflowing)::-webkit-scrollbar-track,
@@ -340,10 +340,6 @@
     background-color: transparent;
     z-index: 5;
 
-}
-
-.optZoom:hover {
-    background-color: var(--accent);
 }
 
 .border {
