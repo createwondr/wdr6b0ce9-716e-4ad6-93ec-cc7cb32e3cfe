@@ -2679,19 +2679,12 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="pnlDrop">
-                                                <div class="dropdown" data-default="No uploaded images yet" >
-                                                    <h2>Mockup Image</h2>
-                        
-                                                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 1L5 5L9 1" stroke="#647499" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>      
-                                                    
-                                                </div>
-                
-                                                <div class="dropOptionVerti" style="position: absolute;">
-                                                    <div class="optLayerMockup">No uploaded images yet</div>
-                                                </div>
+                                            <div class="btnImageLabel" id="btnMockupImage">
+                                                <h2>Mockup Image</h2>
+                                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 1L5 5L9 1" stroke="#647499" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg> 
+                                                <div class="spinImageLabel" style="display: none;"></div>
                                             </div>
                                             <div id="btnRemoveMockup">
                                                 <h2>Remove Mockup</h2>
@@ -2713,6 +2706,12 @@
                                                     <h2>Scale</h2>
                                                     <input type="range" value="100" min="1" max="200" class="rngInput">
                                                     <input type="text" data-unit="plain" class="txtMockupScale" value="100" min="1" max="200">
+                                                </div>
+
+                                                <div class="pnlEntry">
+                                                    <h2>Brightness</h2>
+                                                    <input type="range" value="100" min="0" max="200" class="rngInput">
+                                                    <input type="text" data-unit="plain" class="txtMockupBrightness" value="100" min="0" max="200">
                                                 </div>
                                                 <div class="divCoverDisabler"></div>
                                             </div>

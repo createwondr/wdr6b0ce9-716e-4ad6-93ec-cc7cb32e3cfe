@@ -89,12 +89,16 @@ function moveableSetMode(mode) {
 
     clearGestureCursor();
     createMoveable();
-    llOlOllI();
+    llOlOIOl();
 
-    moveable.snappable = (lIllOOIl == "true");
-    moveable.snapThreshold = lIllOOlO;
-    moveable.snapHorizontalThreshold = lIllOOlO;
-    moveable.snapVerticalThreshold   = lIllOOlO;
+    moveable.snappable = (lIlIlIlI == "true");
+    moveable.snapThreshold = lIlIlIll;
+    moveable.snapHorizontalThreshold = lIlIlIll;
+    moveable.snapVerticalThreshold   = lIlIlIll;
+
+    //A NEW INSTANCE STARTS WITH NO GUIDELINES. WITHOUT THIS THE CANVAS EDGES AND CENTRE DID NOT
+    //SNAP UNTIL SOMETHING ELSE REFRESHED THEM (THE NEXT DRAG END, A ZOOM OR A WINDOW RESIZE)
+    updateMoveableRect();
 
     return true;
 }
@@ -105,12 +109,12 @@ function rebuildMoveable() {
 
     createMoveable();
 
-    llOlOllI();
+    llOlOIOl();
 
-    moveable.snappable = (lIllOOIl == "true");
-    moveable.snapThreshold = lIllOOlO;
-    moveable.snapHorizontalThreshold = lIllOOlO;
-    moveable.snapVerticalThreshold   = lIllOOlO;
+    moveable.snappable = (lIlIlIlI == "true");
+    moveable.snapThreshold = lIlIlIll;
+    moveable.snapHorizontalThreshold = lIlIlIll;
+    moveable.snapVerticalThreshold   = lIlIlIll;
 
     updateMoveableRect();
     moveableUpdateTargets();
@@ -190,7 +194,7 @@ function clearGestureCursor() {
 
     //[!] THIS ALSO RUNS ON WINDOW BLUR AND EVERY POINTERUP, SO IT MUST NOT WIPE THE
     //EYEDROPPER WHILE COLOR PICKING IS STILL LIVE
-    if(cnvPin != null) cnvPin.style.cursor = llIOOIIl ? llIIIIlI : '';
+    if(cnvPin != null) cnvPin.style.cursor = llIOOIOI ? llIIIIII : '';
 
     document.documentElement.classList.remove('is-gesturing');
 }
@@ -254,14 +258,14 @@ function moveableTargets() {
     //[!] (let focusObj). updateMoveableRect() RUNS AT THE BOTTOM OF THIS FILE, SO ON THAT
     //[!] ONE PATH THE APP MAY NOT EXIST YET. A `let` IN THE TEMPORAL DEAD ZONE THROWS ON
     //[!] typeof AS WELL AS ON READ, WHICH IS WHY THIS IS A try, NOT A typeof CHECK.
-    try { if(llIOlllO == null || typeof llIIIIII !== 'function') return []; }
+    try { if(llIOllOI == null || typeof llIIIIOI !== 'function') return []; }
     catch { return []; }
 
     let targets = [];
 
-    for(let f = 0; f < llIOlllO.length; f++) {
-        if(llIOlllO[f] != null) {
-            let pin = llIIIIII(f);
+    for(let f = 0; f < llIOllOI.length; f++) {
+        if(llIOllOI[f] != null) {
+            let pin = llIIIIOI(f);
 
             if(pin != null && pin.dataset.lock == "unlock") targets.push(pin);
         }

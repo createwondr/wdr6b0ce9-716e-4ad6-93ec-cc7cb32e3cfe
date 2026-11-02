@@ -1684,6 +1684,7 @@ h2 {
 }
 
 .btnRetry {
+    position: relative;
     height: 24px;
     width: auto;
     display: flex;
@@ -1706,6 +1707,27 @@ h2 {
 .btnRetry:hover h2 {
     text-decoration: underline;
     filter: saturate(1) brightness(1.5);
+}
+
+.btnRetry.loading,
+.btnRetry.loading:hover {
+    cursor: default;
+}
+
+.btnRetry.loading h2 {
+    visibility: hidden;
+}
+
+.spinRetry {
+    position: absolute;
+    inset: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    border: 2px solid var(--sharp-track);
+    border-top-color: var(--hover-line);
+    border-radius: 50%;
+    animation: spin .65s linear infinite;
 }
 
 .dropOptionSearch {
@@ -1924,4 +1946,10 @@ h2 {
     position: absolute;
     top: 0px;
     visibility: hidden;
+}
+
+input[data-alpha] {
+    width: 48px;
+    padding-left: 6px;
+    padding-right: 6px;
 }

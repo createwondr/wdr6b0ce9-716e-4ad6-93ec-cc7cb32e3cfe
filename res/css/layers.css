@@ -47,8 +47,8 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -6px;
-    bottom: -6px;
+    top: calc(var(--lineGrab, 10px) * -1);
+    bottom: calc(var(--lineGrab, 10px) * -1);
 }
 
 .cnvLayers {

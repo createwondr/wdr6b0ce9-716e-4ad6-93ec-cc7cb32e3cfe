@@ -139,7 +139,7 @@ html {
 }
 
 .btnLogin:hover {
-    border-color: var(--sharp);
+    border-color: var(--hover-line);
 }
 
 .foot {

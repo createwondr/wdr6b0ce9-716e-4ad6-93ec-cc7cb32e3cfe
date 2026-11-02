@@ -283,7 +283,8 @@
     border-bottom: 1px solid var(--muted-track);
 }
 
-.txtMockupScale {
+.txtMockupScale,
+.txtMockupBrightness {
     width: 28px;
     height: 24px;
     outline: none;
@@ -299,11 +300,13 @@
     border-bottom: 1px solid transparent;
     background-color: transparent;
 }
-.txtMockupScale:hover {
+.txtMockupScale:hover,
+.txtMockupBrightness:hover {
     border-bottom: 1px solid var(--muted-track);
 }
 
-.txtMockupScale:focus {
+.txtMockupScale:focus,
+.txtMockupBrightness:focus {
     border-bottom: 1px solid var(--muted-track);
 }
 
@@ -462,8 +465,11 @@
     outline: none;
     transition: .2s;
     border-radius: 4px;
-    background: hsl(6, 93%, 71%, 0.25);
+    background: rgb(255, 0, 0, 0.1);
+    background: hsl(6, 93%, 71%, 0.15);
+    border: 1px solid rgb(255, 0, 0, 0.5);
     border: 1px solid salmon;
+    
     display: none;
     margin-top: 1em;
     box-sizing: border-box;
@@ -480,4 +486,9 @@
     letter-spacing: 1px;
     margin: auto;
     cursor: pointer;
+}
+
+#btnMockupImage {
+    margin-top: 1em;
+    margin-bottom: 0;
 }
