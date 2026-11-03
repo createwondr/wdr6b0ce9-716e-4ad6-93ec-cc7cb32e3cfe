@@ -5,7 +5,7 @@
     grid-template-rows: subgrid;
     row-gap: 0px;
     padding: 2em;
-    border: 1px solid var(--sharp-track);
+    border: 1px solid var(--accent);
     border-radius: 8px;
 }
 
@@ -191,15 +191,15 @@
 
 .btnPlan span {
     margin: auto;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    color: var(--sharp);
+    color: white;
     letter-spacing: 0.5px;
 }
 
 .btnPlanAccent {
-  
-    border: 1px solid var(--accent);
+
+    background: var(--accent);
     box-sizing: border-box;
     transition: filter 0.2s;
 }
@@ -211,11 +211,11 @@
 .btnPlanGold {
     background:
         linear-gradient(135deg, transparent 40%, var(--gold-5) 50%, transparent 60%),
-        linear-gradient(135deg, var(--gold-5), var(--gold-4) 30%, var(--gold-3));
+        linear-gradient(135deg, var(--gold-5) -20%, var(--gold-4) 40%, var(--gold-4) 60%, var(--gold-3) 120%);
     background-size: 300% 100%, 100% 100%;
     background-repeat: no-repeat;
     transition: filter 0.2s;
-    animation: goldShine 4s ease-in-out infinite;
+    animation: goldShine 3s ease-in-out infinite;
 }
 
 @keyframes goldShine {
