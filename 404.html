@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wondr - Page Not Found</title>
+    <title>Wondr - 404 Page Not Found</title>
     <meta name="robots" content="noindex">
 
     <link rel="icon" href="/favicon.svg" type="image/x-icon">
@@ -45,16 +45,22 @@
                     <span class="navName">Wondr</span>
                 </a>
 
-                <nav class="navLinks" aria-label="Main">
-                    <a href="/#features">Features</a>
-                    <a href="/#pricing">Pricing</a>
-                    <a href="/#faq">FAQs</a>
-                    <a href="/tutorials">Tutorials</a>
-                </nav>
+                <button class="btnMenu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">
+                    <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="2" rx="1"/><rect y="6" width="20" height="2" rx="1"/><rect y="12" width="20" height="2" rx="1"/></svg>
+                </button>
 
-                <div class="navCtas">
-                    <a class="btnGetStarted" href="/#pricing"><span>Get started</span></a>
-                    <a class="btnLogin" href="/login"><span>Log in</span></a>
+                <div class="navMenu" id="navMenu">
+                    <nav class="navLinks" aria-label="Main">
+                        <a href="/#features">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQs</a>
+                        <a href="/tutorials">Tutorials</a>
+                    </nav>
+
+                    <div class="navCtas">
+                        <a class="btnGetStarted" href="/#pricing"><span>Get started</span></a>
+                        <a class="btnLogin" href="/login"><span>Log in</span></a>
+                    </div>
                 </div>
 
             </header>
@@ -120,5 +126,6 @@
         </footer>
     </div>
 
+    <script src="/res/js/sec/home.js"></script>
 </body>
 </html>

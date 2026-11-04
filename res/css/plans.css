@@ -211,7 +211,7 @@
 .btnPlanGold {
     background:
         linear-gradient(135deg, transparent 40%, var(--gold-5) 50%, transparent 60%),
-        linear-gradient(135deg, var(--gold-5) -20%, var(--gold-4) 40%, var(--gold-4) 60%, var(--gold-3) 120%);
+        linear-gradient(135deg, var(--gold-5), var(--gold-4) 40%, var(--gold-4) 60%, var(--gold-3) 130%);
     background-size: 300% 100%, 100% 100%;
     background-repeat: no-repeat;
     transition: filter 0.2s;

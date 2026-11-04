@@ -138,6 +138,8 @@ main {
     min-width: 0px;
     box-sizing: border-box;
     padding: 2em;
+    padding-top: 2em;
+    padding-bottom: 1em;
     background: var(--dark2);
 }
 
@@ -170,12 +172,15 @@ main {
 }
 
 #headPayment {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    display: flex;
+    width: 100%;
 }
 
 #headPayment h2 {
-    margin: 0px;
-    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 14px;
     font-weight: 600;
     color: var(--sharp);
 }
@@ -382,7 +387,6 @@ main {
     height: 32px;
     width: 100%;
     justify-content: space-between;
-    margin-top: 1.5em;
     display: flex;
 }
 
@@ -462,7 +466,6 @@ main {
     color: white;
     font-size: 14px;
     margin: auto;
-    margin-left: 2.1em;
 }
 
 #paymentFooter {

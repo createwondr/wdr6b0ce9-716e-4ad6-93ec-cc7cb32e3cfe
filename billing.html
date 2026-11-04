@@ -121,7 +121,9 @@
                 <div id="boxConfig" hidden></div>
 
                 <div id="headPayment">
+                    <div class="breakLine" style="margin: auto; margin-right: 0.5em; width: 20%;"></div>
                     <h2>Choose item</h2>
+                    <div class="breakLine" style="margin: auto; margin-left: 0.5em; width: 20%;"></div>
                 </div>
 
                 <div id="boxPlan">
@@ -143,9 +145,13 @@
                     </div>
 
                 </div>
-
-                <div class="lblTransaction">
+                
+                <div class="lblTransaction" style="margin-top: 1em;">
                     <h2>Subtotal</h2>
+                    <p></p>
+                </div>
+                <div class="lblTransaction">
+                    <h2 style="font-size: 10px; color: var(--placeholder);">VAT included</h2>
                     <p></p>
                 </div>
 
@@ -197,23 +203,27 @@
 
                     </div>
                   
-                    <h2>Proceed to checkout</h2>
+                    <h2>Continue to checkout</h2>
+                    <div style="width: 40px; margin-right: 0px;">
+                    </div>
                 </div>
-                <div class="state" id="stateBusy" hidden>
-                    <span id="iconSpin"></span>
-                    <span id="lblBusy"></span>
-                </div>
+                <div style="width: 100%; height: 2.5em; min-height: 2.5em; margin-top: 0.5em; margin-bottom: 0.5em;">
+                    <div class="state" id="stateBusy" hidden>
+                        <span id="iconSpin"></span>
+                        <span id="lblBusy"></span>
+                    </div>
 
-                <div class="state" id="stateFail" hidden>
-                    <span id="lblFail"></span>
-                </div>
+                    <div class="state" id="stateFail" hidden>
+                        <span id="lblFail"></span>
+                    </div>
 
-                <div class="state" id="stateDone" hidden>
-                    <div class="ico">&#10003;</div>
-                    <h3 data-plan="founding">Payment successful. Welcome to Founding Members. Please wait.</h3>
-                    <h3 data-plan="monthly" hidden>Payment successful. Welcome to Wondr. Please wait.</h3>
-                </div>
+                    <div class="state" id="stateDone" hidden>
+                        <div class="ico">&#10003;</div>
+                        <h3 data-plan="founding">Payment successful. Welcome to Founding Members. Please wait.</h3>
+                        <h3 data-plan="monthly" hidden>Payment successful. Welcome to Wondr. Please wait.</h3>
+                    </div>
 
+                </div>
                 <div id="paymentFooter">
                     <p id="lblFine">
                         By continuing, you agree to our

@@ -26,6 +26,8 @@ body {
 }
 
 #blurWrapper {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
@@ -105,38 +107,10 @@ a {
     margin: auto;
 }
 
-#btnDocMenu {
-    display: none;
-    align-items: center;
-    gap: 10px;
-    height: 36px;
-    margin-bottom: 16px;
-    padding: 0px 14px 0px 12px;
-    border: 1px solid var(--muted-track);
-    border-radius: 999px;
-    background: transparent;
-    color: var(--sharp);
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.menuIcon {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    width: 14px;
-}
-
-.menuIcon i {
-    display: block;
-    height: 1.5px;
-    background: var(--sharp);
-}
-
 .docLayout {
 
     display: grid;
+    flex: 1 0 auto;
     grid-template-columns: minmax(280px, 1fr) minmax(0px, 1080px) minmax(280px, 1fr);
     column-gap: 2em;
     --docTop: 3em;
@@ -182,8 +156,7 @@ a {
     font-weight: 600;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    color: var(--muted-blue-text);
-    filter: brightness(130%);
+    color: var(--sharp);
     cursor: pointer;
 }
 
@@ -301,9 +274,9 @@ a {
 }
 
 .docBody .docUpdated {
-    margin-bottom: 8px;
+    margin-bottom: 44px;
     font-size: 12px;
-    color: var(--muted-blue-text);
+    color: var(--placeholder);
 }
 
 .docBody strong {
@@ -313,8 +286,7 @@ a {
 
 .docBody a,
 .docBody a:visited {
-    color: var(--muted-blue-text);
-    filter: brightness(130%);
+    color: var(--sharp);
     font-weight: 600;
     text-decoration: underline;
     text-decoration-color: var(--muted-track);
@@ -615,12 +587,20 @@ a {
     padding-left: 24px;
 }
 
+.docLegal .docBody h1 {
+    margin-bottom: 2px;
+}
+
 .docLegal .docMain {
     grid-column: 2;
 }
 
 #docScrim {
     display: none;
+}
+
+.noSlide #docNav {
+    transition: none;
 }
 
 @media (max-width: 1180px) {
@@ -655,27 +635,45 @@ a {
 
 @media (max-width: 860px) {
 
+    #homeNav {
+        grid-template-columns: 1fr auto;
+    }
+
     #btnDocMenu {
-        display: inline-flex;
+        display: flex;
+        position: relative;
+        z-index: 61;
     }
 
     .docLayout {
         grid-template-columns: minmax(0px, 1fr);
+        --docTop: 2em;
+        padding-bottom: 0px;
     }
 
     #docNav {
         position: fixed;
         top: 0px;
-        left: 0px;
+        right: 0px;
         bottom: 0px;
         z-index: 60;
-        width: min(300px, 84vw);
+        width: min(18em, 80vw);
         margin-bottom: 0px;
-        padding-left: 16px;
+        padding: calc(4em + 48px) 16px 40px;
+        box-sizing: border-box;
         height: 100%;
-        background: var(--dark1);
-        transform: translateX(-100%);
+        background: var(--bg);
+        box-shadow: -1px 5px 5px 5px rgba(0, 0, 0, 0.2);
+        transform: translateX(calc(100% + 20px));
         transition: transform 0.2s;
+    }
+
+    #docNav::before {
+        content: "";
+        display: block;
+        height: 1px;
+        margin-bottom: 2em;
+        background: var(--muted-line);
     }
 
     #docNav.open {
@@ -687,7 +685,7 @@ a {
         inset: 0px;
         z-index: 55;
         display: block;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.95);
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.2s;
@@ -698,16 +696,21 @@ a {
         pointer-events: auto;
     }
 
+    html:has(#docNav.open) {
+        overflow: hidden;
+    }
+
     .docMain {
         padding: 24px 16px 4em;
     }
 
-    .pager {
-        grid-template-columns: 1fr;
+    .pager a span {
+        font-size: 0px;
     }
 
-    .pagerNext {
-        grid-column: 1;
+    .pager a span::after {
+        content: "Topic";
+        font-size: 18px;
     }
 }
 
