@@ -56,6 +56,58 @@ a:active {
     margin-top: 0;
 }
 
+
+#btnClearCache {
+    width: 100%; margin-top: auto; 
+    margin-bottom: 0px; 
+    background: transparent; 
+    box-sizing: border-box; 
+    border-radius: 4px; 
+    transition: 0.2s; 
+    border: 1px solid var(--muted-line);
+}
+
+#btnClearCache h2 {
+    color: var(--sharp);
+}
+
+#btnClearCache:hover {
+    border: 1px solid var(--muted-track);
+}
+
+#btnLogOut {
+    width: 246px; 
+    background: transparent;
+    border: 1px solid var(--muted-red);
+    box-sizing: border-box; 
+    border-radius: 4px;
+    margin-bottom: 0.75em;
+}
+
+#btnLogOut h2 {
+    color: salmon;
+}
+
+#btnLogOut:hover {
+    border: 1px solid var(--sharp-red)
+    
+}
+
+.btnIcon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+    visibility: hidden;
+}
+
+.btnIcon svg {
+    margin: auto;
+}
+
 /* Log Out keeps its own #btnLogOut margin-bottom: 1em = the gap under it */
 #pnlBoxSettings > #btnClearCache {
     margin-bottom: 0;

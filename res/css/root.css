@@ -11,6 +11,8 @@
     --breakline: hsl(0 0% 20%);
     --placeholder: hsl(0 0% 50%);
     --muted: hsl(0 0% 70%);
+    --muted-red: hsl(6, 93%, 71%, 0.10);
+    --sharp-red: hsl(6, 93%, 71%, 0.2);
 
     --hue: 225;
     --sat: 20%;

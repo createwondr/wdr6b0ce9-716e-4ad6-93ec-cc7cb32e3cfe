@@ -467,8 +467,10 @@
     border-radius: 4px;
     background: rgb(255, 0, 0, 0.1);
     background: hsl(6, 93%, 71%, 0.15);
+    background: transparent;
     border: 1px solid rgb(255, 0, 0, 0.5);
     border: 1px solid salmon;
+    border: 1px solid var(--muted-red);
     
     display: none;
     margin-top: 1em;
@@ -477,10 +479,12 @@
 
 #btnRemoveMockup:hover {
     filter: brightness(110%);
+    border: 1px solid var(--sharp-red)
 }
 
 #btnRemoveMockup h2{
     color: var(--sharp);
+    color: salmon;
     font-weight: 500;
     font-size: 12.5px;
     letter-spacing: 1px;
