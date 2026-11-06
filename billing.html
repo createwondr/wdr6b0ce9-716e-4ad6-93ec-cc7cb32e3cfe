@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" crossorigin>
     <script defer src="res/js/lib/supabase.js"></script>
-    <script defer src="res/js/sec/paths.js"></script>
+    <script defer src="res/js/sec/router.js"></script>
     <script defer src="res/js/sec/billing.js"></script>
 </head>
 
@@ -59,7 +59,9 @@
             <article class="plan" id="planMonthly">
                 <div class="planTop">
                     <p class="planName">Pro</p>
-                    <p class="planPrice" hidden><b></b><span>/ month</span></p>
+                    <div style="width: 100%; height: 32px;">
+                        <p class="planPrice"><b>Loading price…</b><span data-unit="/ month"></span></p>
+                    </div>
                 </div>
                 <p class="planNote">Full access. Monthly subscription.</p>
                 <div class="planList">
@@ -101,7 +103,9 @@
                 </svg>
                 <div class="planTop">
                     <p class="planName">Founding Member</p>
-                    <p class="planPrice" hidden><b></b><span>one-time</span></p>
+                    <div style="width: 100%; height: 32px;">
+                        <p class="planPrice"><b>Loading price…</b><span data-unit="one-time"></span></p>
+                    </div>
                 </div>
                 <p class="planNote">Lifetime access. One payment.</p>
                 <div class="planList">
@@ -130,7 +134,7 @@
 
                     <div class="pnlDrop" id="pnlPlan">
 
-                        <div class="dropdown" id="dropPlan" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
+                        <div class="dropdown" id="dropPlan" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false" style="background: var(--dark2)">
                             <h2 id="lblPlan">Founding Member</h2>
                             <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 1L5 5L9 1" stroke="#647499" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

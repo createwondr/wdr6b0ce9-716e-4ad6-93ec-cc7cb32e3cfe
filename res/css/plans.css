@@ -73,10 +73,7 @@
     align-items: baseline;
     gap: 6px;
     margin-top: 1em;
-}
-
-.planPrice[hidden] {
-    display: none;
+    line-height: 24px;
 }
 
 .planPrice b {

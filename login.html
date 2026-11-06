@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" crossorigin>
     <script src="res/js/lib/supabase.js"></script>
-    <script src="res/js/sec/paths.js"></script>
+    <script src="res/js/sec/router.js"></script>
     <script src="res/js/sec/auth.js"></script>
 
 </head>
@@ -411,6 +411,7 @@
                     </div>
                     <h2>Continue with Google</h2>
                 </div>
+                <div id="dupLoginNotice" role="status" aria-live="polite" hidden></div>
             </div>
         </div>
 
@@ -418,8 +419,6 @@
             <p>By continuing, you agree to our <a href="/terms-of-service">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>.</p>
         </footer>
     </div>
-    
-    <div id="toastNotice" role="status" aria-live="polite"></div>
 
     <div id="modalOverlay"><div id="modalPopup"></div></div>
     <script src="res/js/widgets/modal.js"></script>
