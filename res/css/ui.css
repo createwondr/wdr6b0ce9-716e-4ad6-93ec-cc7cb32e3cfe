@@ -145,7 +145,7 @@ h2 {
 }
 
 .btnHeader:hover {
-    filter: brightness(110%);
+    filter: brightness(105%);
 }
 
 .btnHeader h2 {
@@ -1244,7 +1244,7 @@ h2 {
 }
 
 #divWelcomeMsg h1 {
-    color: hsl(var(--hue) 30% 60%);
+    color: hsl(var(--hue) 30% 65%);
     font-weight: 400;
     font-size: 14px;
     margin: auto;
@@ -1952,4 +1952,111 @@ input[data-alpha] {
     width: 48px;
     padding-left: 6px;
     padding-right: 6px;
+}
+
+#pnlRenewBanner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0px 32px;
+}
+
+#pnlRenewBanner::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: -1;
+    background-color: var(--accent);
+    opacity: 0;
+    transition: background-color .3s, opacity .2s;
+}
+
+#pnlRenewBanner.show::before {
+    opacity: 1;
+}
+
+#pnlRenewBanner h2 {
+    opacity: 0;
+    transition: opacity .2s;
+    margin: 0px;
+    color: white;
+    font-size: 12.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.5px;
+}
+
+#pnlRenewBanner a {
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12.5px;
+    letter-spacing: 0.5px;
+    text-underline-offset: 2px;
+}
+
+#pnlRenewBanner.show h2 {
+    opacity: 1;
+}
+
+#pnlRenewBanner #btnCloseRenew {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    translate: 0px -50%;
+    margin: 0px;
+}
+
+#pnlRenewBanner.show #btnCloseRenew {
+    visibility: visible;
+}
+
+#pnlRenewBanner.busy #btnCloseRenew,
+#pnlRenewBanner.done #btnCloseRenew {
+    display: none;
+}
+
+#iconSpinRenew {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -2px;
+    border: 2px solid color-mix(in srgb, var(--sharp) 35%, transparent);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin .65s linear infinite;
+}
+
+#pnlRenewBanner.fail::before {
+    background-color: salmon;
+}
+
+#pnlRenewBanner.fail h2,
+#pnlRenewBanner.fail a {
+    color: white;
+}
+
+#pnlRenewBanner.done::before {
+    background-color: var(--accent);
+    background-image:
+        linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.45) 50%, transparent 60%),
+        linear-gradient(89.3deg, #CBA6FF -20%, #7A8EFF 60%, #75FFF5 130%);
+    background-size: 300% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    animation: renewShine 1.2s ease-in-out 1 forwards;
+}
+
+@keyframes renewShine {
+    0% {
+        background-position: 100% 0%, 0% 0%;
+    }
+    100% {
+        background-position: 0% 0%, 0% 0%;
+    }
 }

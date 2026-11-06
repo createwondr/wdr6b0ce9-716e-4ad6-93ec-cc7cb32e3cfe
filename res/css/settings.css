@@ -17,7 +17,8 @@ a:active {
   text-decoration: underline;
 }
 
-.chkSnap {
+.chkSnap,
+.chkAutoRenew {
     outline: none;
     width: 24px;
     max-width: 24px;
@@ -61,6 +62,14 @@ a:active {
 }
 
 #pnlBoxSettings > :has(+ .breakline + #btnClearCache) {
+    margin-bottom: auto;
+}
+
+#pnlBoxSettings > #pnlAutoRenew[hidden] {
+    display: none;
+}
+
+#pnlBoxSettings > :has(+ #pnlAutoRenew[hidden] + .breakline + #btnClearCache) {
     margin-bottom: auto;
 }
 

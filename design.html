@@ -80,7 +80,14 @@
 
     <div id="blurWrapper">
         <div id="mainBox">
-            <div class="headerUI"></div>
+            <div class="headerUI" id="pnlRenewBanner">
+                <h2 id="lblRenewBanner"></h2>
+                <div class="btnDelSearch" id="btnCloseRenew">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.63586 0.233983C6.94784 -0.0779945 7.45406 -0.0779945 7.76603 0.233983C8.07783 0.545908 8.07778 1.05168 7.76603 1.36363L5.12966 3.99949L7.76603 6.63586C8.07798 6.94784 8.078 7.45406 7.76603 7.76603C7.45407 8.078 6.94784 8.07798 6.63586 7.76603L3.99949 5.12966L1.36364 7.76603C1.05168 8.0778 0.545916 8.07783 0.233984 7.76603C-0.0779945 7.45405 -0.0779945 6.94784 0.233984 6.63586L2.86984 3.99949L0.233984 1.36363C-0.0779296 1.05165 -0.0779729 0.54594 0.233984 0.233983C0.54594 -0.0779681 1.05165 -0.0779279 1.36364 0.233983L3.99949 2.86984L6.63586 0.233983Z" fill="white"/>
+                </svg>
+                </div>
+            </div>
             <div id="bodyUI">
                 <div id="toolbox">
                     <div id="toolDesigns" class="tool" draggable="false">
@@ -611,25 +618,25 @@
                                     <input type="text" class="txtSnapColor" value="7FFFD4" data-alpha="1" data-gradient="" spellcheck = "false" data-gramm="false" data-gramm_editor = "false" data-enable-grammarly = "false">
                                     <div class="thumbPicker">
                                         <img class="thumbCheckered" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAMNJREFUeAHtljEOhCAQRb+siY3RwsoD6Fk8gAew0M47uOfQ3sQbcA867kBD6N3FZDcUbLSAYiOvnPnwyTCBicqy3LuuQ9u2SNMUH+q6hg3OuTVu6qWU2LYN0zQhHsfx2NwlWZZhGIbDiDRNA1/0fQ9ilsU1eZ6DwDPeDaL9jS1xpVuu6P+/RMHglNhVt/zShzu4gUF4i84N9L/pC6UUyLIs8AWlFA/G2FNPAVVVIUmSb1IIYV1UFIU1bur1ydd1xTzPeAGKOkkKXX89vgAAAABJRU5ErkJggg==">
-                                        <div class="thumbColor" style="background: #FF3E9D"></div>
+                                        <div class="thumbColor" style="background: #7FFFD4"></div>
                                     </div>
                                 </div>
 
                                 <div class="pnlEntry">
                                     <h2>Selection Color</h2>
-                                    <input type="text" class="txtSelectionColor" value="6885CC" data-alpha="1" data-gradient="" spellcheck = "false" data-gramm="false" data-gramm_editor = "false" data-enable-grammarly = "false">
+                                    <input type="text" class="txtSelectionColor" value="5E79C9" data-alpha="1" data-gradient="" spellcheck = "false" data-gramm="false" data-gramm_editor = "false" data-enable-grammarly = "false">
                                     <div class="thumbPicker">
                                         <img class="thumbCheckered" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAMNJREFUeAHtljEOhCAQRb+siY3RwsoD6Fk8gAew0M47uOfQ3sQbcA867kBD6N3FZDcUbLSAYiOvnPnwyTCBicqy3LuuQ9u2SNMUH+q6hg3OuTVu6qWU2LYN0zQhHsfx2NwlWZZhGIbDiDRNA1/0fQ9ilsU1eZ6DwDPeDaL9jS1xpVuu6P+/RMHglNhVt/zShzu4gUF4i84N9L/pC6UUyLIs8AWlFA/G2FNPAVVVIUmSb1IIYV1UFIU1bur1ydd1xTzPeAGKOkkKXX89vgAAAABJRU5ErkJggg==">
-                                        <div class="thumbColor" style="background: #6885CC"></div>
+                                        <div class="thumbColor" style="background: #5E79C9"></div>
                                     </div>
                                 </div>
 
                                 <div class="pnlEntry">
                                     <h2>Handler Color</h2>
-                                    <input type="text" class="txtHandlerColor" value="6885CC" data-alpha="1" data-gradient="" spellcheck = "false" data-gramm="false" data-gramm_editor = "false" data-enable-grammarly = "false">
+                                    <input type="text" class="txtHandlerColor" value="5E79C9" data-alpha="1" data-gradient="" spellcheck = "false" data-gramm="false" data-gramm_editor = "false" data-enable-grammarly = "false">
                                     <div class="thumbPicker">
                                         <img class="thumbCheckered" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAMNJREFUeAHtljEOhCAQRb+siY3RwsoD6Fk8gAew0M47uOfQ3sQbcA867kBD6N3FZDcUbLSAYiOvnPnwyTCBicqy3LuuQ9u2SNMUH+q6hg3OuTVu6qWU2LYN0zQhHsfx2NwlWZZhGIbDiDRNA1/0fQ9ilsU1eZ6DwDPeDaL9jS1xpVuu6P+/RMHglNhVt/zShzu4gUF4i84N9L/pC6UUyLIs8AWlFA/G2FNPAVVVIUmSb1IIYV1UFIU1bur1ydd1xTzPeAGKOkkKXX89vgAAAABJRU5ErkJggg==">
-                                        <div class="thumbColor" style="background: #6885CC"></div>
+                                        <div class="thumbColor" style="background: #5E79C9"></div>
                                     </div>
                                 </div>
 
@@ -637,7 +644,10 @@
                                 <div class="pnlTitle" style="width: 247px; margin: 0 auto;">
                                     <h2 style="margin-left: 0px;">Account & Credits</h2>
                                 </div>
-                                <div class="pnlEntry" style="margin-top: 0px;">
+                                <div class="pnlEntry" id="pnlAccessBadge" style="visibility: hidden; margin-top: 0px;">
+                                    <div id="lblAccessBadge"></div>
+                                </div>
+                                <div class="pnlEntry">
                                     <h2>AI Credits</h2>
                                     <h2 class="pnlValue" id="lblAiCredits">0</h2>
                                 </div>
@@ -649,17 +659,19 @@
                                     <h2>Member since</h2>
                                     <h2 class="pnlValue" id="lblMemberSince"></h2>
                                 </div>
-                                <div class="pnlEntry" id="pnlAccessBadge" style="visibility: hidden;">
-                                    <div id="lblAccessBadge"></div>
-                                </div>
                                 <div class="pnlEntry" id="pnlAccess">
                                     <h2>Access</h2>
                                     <h2 class="pnlValue" id="lblAccess"></h2>
                                 </div>
                                 <div class="pnlEntry" id="pnlExpiration">
-                                    <h2>Expiration</h2>
+                                    <h2>Ends on</h2>
                                     <h2 class="pnlValue" id="lblExpiration"></h2>
                                 </div>                  
+                                <div class="pnlEntry" id="pnlAutoRenew" style="position: relative;" hidden>
+                                    <h2>Auto-renew</h2>
+                                    <div class="chkAutoRenew" data-value="true"><div class="chkSwitch"></div></div>
+                                    <div class="divCoverDisabler"></div>
+                                </div>
                                 <div class="breakline" style="width: 100%; margin-top: 2em;"></div>   
                                 <div class="btnHeader" id="btnClearCache">
                                     <div class="btnIcon">
@@ -696,16 +708,15 @@
                         <div class="configScroll configScrollWondr">
                             <div id="divWelcomeMsg">
                                 <h1>
-                                    &ensp;Wondr was founded by <i>Ozydeus</i>, a solo designer and developer from the Philippines. It started as a small project, built from a simple idea: to create something useful and meaningful that extends human creativity. It was personally designed, developed, and funded from the very beginning, with no investors, no large team, and no millions behind it. Just one person, a computer, countless hours, and the belief that even a humble idea can grow into something worth sharing.
+                                    &ensp;Wondr is a creative work of Ozydeus, a solo designer and developer based in the Philippines. It started as a small project, built from a simple idea: to create something useful and meaningful that extends human creativity. It was personally designed, developed, and funded from the very beginning, with no investors, no large team, and no millions behind it. Just one person, a computer, countless hours, and the belief that even a humble idea can grow into something worth sharing.
                                     <br><br>
-                                    &ensp;The app is built with HTML5, CSS3, and JavaScript, the fundamental building blocks of the web. Its philosophy is inspired by the <i>Wonders of the World</i>, remarkable creations imagined and built from the ground up, piece by piece, long before modern frameworks and standards existed. There is something inspiring about returning to the fundamentals and discovering how much can be achieved with them.
+                                    &ensp;The app is built with HTML, CSS, and JavaScript, the fundamental building blocks of the web. Its philosophy is inspired by the <b style="color: hsl(var(--hue) 30% 70%);">Wonders of the World</b>, remarkable creations imagined and built from the ground up, piece by piece, long before modern frameworks and standards existed. There is something exciting about returning to the fundamentals and rediscovering how much can be achieved with them.
                                     <br><br>
-                                    &ensp;Wondr is dedicated to <b style="color: hsl(var(--hue) 30% 70%);">Wanda Teresa Dela Cruz</b>, a mother who shared her love with her children unconditionally and provided for the people she cared about. This work carries a part of that legacy forward. It is a product of love, persistence, passion, and the joy of building something simply because you believe it can spread wonder.
+                                    &ensp;Wondr is dedicated to <b style="color: hsl(var(--hue) 30% 70%);">Wanda Teresa Dela Cruz</b>, who loved her children unconditionally and provided for the people she cared about. This work carries a part of that legacy forward: creating something that people care about, simply because they believe it can spread wonders.
                                     <br><br>
-                                    &ensp;We are excited to see who you can be and what you can create.
+                                    &ensp;Really excited to see how you'll bring your ideas to life.
                                     <br><br>
-                                    &ensp;<b>Thank you for using Wondr.</b>
-                                
+                                    &ensp;Thank you for using Wondr.
                                 </h1>
                                 <br>
                             </div>

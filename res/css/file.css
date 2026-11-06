@@ -20,7 +20,7 @@
 }
 
 .btnExportHeader:hover {
-    background-color: #82A6FF ;
+    filter: brightness(105%);
 }
 
 .btnExportHeader h2 {

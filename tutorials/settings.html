@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wondr - Settings</title>
-    <meta name="description" content="Change snapping and selection colors, see your AI credits and plan details, clear the cache and log out in Wondr&#x27;s Settings menu.">
+    <meta name="description" content="Change snapping and selection colors, see your AI credits and plan details, turn auto-renew on or off, clear the cache and log out in Wondr&#x27;s Settings menu.">
     <link rel="canonical" href="https://createwondr.io/tutorials/settings">
     <meta name="theme-color" content="#191919">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Wondr">
     <meta property="og:title" content="Wondr - Settings">
-    <meta property="og:description" content="Change snapping and selection colors, see your AI credits and plan details, clear the cache and log out in Wondr&#x27;s Settings menu.">
+    <meta property="og:description" content="Change snapping and selection colors, see your AI credits and plan details, turn auto-renew on or off, clear the cache and log out in Wondr&#x27;s Settings menu.">
     <meta property="og:url" content="https://createwondr.io/tutorials/settings">
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Settings","description":"Change snapping and selection colors, see your AI credits and plan details, clear the cache and log out in Wondr's Settings menu.","url":"https://createwondr.io/tutorials/settings","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tutorials","item":"https://createwondr.io/tutorials"},{"@type":"ListItem","position":2,"name":"Toolbar"},{"@type":"ListItem","position":3,"name":"Settings","item":"https://createwondr.io/tutorials/settings"}]}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Settings","description":"Change snapping and selection colors, see your AI credits and plan details, turn auto-renew on or off, clear the cache and log out in Wondr's Settings menu.","url":"https://createwondr.io/tutorials/settings","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tutorials","item":"https://createwondr.io/tutorials"},{"@type":"ListItem","position":2,"name":"Toolbar"},{"@type":"ListItem","position":3,"name":"Settings","item":"https://createwondr.io/tutorials/settings"}]}]}</script>
     <link rel="icon" href="/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="/res/css/root.css">
     <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
@@ -83,13 +83,21 @@
                     <h1>Settings</h1>
                     <p>The <strong>Settings</strong> menu holds your app preferences and your account details.</p>
 <h2 id="ui-settings">UI Settings</h2>
-<figure><img src="/res/tutorials/img/settings-ui.webp" alt="The UI Settings section" width="280" height="433" loading="lazy"><figcaption>The UI Settings section</figcaption></figure>
-<ul><li><strong>Snapping:</strong> when on, a layer you move or resize snaps to the edges, centers and gaps of other layers. Off by default.</li><li><strong>Snap Sensitivity:</strong> from 1 to 20. Higher values snap from further away. The default is 5.</li><li><strong>Snap Line Color:</strong> the color of the snap guides and of the drop line when you reorder layers.</li><li><strong>Selection Color:</strong> the color of the box you drag to select layers.</li><li><strong>Handler Color:</strong> the color of the handles on a selected layer.</li></ul>
+<figure><img src="/res/tutorials/img/settings-ui.webp" alt="The UI Settings section" width="280" height="340" loading="lazy"><figcaption>The UI Settings section</figcaption></figure>
+<ul><li><strong>Snapping:</strong> when on, a layer you move or resize snaps to the edges, centers and gaps of other layers. On by default.</li><li><strong>Snap Sensitivity:</strong> from 1 to 20. Higher values snap from further away. The default is 5.</li><li><strong>Snap Line Color:</strong> the color of the snap guides and of the drop line when you reorder layers. Aquamarine by default.</li><li><strong>Selection Color:</strong> the color of the box you drag to select layers.</li><li><strong>Handler Color:</strong> the color of the handles on a selected layer.</li></ul>
 <p>Click a color swatch to pick a color, or type a hex value. Click the <strong>reset</strong> icon next to <strong>UI Settings</strong> to put everything back to its default.</p>
 <aside class="callout note"><p><strong>Note:</strong> Wondr remembers these settings in this browser, so they are still set the next time you open the app, even after you close it. Another browser or device starts with the defaults.</p></aside>
 <h2 id="account-credits">Account &amp; Credits</h2>
-<figure><img src="/res/tutorials/img/settings-account.webp" alt="The Account &amp; Credits section" width="280" height="365" loading="lazy"><figcaption>The Account &amp; Credits section</figcaption></figure>
-<ul><li><strong>AI Credits:</strong> credits left today for AI background removal. They refresh every day. See <a href="/tutorials/plans-and-credits">Plans and AI credits</a>.</li><li><strong>Email:</strong> your sign-in email, partly hidden.</li><li><strong>Member since:</strong> the date your plan started.</li><li><strong>Access</strong> and <strong>Expiration:</strong> your plan and the date it ends. Founding Members see a <strong>Founding Member</strong> badge instead, because their access does not expire.</li></ul>
+<figure><img src="/res/tutorials/img/settings-account.webp" alt="The Account &amp; Credits section on the Pro plan" width="280" height="397" loading="lazy"><figcaption>The Account &amp; Credits section on the Pro plan</figcaption></figure>
+<ul><li><strong>AI Credits:</strong> credits left today for AI background removal. They refresh every day. See <a href="/tutorials/plans-and-credits">Plans and AI credits</a>.</li><li><strong>Email:</strong> your sign-in email, partly hidden.</li><li><strong>Member since:</strong> the date your plan started.</li><li><strong>Access:</strong> your plan. Founding Members see a <strong>Founding Member</strong> badge instead, because their access does not expire.</li><li><strong>Renews on</strong> or <strong>Ends on:</strong> the date your Pro plan renews, or the date it ends when auto-renew is off.</li><li><strong>Auto-renew:</strong> on by default for the Pro plan. See <a href="#auto-renew">Auto-renew</a> below.</li></ul>
+<p>Founding Members see their badge in place of <strong>Access</strong>, <strong>Renews on</strong> and <strong>Auto-renew</strong>:</p>
+<figure><img src="/res/tutorials/img/settings-account-founding.webp" alt="The Account &amp; Credits section for a Founding Member" width="280" height="290" loading="lazy"><figcaption>The Account &amp; Credits section for a Founding Member</figcaption></figure>
+<h2 id="auto-renew">Auto-renew</h2>
+<p>Your Pro plan renews every month on its own, so your access never stops by accident. The <strong>Auto-renew</strong> switch is the last row of <strong>Account &amp; Credits</strong>.</p>
+<ul><li>Turn <strong>Auto-renew</strong> off to stop future payments. Wondr asks you to confirm first. You keep full access until the date under <strong>Ends on</strong>, and payments already made are not refunded.</li><li>Turn it back on anytime before that date. No confirmation needed.</li></ul>
+<figure><img src="/res/tutorials/img/settings-auto-renew-popup.webp" alt="Turning off auto-renew asks you to confirm first" width="322" height="212" loading="lazy"><figcaption>Turning off auto-renew asks you to confirm first</figcaption></figure>
+<aside class="callout tip"><p><strong>Tip:</strong> When auto-renew is off and your subscription ends soon, you may see a daily reminder at the top of the app.</p></aside>
+<figure><img src="/res/tutorials/img/settings-renew-banner.webp" alt="The auto-renew reminder at the top of the app" width="960" height="33" loading="lazy"><figcaption>The auto-renew reminder at the top of the app</figcaption></figure>
 <h2 id="clear-cache-and-log-out">Clear Cache and Log Out</h2>
 <figure><img src="/res/tutorials/img/settings-buttons.webp" alt="The Clear Cache and Log Out buttons" width="280" height="112" loading="lazy"><figcaption>The Clear Cache and Log Out buttons</figcaption></figure>
 <ul><li><strong>Clear Cache</strong> deletes the resources Wondr has stored in your browser, such as templates, fonts and 3D environments, so fresh copies download. It also logs you out.</li><li><strong>Log Out</strong> signs you out of Wondr.</li></ul>
@@ -104,7 +112,7 @@
 
             <aside class="onPage" aria-label="On this page">
                 <p>On this page</p>
-                <nav id="docOnPage"><a href="#ui-settings">UI Settings</a><a href="#account-credits">Account &amp; Credits</a><a href="#clear-cache-and-log-out">Clear Cache and Log Out</a><a href="#help-and-support">Help and support</a></nav>
+                <nav id="docOnPage"><a href="#ui-settings">UI Settings</a><a href="#account-credits">Account &amp; Credits</a><a href="#auto-renew">Auto-renew</a><a href="#clear-cache-and-log-out">Clear Cache and Log Out</a><a href="#help-and-support">Help and support</a></nav>
             </aside>
 
         </div>

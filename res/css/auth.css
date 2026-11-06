@@ -76,7 +76,7 @@ body #blurWrapper {
 #btnLogin {
   width: calc(100% - 40px);
   height: 40px;
-  background-color: #7595E5;
+  background-color: var(--accent);
   border-radius: 4px;
   display: flex;
   padding-right: 40px;
@@ -87,7 +87,7 @@ body #blurWrapper {
 }
 
 #btnLogin:hover {
-  background-color: #82A6FF;
+  filter: brightness(105%);
 }
 
 #btnLogin h2 {

@@ -12,7 +12,7 @@
     --placeholder: hsl(0 0% 50%);
     --muted: hsl(0 0% 70%);
 
-    --hue: 223;
+    --hue: 225;
     --sat: 20%;
 
     --muted-line: hsl(var(--hue) var(--sat) 16%);
@@ -20,7 +20,7 @@
     --sharp-track: hsl(var(--hue) var(--sat) 30%);
     --hover-line: hsl(var(--hue) var(--sat) 40%);
     --muted-blue-text: hsl(var(--hue) var(--sat) 50%);
-    --accent: hsl(var(--hue) 50% 60%);
+    --accent: hsl(var(--hue) 50% 58%);
     --scroll-thumb: hsl(var(--hue) var(--sat) 25%);
     --scroll-thumb-hover: hsl(var(--hue) var(--sat) 26%);
 

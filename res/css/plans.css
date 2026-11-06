@@ -205,7 +205,7 @@
 }
 
 .btnPlanAccent:hover {
-    filter: brightness(110%);
+    filter: brightness(105%);
 }
 
 .btnPlanGold {
@@ -216,6 +216,53 @@
     background-repeat: no-repeat;
     transition: filter 0.2s;
     animation: goldShine 3s ease-in-out infinite;
+    position: relative;
+}
+
+.btnPlanGold::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(circle 64px at var(--glintX) var(--glintY), white, transparent 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: goldGlint 8s linear infinite;
+}
+
+@property --glintX {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+@property --glintY {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+@keyframes goldGlint {
+    0%,
+    100% {
+        --glintX: 0%;
+        --glintY: 0%;
+    }
+    43% {
+        --glintX: 100%;
+        --glintY: 0%;
+    }
+    50% {
+        --glintX: 100%;
+        --glintY: 100%;
+    }
+    93% {
+        --glintX: 0%;
+        --glintY: 100%;
+    }
 }
 
 @keyframes goldShine {
