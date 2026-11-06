@@ -122,14 +122,11 @@ body #blurWrapper {
   height: 40px;
   margin-top: 8px;
   background-color: transparent;
-  color: #e8a5a5;
+  color: salmon;
   font-family: "Poppins", "Uncut Sans", sans-serif;
   font-size: 10px;
   line-height: 1.4;
   letter-spacing: 0.5px;
   text-align: center;
-}
-
-#dupLoginNotice[hidden] {
-  display: none;
+  visibility: hidden;
 }
