@@ -219,9 +219,12 @@ html {
 }
 
 .footMini {
+    width: 100dvw;
     min-height: 2em;
+    height: auto;
     display: flex;
-    margin-top: auto;
+    margin: auto;
+    margin-bottom: 0px;
     padding: 0.5em 1em;
     box-sizing: border-box;
 }
@@ -234,6 +237,7 @@ html {
     text-align: center;
     color: var(--muted-blue-text);
     width: auto;
+    word-wrap: break-word;
 }
 
 .footMini a {
