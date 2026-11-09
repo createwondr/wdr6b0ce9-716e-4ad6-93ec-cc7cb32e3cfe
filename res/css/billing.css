@@ -11,8 +11,7 @@ html {
 body {
     margin: 0px;
     min-height: 100vh;
-    font-family: "Poppins", "Uncut Sans", sans-serif;
-    font-feature-settings: "ss05";
+    font-family: "Google Sans Flex", "Inter", sans-serif;
     color: var(--sharp);
 
     background: var(--bg);
@@ -34,7 +33,7 @@ button {
 }
 
 ::selection {
-    background: var(--selection);
+    background: var(--accent);
     color: var(--sharp);
 }
 
@@ -52,20 +51,31 @@ main {
     text-align: center;
 }
 
+/*billing - pricing title: same as the homepage*/
 .sectionTitle {
     margin: 0px;
+    font-family: "Poppins", "Google Sans Flex", sans-serif;
     font-size: 48px;
     font-weight: 400;
     line-height: 1.2;
     color: var(--sharp);
 }
 
+/*billing - pricing subtitle: same as the homepage*/
 .sectionSub {
     margin: 1em 0px 0px;
-    font-size: 14px;
+    font-family: "Poppins", "Google Sans Flex", sans-serif;
+    font-size: 13px;
     font-weight: 400;
     line-height: 1.6;
+    letter-spacing: 1px;
     color: var(--placeholder);
+}
+
+/*billing - pricing cards: same font as the homepage cards*/
+.plan,
+.plan * {
+    font-family: "Poppins", "Google Sans Flex", sans-serif;
 }
 
 #offer .plan {
@@ -163,7 +173,8 @@ main {
     border-radius: 9px;
     background: rgba(0, 0, 0, .2);
     color: var(--placeholder);
-    font-size: 11px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     line-height: 1.5;
 }
 
@@ -181,7 +192,7 @@ main {
     margin-top: auto;
     margin-bottom: auto;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--sharp);
 }
 
@@ -190,7 +201,6 @@ main {
     font-size: 14px;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.7);
-    letter-spacing: 0.5px;
 }
 
 #boxSignedIn {
@@ -203,7 +213,8 @@ main {
     border: 1px solid var(--muted-line);
     border-radius: 0.5em;
     background: var(--dark2);
-    font-size: 11px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     box-sizing: border-box;
     height: 40px;
 }
@@ -228,12 +239,14 @@ main {
     filter: brightness(105%);
 }
 
+/*billing - google button text*/
 #btnSignUp h2 {
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
     font-weight: 500;
     overflow: hidden;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     margin: auto;
 }
 
@@ -258,7 +271,7 @@ main {
 #lblEmail {
     margin: auto;
     color: #d5d6d9;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #btnSignOut {
@@ -267,8 +280,10 @@ main {
     border: none;
     background: none;
     color: var(--muted-blue-text);
-    font-size: 11px;
-    font-weight: 600;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     transition: .2s;
 }
 
@@ -311,8 +326,8 @@ main {
 .dropdown h2 {
     color: var(--sharp);
     font-weight: 500;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     margin: auto;
     cursor: pointer;
 }
@@ -357,9 +372,9 @@ main {
     grid-template-columns: subgrid;
     height: 40px;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     user-select: none;
@@ -391,13 +406,12 @@ main {
 }
 
 .lblTransaction h2 {
-    font-size: 14px;
     color: var(--sharp);
     font-weight: 500;
     letter-spacing: 0.5px;
     margin: auto;
     margin-left: 0px;
-    font-size: 10px; 
+    font-size: 10px;
     color: var(--placeholder);
 }
 
@@ -413,10 +427,10 @@ main {
 
 #lblSignUp,
 #lblMethod {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     color: var(--placeholder);
     font-size: 10px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -431,8 +445,8 @@ main {
     background-size: 300% 100%, 100% 100%;
     background-repeat: no-repeat;
     animation: goldShine 3s ease-in-out infinite;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 500;
     transition: filter .2s;
     display: flex;
     cursor: pointer;
@@ -448,12 +462,14 @@ main {
     margin: auto;
 }
 
+/*billing - checkout button text*/
 #btnCheckout h2 {
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
     font-weight: 500;
     overflow: hidden;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     margin: auto;
 }
 
@@ -497,7 +513,7 @@ main {
     padding: 0px;
     box-sizing: border-box;
     overflow: hidden;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.4;
     letter-spacing: 0.5px;
     text-indent: 1em;
@@ -534,8 +550,14 @@ main {
     }
 }
 
+/*billing - salmon message: google sans 10px*/
 #stateFail {
     color: salmon;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1rem;
 }
 
 #stateDone {
@@ -556,14 +578,16 @@ main {
 #stateDone h3 {
     margin: 0px;
     color: #e9ffff;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 #lblFine {
     margin: 12px 4px 0px;
     color: var(--placeholder);
-    font-size: 9px;
+    font-size: 8px;
+    letter-spacing: 0.5px;
     line-height: 1.5;
     text-align: center;
 }

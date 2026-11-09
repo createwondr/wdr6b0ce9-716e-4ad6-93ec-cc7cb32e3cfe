@@ -7,7 +7,6 @@
     <title>Wondr - Online 2D and 3D Graphic Design Web App</title>
     <link rel="icon" href="favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="res/css/root.css">
-    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="res/css/fonts.css">
     <link rel="stylesheet" href="res/css/workarea.css">
     <link rel="stylesheet" href="res/css/ui.css">
@@ -28,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" crossorigin>
 
     <!--STYLISH-->
     <link href='https://fonts.googleapis.com/css2?family=Pacifico&display=swap' rel='stylesheet' crossorigin>
@@ -273,7 +273,7 @@
                             <div class="breakline" style="margin-bottom: 0px;"></div>
                             <div style="display: flex; width: 88%; height: 69px; margin: auto;">
                                 <h2 style="margin: auto; margin-left: 0px;">Resume your work?</h2>
-                                <div id="btnClearAutosave" class="btnMenuFooter" style="margin-right: 0.5em; border: 1px solid var(--accent); height: 25px;">
+                                <div id="btnClearAutosave" class="btnMenuFooter">
                                     <h2 style="color: var(--sharp);">Close</h2>
                                 </div>
                                 <div id="btnLoadAutosave" class="btnMenuFooter" style="margin-right: 0px; background: var(--accent);">
@@ -320,7 +320,7 @@
 
                         <div class="pnlHeader">
                             
-                            <div class="btnHeader" id="btnUploadImg" style="width: 206px;">
+                            <div class="btnHeader" id="btnUploadImg" style="width: 246px;">
                                 <div class="btnIcon">
                                     <svg width="18" height="16" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 6.25694C0 4.45818 1.45818 3 3.25694 3C4.34591 3 5.36283 2.45576 5.96688 1.54969L6 1.5C6.62474 0.562883 7.6765 0 8.80278 0H13.1972C14.3235 0 15.3753 0.562883 16 1.5L16.0331 1.54969C16.6372 2.45576 17.6541 3 18.7431 3C20.5418 3 22 4.45818 22 6.25694V11.1708C21.3541 10.9431 20.6459 10.9431 20 11.1708V6.25694C20 5.56275 19.4373 5 18.7431 5C16.9854 5 15.344 4.12156 14.369 2.65909L14.3359 2.6094C14.0821 2.22868 13.6548 2 13.1972 2H8.80278C8.34521 2 7.91791 2.22868 7.6641 2.6094L7.63098 2.65909C6.65599 4.12156 5.01461 5 3.25694 5C2.56275 5 2 5.56275 2 6.25694V17C2 18.6569 3.34315 20 5 20H17C17.1706 20 17.3379 19.9858 17.5007 19.9584C17.6659 19.9861 17.8329 20 18 20C18 20.6534 18.2089 21.258 18.5635 21.7507C18.0716 21.9125 17.546 22 17 22H5C2.23858 22 0 19.7614 0 17V6.25694Z" fill="white"/>
@@ -336,9 +336,6 @@
                             </div>
                             
                         </div>
-                        <!--
-                        <div class="breakline"></div>
-                        -->
                         <div class="configScroll configScrollUploads" >
                             <div id="configContainer">
                                 <div id="wrapUploads">
@@ -437,13 +434,13 @@
                             <div id="tabFontCategory">
                                 <div id="tabSliderFont">
                                     <div id="tabStylish">
-                                        <div class="wrapFonts" data-cloudid="0" data-font="Pacifico" data-class="stylish" data-case="Capitalize" data-thumbno="0" style="transition: all; background-color: transparent;"><h2 style="font-family: Pacifico; font-size: 130%; font-weight: 400; text-transform: capitalize; display: flex;">Pacifico</h2></div>
+                                        <div class="wrapFonts" data-cloudid="0" data-font="Pacifico" data-class="stylish" data-case="Capitalize" data-thumbno="0" style="transition: all; background-color: transparent;"><h2 style="font-family: Pacifico; font-size: 16px; font-weight: 400; text-transform: capitalize; display: flex;">Pacifico</h2></div>
                                         <div class="wrapFonts" data-cloudid="1" data-font="Sour Gummy" data-class="stylish" data-case="UpperCase" data-thumbno="1" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Sour Gummy&quot;; font-weight: 400; display: flex;">SOUR GUMMY</h2></div>
                                         <div class="wrapFonts" data-cloudid="2" data-font="Delius" data-class="stylish" data-case="UpperCase" data-thumbno="2" style="transition: all; background-color: transparent;"><h2 style="font-family: Delius; font-weight: 400; display: flex;">DELIUS</h2></div>
-                                        <div class="wrapFonts" data-cloudid="3" data-font="Meow Script" data-class="stylish" data-case="Capitalize" data-thumbno="3" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Meow Script&quot;; font-size: 130%; font-weight: 400; text-transform: capitalize; display: flex;">Meow Script</h2></div>
-                                        <div class="wrapFonts" data-cloudid="4" data-font="Delius Swash Caps" data-class="stylish" data-case="Capitalize" data-thumbno="4" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Delius Swash Caps&quot;; font-size: 130%; font-weight: 400; text-transform: capitalize; display: flex;">Delius Swash Caps</h2></div>
-                                        <div class="wrapFonts" data-cloudid="5" data-font="Akaya Kanadaka" data-class="stylish" data-case="UpperCase" data-thumbno="5" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Akaya Kanadaka&quot;; font-weight: 400; display: flex;">AKAYA KANADAKA</h2></div><div class="wrapFonts" data-cloudid="6" data-font="Yellowtail" data-class="stylish" data-case="Capitalize" data-thumbno="6" style="transition: all; background-color: transparent;"><h2 style="font-family: Yellowtail; font-size: 130%; font-weight: 400; text-transform: capitalize; display: flex;">Yellowtail</h2></div>
-                                        <div class="wrapFonts" data-cloudid="7" data-font="Leckerli One" data-class="stylish" data-case="Capitalize" data-thumbno="7" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Leckerli One&quot;; font-size: 130%; font-weight: 400; text-transform: capitalize; display: flex;">Leckerli One</h2></div>
+                                        <div class="wrapFonts" data-cloudid="3" data-font="Meow Script" data-class="stylish" data-case="Capitalize" data-thumbno="3" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Meow Script&quot;; font-size: 16px; font-weight: 400; text-transform: capitalize; display: flex;">Meow Script</h2></div>
+                                        <div class="wrapFonts" data-cloudid="4" data-font="Delius Swash Caps" data-class="stylish" data-case="Capitalize" data-thumbno="4" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Delius Swash Caps&quot;; font-size: 16px; font-weight: 400; text-transform: capitalize; display: flex;">Delius Swash Caps</h2></div>
+                                        <div class="wrapFonts" data-cloudid="5" data-font="Akaya Kanadaka" data-class="stylish" data-case="UpperCase" data-thumbno="5" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Akaya Kanadaka&quot;; font-weight: 400; display: flex;">AKAYA KANADAKA</h2></div><div class="wrapFonts" data-cloudid="6" data-font="Yellowtail" data-class="stylish" data-case="Capitalize" data-thumbno="6" style="transition: all; background-color: transparent;"><h2 style="font-family: Yellowtail; font-size: 16px; font-weight: 400; text-transform: capitalize; display: flex;">Yellowtail</h2></div>
+                                        <div class="wrapFonts" data-cloudid="7" data-font="Leckerli One" data-class="stylish" data-case="Capitalize" data-thumbno="7" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Leckerli One&quot;; font-size: 16px; font-weight: 400; text-transform: capitalize; display: flex;">Leckerli One</h2></div>
                                         <div class="wrapFonts" data-cloudid="8" data-font="Delius Unicase" data-class="stylish" data-case="UpperCase" data-thumbno="8" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Delius Unicase&quot;; font-weight: 400; display: flex;">DELIUS UNICASE</h2></div>
                                         <div class="wrapFonts" data-cloudid="9" data-font="Emilys Candy" data-class="stylish" data-case="UpperCase" data-thumbno="9" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Emilys Candy&quot;; font-weight: 400; display: flex;">EMILYS CANDY</h2></div>
                                         <div class="wrapFonts" data-cloudid="10" data-font="Mystery Quest" data-class="stylish" data-case="UpperCase" data-thumbno="10" style="transition: all; background-color: transparent;"><h2 style="font-family: &quot;Mystery Quest&quot;; font-weight: 400; display: flex;">MYSTERY QUEST</h2></div>
@@ -519,13 +516,13 @@
                                         </div>
                                     </div>
                                     <div class="pnlEntry">
-                                        <div class="btnExportHeader" id="btnSave">
+                                        <div class="btnHeader" id="btnSave">
                                             <div class="btnIcon">
                                                 <svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4C0 1.79086 1.79086 0 4 0H9.39445C10.7319 0 11.9808 0.668404 12.7226 1.7812L12.9415 2.1094C13.3124 2.6658 13.9368 3 14.6056 3H18C20.2091 3 22 4.79086 22 7V18C22 20.2091 20.2091 22 18 22H4C1.79086 22 0 20.2091 0 18V4ZM4 2C2.89543 2 2 2.89543 2 4V8H20V7C20 5.89543 19.1046 5 18 5H14.6056C13.2681 5 12.0192 4.3316 11.2774 3.2188L11.0585 2.8906C10.6876 2.3342 10.0632 2 9.39445 2H4ZM2 18V10H20V18C20 19.1046 19.1046 20 18 20H4C2.89543 20 2 19.1046 2 18Z" fill="white"/>
                                                 </svg>                                                   
                                             </div>
-                                            <h2><u>S</u>ave File</h2>
+                                            <h2>Save File</h2>
                                         </div>
                                     </div>
                                     <div class="pnlEntry">
@@ -567,7 +564,7 @@
                                         <input type="text" data-unit="px" class="txtOutputHeight" value="1080" min="2" max="1080">
                                     </div>
                                     <div class="pnlEntry">
-                                        <div class="btnExportHeader" id="btnDownload">
+                                        <div class="btnHeader" id="btnDownload">
                                             <div class="btnIcon">
                                                 <svg width="18" height="16" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 0C1.34315 0 0 1.34315 0 3V19C0 20.6569 1.34315 22 3 22H17.7574L15.8787 20.1213C14.7071 18.9497 14.7071 17.0503 15.8787 15.8787C16.4645 15.2929 17.2322 15 18 15C18 14.6969 18.0449 14.4043 18.1285 14.1285L16.7071 12.7071C16.3166 12.3166 15.6834 12.3166 15.2929 12.7071L10.7071 17.2929C10.3166 17.6834 9.68342 17.6834 9.29289 17.2929L7.54716 15.5472C7.22498 15.225 6.72576 15.1613 6.33303 15.3923L2 17.9412V3C2 2.44772 2.44772 2 3 2H19C19.5523 2 20 2.44772 20 3V12.1707C20.3128 12.0602 20.6494 12 21 12C21.3506 12 21.6872 12.0602 22 12.1707V3C22 1.34315 20.6569 0 19 0H3Z" fill="white"/>
@@ -593,7 +590,7 @@
                         <div class="configScroll configScrollSettings">
                             <div id="pnlBoxSettings" style="display: flex; margin-top: 0px;">
                            
-                                <div class="pnlEntry">
+                                <div class="pnlTitle">
                                     <h2 style="margin-left: 0px;">UI Settings</h2>
                                     <div id="btnResetSettings">
                                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -602,7 +599,7 @@
 
                                     </div>
                                 </div>
-                                <div class="pnlEntry">
+                                <div class="pnlEntry" style="margin-top: 0px;">
                                     <h2>Snapping</h2>
                                     <div class="chkSnap" data-value="false"><div class="chkSwitch"></div></div>
                                 
@@ -639,15 +636,14 @@
                                         <div class="thumbColor" style="background: #5E79C9"></div>
                                     </div>
                                 </div>
-
                                 <div class="breakline" style="width: 100%; margin-top: 2em;"></div>   
-                                <div class="pnlTitle" style="width: 247px; margin: 0 auto;">
-                                    <h2 style="margin-left: 0px;">Account & Credits</h2>
+                                <div class="pnlTitle" style="width: 247px; margin: 0px;">
+                                    <h2 style="margin-left: 0px;">Account & Billing</h2>
                                 </div>
-                                <div class="pnlEntry" id="pnlAccessBadge" style="visibility: hidden; margin-top: 0px;">
+                                <div class="pnlEntry" id="pnlAccessBadge" style="visibility: hidden; margin-top: 0px; margin-bottom: 1em;">
                                     <div id="lblAccessBadge"></div>
                                 </div>
-                                <div class="pnlEntry">
+                                <div class="pnlEntry"  style="margin-top: 0px;">
                                     <h2>AI Credits</h2>
                                     <h2 class="pnlValue" id="lblAiCredits">0</h2>
                                 </div>
@@ -659,42 +655,55 @@
                                     <h2>Member since</h2>
                                     <h2 class="pnlValue" id="lblMemberSince"></h2>
                                 </div>
-                                <div class="pnlEntry" id="pnlAccess">
+                                <div class="pnlEntry" id="pnlAccess" style="display: none;">
                                     <h2>Access</h2>
                                     <h2 class="pnlValue" id="lblAccess"></h2>
                                 </div>
-                                <div class="pnlEntry" id="pnlExpiration">
+                                <div class="pnlEntry" id="pnlExpiration" style="display: none;">
                                     <h2>Ends on</h2>
                                     <h2 class="pnlValue" id="lblExpiration"></h2>
                                 </div>                  
-                                <div class="pnlEntry" id="pnlAutoRenew" style="position: relative;" hidden>
+                                <div class="pnlEntry" id="pnlAutoRenew" style="position: relative; display: none;">
                                     <h2>Auto-renew</h2>
                                     <div class="chkAutoRenew" data-value="true"><div class="chkSwitch"></div></div>
                                     <div class="divCoverDisabler"></div>
                                 </div>
-                                <div class="breakline" style="width: 100%; margin-top: 2em; visibility: hidden; background: hsl(6, 93%, 71%, 0.15);"></div>   
-                                
-                                <div class="btnHeader" id="btnClearCache">
-                                    <div class="btnIcon">
-                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2.32116 3.52722C4.17528 0.77775 7.62691 -0.632036 11.0057 0.273318C15.2658 1.41509 17.7872 5.80113 16.6444 10.0663C15.5015 14.3315 11.1244 16.8697 6.86413 15.7284C4.7395 15.159 3.04544 13.7798 2.02527 12.0145C1.74912 11.5365 1.91267 10.9257 2.3905 10.6493C2.86868 10.3729 3.48037 10.5364 3.75671 11.0145C4.52283 12.34 5.79067 13.3693 7.38171 13.7958C10.5703 14.65 13.8545 12.7518 14.7128 9.54871C15.5709 6.34575 13.6765 3.05958 10.4882 2.20496C7.88806 1.50826 5.22415 2.64227 3.86413 4.82117L5.60144 4.45789C6.1417 4.34485 6.67151 4.69128 6.78503 5.23133C6.89812 5.77183 6.55205 6.30269 6.01159 6.4159L2.39538 7.17273C1.9033 7.27556 1.41104 6.99623 1.24597 6.52136L0.0555386 3.09656C-0.125414 2.57507 0.150323 2.00541 0.67175 1.8241C1.19334 1.64279 1.76278 1.9188 1.94421 2.44031L2.32116 3.52722Z" fill="var(--sharp)"/>
-                                            <path d="M8.91198 4.90515C9.46427 4.90515 9.91198 5.35287 9.91198 5.90515V8.90515H11.412C11.9643 8.90515 12.412 9.35287 12.412 9.90515C12.4119 10.4574 11.9642 10.9052 11.412 10.9052H8.91198C8.35976 10.9051 7.91205 10.4574 7.91198 9.90515V5.90515C7.91198 5.35288 8.35972 4.90518 8.91198 4.90515Z" fill="var(--sharp)"/>
-                                        </svg>
-
+                                <div class="pnlEntry" id="pnlManageBilling" style="position: relative; display: none;">
+                                    <div class="btnHeader" id="btnManageBilling">
+                                        <div class="btnIcon">
+                                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 7V12.8333C0 13.4782 0.503156 14 1.125 14H16.875C17.4968 14 18 13.4782 18 12.8333V7H0ZM6.75 10.5H4.5C3.87816 10.5 3.375 9.97821 3.375 9.33333C3.375 8.68846 3.87816 8.16667 4.5 8.16667H6.75C7.37184 8.16667 7.875 8.68846 7.875 9.33333C7.875 9.97821 7.37184 10.5 6.75 10.5Z" fill="white"/>
+                                                <path d="M18 4.66667V1.16667C18 0.521792 17.4968 0 16.875 0H1.125C0.503156 0 0 0.521792 0 1.16667V4.66667H18Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <h2>Manage Billing</h2>
                                     </div>
-                                    <h2>Clear Cache</h2>
                                 </div>
-
-                                <div class="btnHeader" style="margin-top: 0.5em;" id="btnLogOut">
-                                    <div class="btnIcon">
-
-                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.4 1.18187C13.6454 2.21355 16 5.28018 16 8.90476C16 13.3756 12.4183 17 8 17C3.58172 17 0 13.3756 0 8.90476C0 5.28018 2.35456 2.21355 5.6 1.18187V2.89974C3.25462 3.86051 1.6 6.18694 1.6 8.90476C1.6 12.4815 4.46538 15.381 8 15.381C11.5346 15.381 14.4 12.4815 14.4 8.90476C14.4 6.18694 12.7454 3.86051 10.4 2.89974V1.18187Z" fill="salmon"/>
-                                            <path d="M8 0C8.44183 0 8.8 0.362436 8.8 0.809524V5.66667C8.8 6.11375 8.44183 6.47619 8 6.47619C7.55817 6.47619 7.2 6.11375 7.2 5.66667V0.809524C7.2 0.362436 7.55817 0 8 0Z" fill="salmon"/>
-                                        </svg>
-
+                                <div id="pnlSettingsSession">
+                                    <div class="breakline" style="width: 100%; margin-top: 2.5em;"></div>   
+                                    <div class="pnlTitle" style="width: 247px; margin: 0px;">
+                                        <h2 style="margin-left: 0px;">Storage & Session</h2>
                                     </div>
-                                    <h2>Log Out</h2>
+                                    <div class="btnHeader" id="btnClearCache">
+                                        <div class="btnIcon" style="visibility: hidden;">
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2.32116 3.52722C4.17528 0.77775 7.62691 -0.632036 11.0057 0.273318C15.2658 1.41509 17.7872 5.80113 16.6444 10.0663C15.5015 14.3315 11.1244 16.8697 6.86413 15.7284C4.7395 15.159 3.04544 13.7798 2.02527 12.0145C1.74912 11.5365 1.91267 10.9257 2.3905 10.6493C2.86868 10.3729 3.48037 10.5364 3.75671 11.0145C4.52283 12.34 5.79067 13.3693 7.38171 13.7958C10.5703 14.65 13.8545 12.7518 14.7128 9.54871C15.5709 6.34575 13.6765 3.05958 10.4882 2.20496C7.88806 1.50826 5.22415 2.64227 3.86413 4.82117L5.60144 4.45789C6.1417 4.34485 6.67151 4.69128 6.78503 5.23133C6.89812 5.77183 6.55205 6.30269 6.01159 6.4159L2.39538 7.17273C1.9033 7.27556 1.41104 6.99623 1.24597 6.52136L0.0555386 3.09656C-0.125414 2.57507 0.150323 2.00541 0.67175 1.8241C1.19334 1.64279 1.76278 1.9188 1.94421 2.44031L2.32116 3.52722Z" fill="var(--sharp)"/>
+                                                <path d="M8.91198 4.90515C9.46427 4.90515 9.91198 5.35287 9.91198 5.90515V8.90515H11.412C11.9643 8.90515 12.412 9.35287 12.412 9.90515C12.4119 10.4574 11.9642 10.9052 11.412 10.9052H8.91198C8.35976 10.9051 7.91205 10.4574 7.91198 9.90515V5.90515C7.91198 5.35288 8.35972 4.90518 8.91198 4.90515Z" fill="var(--sharp)"/>
+                                            </svg>
+
+                                        </div>
+                                        <h2>Clear Cache</h2>
+                                    </div>
+
+                                    <div class="btnHeader" style="margin-top: 0.5em;" id="btnLogOut">
+                                        <div class="btnIcon" style="visibility: hidden;">
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4 1.18187C13.6454 2.21355 16 5.28018 16 8.90476C16 13.3756 12.4183 17 8 17C3.58172 17 0 13.3756 0 8.90476C0 5.28018 2.35456 2.21355 5.6 1.18187V2.89974C3.25462 3.86051 1.6 6.18694 1.6 8.90476C1.6 12.4815 4.46538 15.381 8 15.381C11.5346 15.381 14.4 12.4815 14.4 8.90476C14.4 6.18694 12.7454 3.86051 10.4 2.89974V1.18187Z" fill="salmon"/>
+                                                <path d="M8 0C8.44183 0 8.8 0.362436 8.8 0.809524V5.66667C8.8 6.11375 8.44183 6.47619 8 6.47619C7.55817 6.47619 7.2 6.11375 7.2 5.66667V0.809524C7.2 0.362436 7.55817 0 8 0Z" fill="salmon"/>
+                                            </svg>
+                                        </div>
+                                        <h2>Log Out</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -705,7 +714,7 @@
                         </div>  
                         <div class="configScroll configScrollWondr">
                             <div id="divWelcomeMsg">
-                                <h1>
+                                <h2>
                                     &ensp;Wondr is a creative work of Ozydeus, a solo designer and developer based in the Philippines. It started as a small project, built from a simple idea: to create something useful and meaningful that extends human creativity. It was personally designed, developed, and funded from the very beginning, with no investors, no large team, and no millions behind it. Just one person, a computer, countless hours, and the belief that even a humble idea can grow into something worth sharing.
                                     <br><br>
                                     &ensp;The app is built with HTML, CSS, and JavaScript, the fundamental building blocks of the web. Its philosophy is inspired by the <b style="color: hsl(var(--hue) 30% 70%);">Wonders of the World</b>, remarkable creations imagined and built from the ground up, piece by piece, long before modern frameworks and standards existed. There is something exciting about returning to the fundamentals and rediscovering how much can be achieved with them.
@@ -715,7 +724,7 @@
                                     &ensp;Really excited to see how you'll bring your ideas to life.
                                     <br><br>
                                     &ensp;Thank you for using Wondr.
-                                </h1>
+                                </h2>
                                 <br>
                             </div>
                             
@@ -757,8 +766,8 @@
                         <div id="chkMode" class="chk" data-value="2D">
                             <div class="chkSwitchMode"></div>
                             <div class="chkContainer">
-                                <h2 style="margin-left: 0px;">2D</h2>
-                                <h2 style="color: #647499; margin-right: 0px;">3D</h2>
+                                <h2 style="margin-left: 1px;">2D</h2>
+                                <h2 style="color: #647499; margin-right: 1px;">3D</h2>
                             </div>
                         </div>
                     </div>                
@@ -1195,6 +1204,7 @@
                                                     <div class="optLayerStyleImage">Outline</div>
                                                     <div class="optLayerStyleImage">Glow</div>
                                                     <div class="optLayerStyleImage">Shadow</div>
+                                                    <div class="breakline" style="margin-bottom: 0px;"></div>
                                                     <div class="optLayerStyleImage">Remove</div>
                                                 </div>
                                                     
@@ -1405,7 +1415,7 @@
             
                                             <div class = "contNoPath" style="width: 100%; height: 100%";>
                                                 <div style="width: 100%; height: 100%; display: flex;">
-                                                    <h2 style="color: #647499; margin: auto; font-size: 14.5px; font-weight: normal; font-style: italic;">Select a path to edit</h2>
+                                                    <h2 style="color: #647499; margin: auto; font-size: 12px; font-weight: normal; font-style: italic;">Select a path to edit</h2>
                                                 </div>
                                             </div>
                         
@@ -2828,14 +2838,15 @@
                                 <div class="contentBox">
                                     
                                     <textarea class="txtEditorBox" spellcheck = "false" data-gramm="false" data-gramm_editor = "false" data-enable-grammarly = "false" placeholder="Edit text here.."></textarea>
-                                    <div id="btnSaveEdit">
+                                    <div id="btnSaveEdit" class="btnHeader">
                                         <div class="btnIcon">
-                                            <svg width="16" height="17" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16.4023 0.785156V5.44434H15.9453C15.6745 4.36947 15.374 3.59928 15.0439 3.13379C14.7139 2.65983 14.2611 2.2832 13.6855 2.00391C13.3639 1.85156 12.8011 1.77539 11.9971 1.77539H10.7148V15.0547C10.7148 15.9349 10.7614 16.485 10.8545 16.7051C10.9561 16.9251 11.1465 17.1198 11.4258 17.2891C11.7135 17.4499 12.1029 17.5303 12.5938 17.5303H13.165V18H4.15137V17.5303H4.72266C5.22201 17.5303 5.62402 17.4414 5.92871 17.2637C6.14876 17.1452 6.32227 16.9421 6.44922 16.6543C6.54232 16.4512 6.58887 15.918 6.58887 15.0547V1.77539H5.34473C4.18522 1.77539 3.3431 2.02083 2.81836 2.51172C2.08203 3.19727 1.61654 4.1748 1.42188 5.44434H0.939453V0.785156H16.4023Z" fill="white"/>
                                             </svg>        
                                         </div>
                                    
                                         <h2>Save <u>E</u>dit</h2>
+            
                                     </div>        
                                 </div> 
                             </div>  
@@ -2965,7 +2976,7 @@
                 </div>  
             </div>
             <div class="colorManagerEntry">
-                <h2 style="color: var(--sharp); font-weight: 500px; font-size:12.5px; margin-top: auto; margin-bottom: auto;">Stops</h2>
+                <h2 style="color: var(--sharp); font-weight: 500; font-size:12px; margin-top: auto; margin-bottom: auto;">Stops</h2>
                 <div id="btnAddGradient">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 0H6V10H4V0Z" fill="#343C4F"/>
@@ -2989,7 +3000,7 @@
                     </div>
                     <div class="btnDelGradient" style="opacity: 1;" data-index = "0">
                         <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="10" width="2" height="10" transform="rotate(90 10 0)" fill="salmon"/>
+                            <rect x="10" width="2" height="10" transform="rotate(90 10 0)" fill="white"/>
                         </svg>
                     </div>
                 </div>
@@ -3007,7 +3018,7 @@
                     </div>
                     <div class="btnDelGradient" style="opacity: 1;" data-index = "1">
                         <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="10" width="2" height="10" transform="rotate(90 10 0)" fill="salmon"/>
+                            <rect x="10" width="2" height="10" transform="rotate(90 10 0)" fill="white"/>
                         </svg>
                     </div>
                 </div>

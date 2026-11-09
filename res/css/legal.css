@@ -2,8 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Uncut Sans", "Inter", sans-serif;
-    font-feature-settings: "ss05";
+    font-family: "Google Sans Flex", "Inter", sans-serif;
 }
 
 html {
@@ -19,6 +18,11 @@ body {
     -webkit-user-select: none;
     user-select: none;
     -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--sharp);
 }
 
 a {
@@ -49,29 +53,32 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 4em 1em;
+    gap: 0.75rem;
+    padding: 4rem 1rem;
     text-align: center;
 }
 
+/*404 - title*/
 #notFound h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
-    letter-spacing: 1px;
     word-spacing: 1px;
 }
 
+/*404 - text*/
 #notFound p {
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
     word-spacing: 1px;
-    line-height: 1.5em;
+    line-height: 1.5;
 }
 
+/*404 - link*/
 #notFound a {
     font-size: 13px;
     font-weight: 500;
+    letter-spacing: 0.5px;
     color: var(--muted-blue-text);
     filter: brightness(140%);
 }

@@ -42,10 +42,10 @@
     color: var(--sharp);
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 12.5px;
-    font-weight: 600px;
+    font-size: 12px;
+    font-weight: 500;
     cursor: default;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .optElementMini {
@@ -122,8 +122,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border-radius: 3px;
     border: 1px solid var(--muted-track);
@@ -147,8 +147,8 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12.5px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -173,8 +173,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -199,8 +199,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -230,8 +230,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border-radius: 3px;
     border: 1px solid var(--muted-track);
@@ -255,8 +255,8 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12.5px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -281,8 +281,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -307,8 +307,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -380,9 +380,9 @@
     height: 32px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;

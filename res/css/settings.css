@@ -1,7 +1,7 @@
 a {
   text-decoration: none;
-  font-weight: 500; 
-  font-size: 11.5px; 
+  font-weight: 400; 
+  font-size: 12px; 
   color: var(--muted-blue-text);
   cursor: pointer;
   transition: .2s;
@@ -37,7 +37,7 @@ a:active {
 
 #pnlBoxSettings {
     width: 246px;
-    height: auto; /* was max(100%, 886px): the free height went into every margin:auto and spread the rows on F11 */
+    height: auto; 
     min-height: 100%;
     background: transparent;
     overflow: visible;
@@ -46,33 +46,42 @@ a:active {
     flex-direction: column;
 }
 
-/* Fixed gaps between rows; any extra height goes above the last line, so it
-   and Clear Cache / Log Out stay at the bottom (2026-10-27, F11 fix) */
 #pnlBoxSettings > .pnlEntry {
     margin-bottom: 0;
 }
 
-#pnlBoxSettings > .btnHeader {
+#pnlSettingsSession {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+#pnlSettingsSession > .btnHeader {
     margin-top: 0;
 }
 
+#pnlManageBilling {
+    margin-top: 1.5em;
+}
 
 #btnClearCache {
-    width: 100%; margin-top: auto; 
+    width: 100%; 
+    margin-top: auto; 
     margin-bottom: 0px; 
     background: transparent; 
     box-sizing: border-box; 
     border-radius: 4px; 
     transition: 0.2s; 
-    border: 1px solid var(--muted-line);
+    border: 1px solid var(--muted-track);
 }
 
-#btnClearCache h2 {
+div#btnClearCache h2 {
     color: var(--sharp);
 }
 
 #btnClearCache:hover {
-    border: 1px solid var(--muted-track);
+    border: 1px solid var(--sharp-track);
+    filter: brightness(105%);
 }
 
 #btnLogOut {
@@ -84,45 +93,18 @@ a:active {
     margin-bottom: 0.75em;
 }
 
-#btnLogOut h2 {
+div#btnLogOut h2 {
     color: salmon;
 }
 
 #btnLogOut:hover {
-    border: 1px solid var(--sharp-red)
-    
-}
-
-.btnIcon {
-    width: 28px;
-    height: 28px;
-    display: flex;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-top: auto;
-    margin-bottom: auto;
-    visibility: hidden;
-}
-
-.btnIcon svg {
-    margin: auto;
+    border: 1px solid var(--sharp-red);
+    filter: brightness(105%);
 }
 
 /* Log Out keeps its own #btnLogOut margin-bottom: 1em = the gap under it */
-#pnlBoxSettings > #btnClearCache {
+#pnlSettingsSession > #btnClearCache {
     margin-bottom: 0;
-}
-
-#pnlBoxSettings > :has(+ .breakline + #btnClearCache) {
-    margin-bottom: auto;
-}
-
-#pnlBoxSettings > #pnlAutoRenew[hidden] {
-    display: none;
-}
-
-#pnlBoxSettings > :has(+ #pnlAutoRenew[hidden] + .breakline + #btnClearCache) {
-    margin-bottom: auto;
 }
 
 .txtSnapColor {
@@ -134,8 +116,8 @@ a:active {
     margin-left: auto;
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border-radius: 3px;
     border: 1px solid var(--muted-track);
@@ -160,8 +142,8 @@ a:active {
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -187,8 +169,8 @@ a:active {
     margin-left: auto;
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border-radius: 3px;
     border: 1px solid var(--muted-track);
@@ -213,8 +195,8 @@ a:active {
     margin-left: auto;
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border-radius: 3px;
     border: 1px solid var(--muted-track);
@@ -239,7 +221,7 @@ a:active {
 
 #footerCopyright h2 {
     color: var(--muted-blue-text); 
-    font-size: 11.5px;
+    font-size: 12px;
 }
 
 #footerLinks {
@@ -287,4 +269,81 @@ a:active {
 .pnlEntry .pnlValue {
     color: var(--muted-blue-text);
     margin-left: auto;
+}
+
+#btnResetSettings {
+    min-width: 24px;
+    min-height: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    
+}
+
+#btnResetSettings svg {
+    margin: auto;
+    transition: 0.2s;
+}
+
+#btnResetSettings:hover svg {
+    filter: saturate(1) brightness(1.5);
+}
+
+@keyframes badgeSpin {
+    to { --badge-angle: 360deg; }
+}
+
+#lblAccessBadge {
+    height: 40px;
+    border-radius: 999px;
+    border: none;
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    position: relative;
+    background: transparent;
+    margin: auto;
+    margin-right: 0px;
+
+}
+
+#lblAccessBadge::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(from var(--badge-angle),
+        var(--gold-1), var(--gold-2) 17.5%, var(--gold-3) 32.5%, var(--gold-4) 50%,
+        var(--gold-3) 67.5%, var(--gold-2) 82.5%, var(--gold-1));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: badgeSpin 4s linear infinite;
+}
+
+#lblAccessBadge svg {
+    height: 18px;
+    width: auto;
+    margin: auto;
+    margin-right: 0.6em;
+}
+
+#lblAccessBadge h1 {
+    border-color: var(--hover-line);
+    color: var(--sharp);
+    font-weight: 700;
+    font-size: 10px;
+    margin: auto;
+    margin-left: 0px;
+    text-transform: uppercase;
+    letter-spacing: 0px;
 }

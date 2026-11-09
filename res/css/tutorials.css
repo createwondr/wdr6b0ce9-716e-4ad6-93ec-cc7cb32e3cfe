@@ -2,8 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Uncut Sans", "Inter", sans-serif;
-    font-feature-settings: "ss05";
+    font-family: "Google Sans Flex", "Inter", sans-serif;
 }
 
 html {
@@ -21,8 +20,8 @@ body {
 }
 
 ::selection {
-    background: var(--selection);
-    color: var(--bg);
+    background: var(--accent);
+    color: var(--sharp);
 }
 
 #blurWrapper {
@@ -63,6 +62,7 @@ a {
     margin: auto;
 }
 
+/*left panel - search box*/
 .txtSearch {
     flex: 1;
     min-width: 0px;
@@ -70,7 +70,8 @@ a {
     outline: none;
     border: none;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
+    letter-spacing: 0.5px;
     color: var(--sharp);
     background-color: transparent;
     cursor: default;
@@ -111,7 +112,7 @@ a {
 
     display: grid;
     flex: 1 0 auto;
-    grid-template-columns: minmax(280px, 1fr) minmax(0px, 1080px) minmax(280px, 1fr);
+    grid-template-columns: minmax(300px, 1fr) minmax(0px, 1080px) minmax(300px, 1fr);
     column-gap: 2em;
     --docTop: 3em;
     margin-top: 2em;
@@ -137,7 +138,7 @@ a {
     */
     scrollbar-width: thin;
     scrollbar-color: var(--scroll-thumb) transparent;
-    width: 280px;
+    width: 300px;
     justify-self: end;
     margin-bottom: -100vh;
 }
@@ -146,6 +147,7 @@ a {
     margin-bottom: 6px;
 }
 
+/*left panel - main topics (collapsibles)*/
 .navGroup summary {
     display: flex;
     align-items: center;
@@ -153,8 +155,7 @@ a {
     padding: 8px 10px;
     list-style: none;
     font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.6px;
+    font-weight: 500;
     text-transform: uppercase;
     color: var(--sharp);
     cursor: pointer;
@@ -187,10 +188,12 @@ a {
     margin-right: 0px;
 }
 
+/*left panel - sub topics*/
 #docNav .navLinks a {
     padding: 7px 10px 7px 14px;
     border-right: 2px solid transparent;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
     color: hsl(var(--hue) 12% 70%);
     cursor: pointer;
 }
@@ -207,6 +210,7 @@ a {
     font-weight: 500;
 }
 
+/*left panel - nested sub topics*/
 #docNav .navLinks a.sub {
     padding-left: 28px;
     font-size: 13px;
@@ -216,9 +220,11 @@ a {
     display: none;
 }
 
+/*left panel - no topics found*/
 #lblNoTopics {
     padding: 10px;
     font-size: 13px;
+    letter-spacing: 0.5px;
     color: var(--muted-blue-text);
 }
 
@@ -231,63 +237,67 @@ a {
     
 }
 
-
+/*main title*/
 .docBody h1 {
     text-box: trim-start cap alphabetic;
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.3;
     color: var(--sharp);
 }
 
+/*mini title*/
 .docBody h2 {
-    margin-top: 44px;
-    margin-bottom: 12px;
-    padding-top: 8px;
-    font-size: 18px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 16px;
     font-weight: 500;
     color: var(--sharp);
 }
 
+/*small sub title*/
+.docBody h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--sharp);
+}
+
+/*main document text*/
 .docBody p,
 .docBody li {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
     word-spacing: 1px;
     line-height: 1.7;
-    color: var(--muted);
+    color: var(--unsharp);
 }
 
 .docBody p + p,
-.docBody ul + p {
-    margin-top: 12px;
-}
-
-.docBody h3 {
-    margin-top: 28px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--sharp);
+.docBody ul + p,
+.docBody ol + p {
+    margin-top: 1rem;
 }
 
 .docBody .docUpdated {
-    margin-bottom: 44px;
+    margin-bottom: 2rem;
     font-size: 12px;
     color: var(--placeholder);
 }
 
 .docBody strong {
-    font-weight: 600;
+    font-weight: 500;
     color: var(--sharp);
 }
 
 .docBody a,
 .docBody a:visited {
     color: var(--sharp);
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: underline;
     text-decoration-color: var(--muted-track);
     text-underline-offset: 3px;
@@ -304,29 +314,29 @@ a {
     border-radius: 4px;
     border: 1px solid var(--muted-line);
     background: var(--dark3);
-    font-size: 13px;
+    font-size: 12px;
     color: var(--sharp);
 }
 
 .docBody ol,
 .docBody ul {
-    margin: 12px 0px 0px;
+    margin: 1rem 0px 0px;
     padding-left: 22px;
 }
 
 .docBody li + li {
-    margin-top: 6px;
+    margin-top: 0.375rem;
 }
 
 .docBody li::marker {
-    color: var(--muted-blue-text);
+    color: var(--muted);
     font-weight: 500;
 }
 
 .docBody figure {
     width: fit-content;
     max-width: 100%;
-    margin: 24px 0px;
+    margin: 2rem 0px;
 }
 
 .docBody figure img {
@@ -340,17 +350,17 @@ a {
 
 .docBody figcaption {
     contain: inline-size;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     text-align: center;
     white-space: nowrap;
     font-size: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: var(--muted-blue-text);
 }
 
 .callout {
-    margin: 22px 0px;
-    padding: 12px 18px;
+    margin: 3rem 0px;
+    padding: 0.75rem 1.125rem;
     border-radius: 6px;
     border: 1px solid var(--muted-line);
     border-left: 3px solid var(--accent);
@@ -363,11 +373,11 @@ a {
 
 .callout.warn {
 
-    border-left: 3px solid salmon;
+    border-left: 3px solid indianred;
 }
 
 .callout p {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .uiFigure .uiPanel {
@@ -406,8 +416,9 @@ a {
 
 .uiPlaceholder {
     width: 136px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
+    letter-spacing: 0.5px;
     color: var(--muted-blue-text);
 }
 
@@ -461,7 +472,7 @@ a {
     height: 28px;
     border-radius: 4px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.5px;
     color: var(--sharp);
 }
@@ -492,14 +503,14 @@ a {
 
 .pager small {
     font-size: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: var(--muted-blue-text);
     filter: brightness(130%);
 }
 
 .pager span {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     color: var(--sharp);
 }
 
@@ -520,17 +531,18 @@ a {
     /*
     border-left: 1px solid var(--muted-line);
     */
-    width: 280px;
+    width: 300px;
     justify-self: start;
     margin-bottom: -100vh;
 }
 
+/*right panel - on this page title*/
 .onPage p {
     text-box: trim-start cap alphabetic;
     margin-bottom: 12px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.6px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--muted-blue-text);
 }
@@ -561,11 +573,14 @@ a {
     background: transparent;
 }
 
+/*right panel - topics*/
 #docOnPage a {
     flex-shrink: 0;
     padding: 6px 0px 6px 12px;
     border-left: 2px solid transparent;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     line-height: 1.4;
     color: hsl(var(--hue) 12% 64%);
     cursor: pointer;
@@ -581,8 +596,10 @@ a {
     color: var(--sharp);
 }
 
+/*right panel - sub topics*/
 #docOnPage a.sub {
     padding-left: 24px;
+    font-weight: 400;
 }
 
 .docLegal .docBody h1 {
@@ -708,7 +725,7 @@ a {
 
     .pager a span::after {
         content: "Topic";
-        font-size: 18px;
+        font-size: 14px;
     }
 }
 

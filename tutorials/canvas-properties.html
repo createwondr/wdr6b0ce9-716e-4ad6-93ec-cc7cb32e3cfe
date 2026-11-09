@@ -15,12 +15,12 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"Canvas properties","description":"Set the canvas size, background color and resize direction in Wondr's Canvas Properties panel.","url":"https://createwondr.io/tutorials/canvas-properties","publisher":{"@type":"Organization","name":"Wondr","url":"https://createwondr.io"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tutorials","item":"https://createwondr.io/tutorials"},{"@type":"ListItem","position":2,"name":"Canvas"},{"@type":"ListItem","position":3,"name":"Canvas properties","item":"https://createwondr.io/tutorials/canvas-properties"}]}]}</script>
     <link rel="icon" href="/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="/res/css/root.css">
-    <link rel="preload" href="/res/fonts/uncut-sans/UncutSans-Variable-Wondr.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/res/css/tutorials.css">
     <link rel="stylesheet" href="/res/css/site.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" crossorigin>
     <link rel="prefetch" href="/tutorials/zoom-and-view">
     <script src="/res/js/sec/router.js"></script>
 </head>
@@ -86,7 +86,7 @@
 <p>To get back to it, click an empty spot of the work area. That clears the selection.</p>
 <h2 id="width-and-height">Width and height</h2>
 <p>Type a size in pixels in <strong>Width</strong> and <strong>Height</strong>, then press <strong>Enter</strong> or click outside the box. Each side can be from <strong>2</strong> to <strong>4096</strong> pixels. A new canvas is 1080 × 1080.</p>
-<ul><li>You can type basic math, for example <code>1080 * 2</code> or <code>(1920 / 2)</code>.</li><li><code>50%</code> sets the box to half of its current value.</li><li><code>half</code> and <code>quarter</code> set the box to half or a quarter of its current value. <code>max</code> sets it to 4096 and <code>min</code> to 2.</li><li>You can also use <code>em</code> or <code>rem</code> units as part of basic math, for example <code>1080 + 2rem</code> or <code>50% - 1em</code>.</li><li>Use the <strong>Up</strong> and <strong>Down</strong> arrow keys to change the value by 1.</li></ul>
+<ul><li>You can type basic math, for example <code>1080 * 2</code> or <code>(1920 / 2)</code>.</li><li><code>50%</code> sets the box to half of its current value.</li><li><code>half</code> and <code>quarter</code> set the box to half or a quarter of its current value. <code>max</code> sets it to 4096 and <code>min</code> to 2.</li><li>You can also use <code>rem</code> units as part of basic math (<code>1rem</code> is 16 pixels), for example <code>1080 + 2rem</code> or <code>50% - 1rem</code>.</li><li>Use the <strong>Up</strong> and <strong>Down</strong> arrow keys to change the value by 1.</li></ul>
 <p>A size change is a single undo step. It also resets <strong>Output Width</strong> and <strong>Output Height</strong> in the Save menu to the new size. See <a href="/tutorials/export">Export</a>.</p>
 <aside class="callout note"><p><strong>Note:</strong> Sizes are in pixels only. There are no size presets or print units, so look up the pixel size you need first.</p></aside>
 <h2 id="lock-aspect-ratio">Lock Aspect Ratio</h2>

@@ -89,12 +89,12 @@ function moveableSetMode(mode) {
 
     clearGestureCursor();
     createMoveable();
-    llOIllIO();
+    llOIllOl();
 
-    moveable.snappable = (lIlIIIlO == "true");
-    moveable.snapThreshold = lIlIIIlI;
-    moveable.snapHorizontalThreshold = lIlIIIlI;
-    moveable.snapVerticalThreshold   = lIlIIIlI;
+    moveable.snappable = (lIlIIIII == "true");
+    moveable.snapThreshold = lIlIIIIl;
+    moveable.snapHorizontalThreshold = lIlIIIIl;
+    moveable.snapVerticalThreshold   = lIlIIIIl;
 
     //A NEW INSTANCE STARTS WITH NO GUIDELINES. WITHOUT THIS THE CANVAS EDGES AND CENTRE DID NOT
     //SNAP UNTIL SOMETHING ELSE REFRESHED THEM (THE NEXT DRAG END, A ZOOM OR A WINDOW RESIZE)
@@ -109,12 +109,12 @@ function rebuildMoveable() {
 
     createMoveable();
 
-    llOIllIO();
+    llOIllOl();
 
-    moveable.snappable = (lIlIIIlO == "true");
-    moveable.snapThreshold = lIlIIIlI;
-    moveable.snapHorizontalThreshold = lIlIIIlI;
-    moveable.snapVerticalThreshold   = lIlIIIlI;
+    moveable.snappable = (lIlIIIII == "true");
+    moveable.snapThreshold = lIlIIIIl;
+    moveable.snapHorizontalThreshold = lIlIIIIl;
+    moveable.snapVerticalThreshold   = lIlIIIIl;
 
     updateMoveableRect();
     moveableUpdateTargets();

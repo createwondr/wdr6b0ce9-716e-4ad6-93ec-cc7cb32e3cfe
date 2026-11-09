@@ -11,9 +11,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -31,9 +31,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -52,9 +52,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -71,9 +71,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -121,8 +121,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -147,8 +147,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -173,8 +173,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -197,8 +197,8 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12.5px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -217,8 +217,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border-radius: 3px;
     border: 1px solid var(--muted-track);
@@ -243,8 +243,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -268,8 +268,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -293,8 +293,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -342,8 +342,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -368,8 +368,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -394,8 +394,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -408,32 +408,6 @@
 }
 
 .txtEnvRotation:focus {
-    border-bottom: 1px solid var(--muted-track);
-}
-
-.txtEnvBlur {
-    width: 28px;
-    height: 24px;
-    outline: none;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: var(--sharp);
-    text-align: center;
-    font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
-    cursor: default;
-    border: none;
-    border-bottom: 1px solid transparent;
-    background-color: transparent;
-    transition: .2s;
-}
-
-.txtEnvBlur:hover {
-    border-bottom: 1px solid var(--muted-track);
-}
-
-.txtEnvBlur:focus {
     border-bottom: 1px solid var(--muted-track);
 }
 
@@ -466,10 +440,10 @@
     transition: .2s;
     border-radius: 4px;
     background: rgb(255, 0, 0, 0.1);
-    background: hsl(6, 93%, 71%, 0.15);
+    background: color-mix(in srgb, indianred 15%, transparent);
     background: transparent;
     border: 1px solid rgb(255, 0, 0, 0.5);
-    border: 1px solid salmon;
+    border: 1px solid indianred;
     border: 1px solid var(--muted-red);
     
     display: none;
@@ -486,8 +460,8 @@
     color: var(--sharp);
     color: salmon;
     font-weight: 500;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     margin: auto;
     cursor: pointer;
 }
@@ -495,4 +469,28 @@
 #btnMockupImage {
     margin-top: 1em;
     margin-bottom: 0;
+}
+
+.tab3DBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+.tabEnvironmentBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
+}
+
+.tabMockupBox {
+    margin-left: auto;
+    margin-right: auto;
+    height: 370px;
+    width: 214px;
+    width: 264px;
 }

@@ -179,9 +179,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -198,9 +198,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -217,9 +217,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -236,9 +236,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -246,6 +246,7 @@
     -moz-user-select: none;
     -ms-user-select: none; 
     user-select: none; 
+    box-sizing: border-box;
     background-color: transparent;
 }
 
@@ -255,9 +256,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -274,9 +275,9 @@
     height: 40px;
     display: flex;
     color: var(--sharp);
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -319,8 +320,8 @@
 .pnlEntryFold h2 {
     color: var(--sharp);
     font-weight: 500;
-    font-size: 12.5px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -401,28 +402,6 @@
     color: #99B7FF;
 }
 
-.frBottom {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.frBottom div {
-    margin: auto;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    cursor: pointer;
-}
-
-.frBottom div:hover svg {
-    filter: saturate(1) brightness(1.5);
-}
-
-.frBottom div svg{
-    margin: auto;
-}
-
 .txtMiniLayer {
     width: 28px;
     height: 24px;
@@ -431,8 +410,8 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12.5px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -457,8 +436,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -483,8 +462,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -525,8 +504,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -551,8 +530,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -577,8 +556,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -603,8 +582,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -675,8 +654,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border-radius: 3px;
     border: 1px solid var(--muted-track);
@@ -702,8 +681,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -729,8 +708,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -756,8 +735,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -782,8 +761,8 @@
     color: var(--sharp);
     text-align: center;
     font-size: 12px;
-    font-family: "Inter";
-    font-weight: 500;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -808,8 +787,8 @@
     margin-bottom: auto;
     color: var(--sharp);
     text-align: center;
-    font-size: 12.5px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     cursor: default;
     border: none;
     border-bottom: 1px solid transparent;
@@ -830,4 +809,381 @@
     width: 88px;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.txtOutlineColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtOutlineColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtOutlineColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtOutlineOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOutlineOpacity:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOutlineOpacity:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOutlineSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOutlineSize:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtOutlineSize:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.tabGlowLayer {
+    display: none;
+}
+
+.txtGlowColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtGlowColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtGlowColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtGlowOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowOpacity:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowOpacity:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowSize:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowSize:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowSpread {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowSpread:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtGlowSpread:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.tabShadowLayer {
+    display: none;
+}
+
+.txtShadowColor {
+    width: 60px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid var(--muted-track);
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtShadowColor:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.txtShadowColor:focus {
+    border: 1px solid var(--muted-blue-text);
+}
+
+.txtShadowOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowOpacity:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowOpacity:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowSize:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowSize:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowSpread {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowSpread:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowSpread:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowRotation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--sharp);
+    text-align: center;
+    font-size: 12px;
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+    font-weight: 400;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowRotation:hover {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.txtShadowRotation:focus {
+    border-bottom: 1px solid var(--muted-track);
+}
+
+.btnImageLabel {
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 1em;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid var(--muted-track);
+    box-sizing: border-box;
+}
+
+.btnImageLabel:hover {
+    border: 1px solid var(--sharp-track);
+}
+
+.btnImageLabel h2 {
+    color: var(--sharp);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.btnImageLabel svg {
+    width: 8px;
+    height: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+}
+
+.spinImageLabel {
+    width: 10px;
+    height: 10px;
+    flex: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+    border: 2px solid var(--muted-line);
+    border-top-color: var(--muted-track);
+    border-radius: 50%;
+    animation: spin .65s linear infinite;
+}
+
+.btnImageLabel.swapping,
+.btnImageLabel.swapping:hover {
+    border: 1px solid var(--muted-track);
+}
+
+.btnImageLabel.swapping h2 {
+    color: var(--muted-track);
 }

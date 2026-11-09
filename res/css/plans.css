@@ -45,11 +45,6 @@
     height: auto;
 }
 
-/*
-#planMonthly {
-    border: 1px solid var(--placeholder-line);
-}
-*/
 
 .planTop {
     display: flex;
@@ -64,7 +59,7 @@
 
 .planName {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--sharp);
 }
 
@@ -77,25 +72,27 @@
 }
 
 .planPrice b {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--sharp);
+    letter-spacing: 0.5px;
 }
 
 .planPrice span {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.5px;
+    color: var(--unsharp);
 }
 
 .planNote {
-    margin-top: 24px;
+    margin-top: 2rem;
     padding: 16px 0px;
     border-top: 1px solid var(--muted-track);
     border-bottom: 1px solid var(--muted-track);
     font-size: 14px;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.7);
     letter-spacing: 0.5px;
+    color: var(--unsharp);
 }
 
 .planList {
@@ -105,8 +102,7 @@
 .planListLabel {
     font-size: 14px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.7);
-    letter-spacing: 0.5px;
+    color: var(--sharp);
 }
 
 #planFounding .planListLabel {
@@ -153,8 +149,7 @@
     padding-left: 30px;
     font-size: 14px;
     line-height: 20px;
-    color: var(--sharp);
-    letter-spacing: 0.5px;
+    color: var(--unsharp);
 }
 
 .planPerks li::before {
@@ -189,7 +184,7 @@
 .btnPlan span {
     margin: auto;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     letter-spacing: 0.5px;
 }
@@ -222,12 +217,12 @@
     inset: 0px;
     border-radius: inherit;
     padding: 1px;
-    background: radial-gradient(circle 64px at var(--glintX) var(--glintY), white, transparent 100%);
+    background: radial-gradient(circle 64px at var(--glintX) var(--glintY), white, transparent 120%);
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
-    animation: goldGlint 8s linear infinite;
+    animation: goldGlint 12s linear infinite;
 }
 
 @property --glintX {

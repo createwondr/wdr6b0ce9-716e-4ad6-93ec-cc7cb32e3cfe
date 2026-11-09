@@ -4,12 +4,18 @@ html {
     scrollbar-color: var(--scroll-thumb) transparent;
 }
 
-#homeNav,
-#homeNav *,
+/*footers - homepage footer and mini footer*/
 .foot,
 .foot *,
 .footMini,
 .footMini * {
+    font-family: "Google Sans Flex", "Inter", sans-serif;
+}
+
+/*top nav and the Wondr brand (also the brand inside the footer)*/
+#homeNav,
+#homeNav *,
+.navName {
     font-family: "Poppins", sans-serif;
 }
 
@@ -76,16 +82,17 @@ html {
 #homeNav .navLinks {
     display: flex;
     align-items: center;
-    gap: 2.5em;
+    gap: 2em;
     margin: auto;
     font-size: 14px;
 }
 
 #homeNav .navLinks a {
     font-weight: 400;
-    color: var(--muted);
+    color: var(--placeholder);
     cursor: pointer;
     transition: color 0.2s;
+    font-size: 14px;
 }
 
 #homeNav .navLinks a:hover {
@@ -165,23 +172,25 @@ html {
 }
 
 .foot {
-    padding-top: 4em;
+    padding-top: 4rem;
 }
 
 .footGrid {
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr 1fr 1.3fr;
-    gap: 2em;
-    margin-bottom: 4em;
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
 
 .footBrand .navBrand {
     height: auto;
 }
 
+/*homepage footer - brand text*/
 .footBrand p {
-    margin-top: 1em;
-    font-size: 14px;
+    margin-top: 1rem;
+    font-size: 13px;
+    letter-spacing: 0.5px;
     line-height: 1.6;
     color: var(--muted-blue-text);
 }
@@ -189,50 +198,56 @@ html {
 .footCol {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
+/*homepage footer - column titles*/
 .footCol p {
-    margin-bottom: 4px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.6px;
+    margin-bottom: 0.25rem;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: var(--muted-blue-text);
+    color: var(--sharp);
 }
 
+/*homepage footer - links*/
 .footCol a {
     width: max-content;
     max-width: 100%;
-    font-size: 14px;
-    color: var(--sharp-track);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: var(--muted-blue-text);
     cursor: pointer;
     transition: color 0.2s;
 }
 
 .footCol a:hover {
-    color: var(--sharp);
+    color: hsl(var(--hue) 30% 65%);
 }
 
 .footCol a:not([href]) {
     cursor: default;
 }
 
+/*mini footer - box*/
 .footMini {
     width: 100dvw;
-    min-height: 2em;
+    min-height: 2rem;
     height: auto;
     display: flex;
     margin: auto;
     margin-bottom: 0px;
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
     box-sizing: border-box;
 }
 
+/*mini footer - text*/
 .footMini p {
     margin: auto;
     font-size: 10px;
     font-weight: 400;
+    letter-spacing: 0.5px;
     line-height: 1.6;
     text-align: center;
     color: var(--muted-blue-text);
@@ -250,11 +265,13 @@ html {
     text-decoration: underline;
 }
 
+/*homepage footer - copyright*/
 .divCopyright {
     font-size: 10px;
     font-weight: 400;
+    letter-spacing: 0.5px;
     color: var(--muted-blue-text);
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 #homeNav .navLinks a[aria-current="page"] {
