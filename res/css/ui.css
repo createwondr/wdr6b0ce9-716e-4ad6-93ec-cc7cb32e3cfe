@@ -38,7 +38,7 @@ h2 {
     background: var(--accent);
     color: var(--sharp);
 }
-  
+
 ::selection { 
     background: var(--accent);
     color: var(--sharp);
