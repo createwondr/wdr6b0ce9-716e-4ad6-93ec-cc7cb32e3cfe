@@ -47,6 +47,7 @@
     font-weight: 500;
     margin: auto;
     margin-left: 1em;
+    word-spacing: 1px;
 }
 
 #modalMessage {
@@ -71,6 +72,7 @@
     letter-spacing: 1px;
     word-wrap: break-word;
     margin: auto;
+    text-indent: 1rem;
 }
 
 #modalMessage a {
